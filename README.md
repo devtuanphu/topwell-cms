@@ -23,8 +23,9 @@ Lần đầu chạy với `SEED_DATA=true`, hệ thống nhập nội dung mẫu
 | Biến | Ý nghĩa |
 | --- | --- |
 | `HOST`, `PORT` | Địa chỉ server (mặc định `0.0.0.0:1337`). |
+| `IS_PROXIED` | `true` khi chạy sau reverse proxy (nginx) để Strapi đọc đúng `X-Forwarded-Proto`. |
 | `PUBLIC_URL` | Địa chỉ công khai của CMS, dùng cho link media. |
-| `FRONTEND_URL` | Domain website, dùng cho CORS. |
+| `FRONTEND_URL` | Domain website, dùng cho CORS. Nhiều domain thì ngăn cách bằng dấu phẩy. |
 | `INQUIRY_SECRET` | Chuỗi bí mật dùng chung với website để nhận dữ liệu form. Không đặt tiền tố `NEXT_PUBLIC_`. |
 | `APP_KEYS`, `ADMIN_JWT_SECRET`, `API_TOKEN_SALT`, `TRANSFER_TOKEN_SALT`, `ENCRYPTION_KEY`, `JWT_SECRET` | Secret của Strapi. Tạo giá trị mạnh, riêng cho production. |
 | `DATABASE_CLIENT`, `DATABASE_FILENAME` | SQLite cho máy cá nhân. Production nên dùng `postgres` với `DATABASE_URL` và `DATABASE_SSL=true`. |

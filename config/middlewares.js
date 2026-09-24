@@ -17,7 +17,13 @@ module.exports = [
   },
   {
     name: 'strapi::cors',
-    config: { origin: [process.env.FRONTEND_URL || 'http://localhost:3100'] },
+    config: {
+      // FRONTEND_URL có thể liệt kê nhiều domain, ngăn cách bằng dấu phẩy.
+      origin: (process.env.FRONTEND_URL || 'http://localhost:3100')
+        .split(',')
+        .map((o) => o.trim())
+        .filter(Boolean),
+    },
   },
   'strapi::poweredBy',
   'strapi::query',
