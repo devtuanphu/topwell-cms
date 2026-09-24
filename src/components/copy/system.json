@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_copy_system",
+  "info": {
+    "displayName": "Thông báo hệ thống"
+  },
+  "attributes": {
+    "notFoundCode": {
+      "type": "string",
+      "required": true
+    },
+    "notFoundTitle": {
+      "type": "string",
+      "required": true
+    },
+    "notFoundDescription": {
+      "type": "string",
+      "required": true
+    },
+    "homeLabel": {
+      "type": "string",
+      "required": true
+    },
+    "errorTitle": {
+      "type": "string",
+      "required": true
+    },
+    "errorDescription": {
+      "type": "string",
+      "required": true
+    },
+    "retry": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

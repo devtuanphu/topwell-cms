@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_sections_quote_forms",
+  "info": {
+    "displayName": "Form báo giá",
+    "description": "Form nhận báo giá miễn phí kèm ảnh và khối \"Vì sao chọn chúng tôi\""
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "panelEyebrow": {
+      "type": "string"
+    },
+    "panelTitle": {
+      "type": "string"
+    },
+    "panelText": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  }
+}

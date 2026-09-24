@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_feature_grid",
+  "info": {
+    "displayName": "Lưới tính năng"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

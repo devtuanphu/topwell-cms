@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_footer_columns",
+  "info": {
+    "displayName": "Cột chân trang"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_projects",
+  "info": {
+    "displayName": "Dự án"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    }
+  }
+}

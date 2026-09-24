@@ -1,0 +1,70 @@
+{
+  "collectionName": "components_sections_cta",
+  "info": {
+    "displayName": "Kêu gọi hành động"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "ctaHref": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "supportLabel": {
+      "type": "string"
+    },
+    "supportValue": {
+      "type": "string"
+    },
+    "panelTitle": {
+      "type": "string"
+    },
+    "panelText": {
+      "type": "text"
+    },
+    "panelLabel": {
+      "type": "string"
+    },
+    "panelHref": {
+      "type": "string"
+    },
+    "supportIcon": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "panelIcon": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    }
+  }
+}

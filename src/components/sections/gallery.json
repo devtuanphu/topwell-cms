@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_gallery",
+  "info": {
+    "displayName": "Thư viện ảnh"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "variant": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_hero_slider",
+  "info": {
+    "displayName": "Banner trình chiếu"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "stats": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  }
+}

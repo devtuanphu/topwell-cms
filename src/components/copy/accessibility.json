@@ -1,0 +1,99 @@
+{
+  "collectionName": "components_copy_accessibility",
+  "info": {
+    "displayName": "Nhãn hỗ trợ truy cập"
+  },
+  "attributes": {
+    "skip": {
+      "type": "string",
+      "required": true
+    },
+    "homeLink": {
+      "type": "string",
+      "required": true
+    },
+    "menuOpen": {
+      "type": "string",
+      "required": true
+    },
+    "menuClose": {
+      "type": "string",
+      "required": true
+    },
+    "navigation": {
+      "type": "string",
+      "required": true
+    },
+    "breadcrumb": {
+      "type": "string",
+      "required": true
+    },
+    "hero": {
+      "type": "string",
+      "required": true
+    },
+    "previousSlide": {
+      "type": "string",
+      "required": true
+    },
+    "nextSlide": {
+      "type": "string",
+      "required": true
+    },
+    "slide": {
+      "type": "string",
+      "required": true
+    },
+    "play": {
+      "type": "string",
+      "required": true
+    },
+    "pause": {
+      "type": "string",
+      "required": true
+    },
+    "partners": {
+      "type": "string",
+      "required": true
+    },
+    "projectFilters": {
+      "type": "string",
+      "required": true
+    },
+    "pagination": {
+      "type": "string",
+      "required": true
+    },
+    "comparison": {
+      "type": "string",
+      "required": true
+    },
+    "checklist": {
+      "type": "string",
+      "required": true
+    },
+    "articleNavigation": {
+      "type": "string",
+      "required": true
+    },
+    "gallery": {
+      "type": "string",
+      "required": true
+    },
+    "zoomIn": {
+      "type": "string",
+      "required": true
+    },
+    "zoomOut": {
+      "type": "string",
+      "required": true
+    },
+    "closeStory": {
+      "type": "string",
+      "required": true
+    },
+    "language": {
+      "type": "string"
+    }
+  }
+}

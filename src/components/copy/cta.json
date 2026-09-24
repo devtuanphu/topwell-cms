@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_copy_cta",
+  "info": {
+    "displayName": "Kêu gọi hành động"
+  },
+  "attributes": {
+    "heroSecondaryLabel": {
+      "type": "string",
+      "required": true
+    },
+    "heroSecondaryHref": {
+      "type": "string",
+      "required": true
+    },
+    "consultationEyebrow": {
+      "type": "string",
+      "required": true
+    },
+    "supportDescription": {
+      "type": "text",
+      "required": true
+    },
+    "supportLabel": {
+      "type": "string",
+      "required": true
+    },
+    "supportHref": {
+      "type": "string",
+      "required": true
+    },
+    "eyebrow": {
+      "type": "string",
+      "required": true
+    },
+    "questionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "questionDescription": {
+      "type": "string",
+      "required": true
+    },
+    "questionLabel": {
+      "type": "string",
+      "required": true
+    },
+    "questionHref": {
+      "type": "string",
+      "required": true
+    },
+    "articleEyebrow": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

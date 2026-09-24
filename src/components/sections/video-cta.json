@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_sections_video_ctas",
+  "info": {
+    "displayName": "Khối video",
+    "description": "Khối nền tối có nút phát video, tiêu đề và nút kêu gọi hành động"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "videoLabel": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaHref": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "variant": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_about_stories",
+  "info": {
+    "displayName": "Hộp thoại câu chuyện"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  }
+}

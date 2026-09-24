@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_project_overview",
+  "info": {
+    "displayName": "Tổng quan dự án"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

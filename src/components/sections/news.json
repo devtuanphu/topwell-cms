@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_news",
+  "info": {
+    "displayName": "Tin tức"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaHref": {
+      "type": "string"
+    },
+    "promo": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": false
+    }
+  }
+}

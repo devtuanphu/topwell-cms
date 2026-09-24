@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_metrics",
+  "info": {
+    "displayName": "Số liệu nổi bật"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

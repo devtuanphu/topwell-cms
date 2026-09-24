@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_shared_card",
+  "info": {
+    "displayName": "Thẻ nội dung"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "href": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    }
+  }
+}

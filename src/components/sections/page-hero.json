@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_page_hero",
+  "info": {
+    "displayName": "Banner đầu trang"
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_copy_article",
+  "info": {
+    "displayName": "Bài viết"
+  },
+  "attributes": {
+    "comparisonItem": {
+      "type": "string",
+      "required": true
+    },
+    "comparisonReference": {
+      "type": "string",
+      "required": true
+    },
+    "comparisonTarget": {
+      "type": "string",
+      "required": true
+    },
+    "share": {
+      "type": "string"
+    },
+    "copyLink": {
+      "type": "string"
+    },
+    "copied": {
+      "type": "string"
+    },
+    "tagsLabel": {
+      "type": "string"
+    },
+    "previousLabel": {
+      "type": "string"
+    },
+    "nextLabel": {
+      "type": "string"
+    }
+  }
+}

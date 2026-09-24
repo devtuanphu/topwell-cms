@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_article_comparison",
+  "info": {
+    "displayName": "Bảng so sánh bài viết"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "checklistTitle": {
+      "type": "string"
+    },
+    "checklist": {
+      "type": "text"
+    }
+  }
+}

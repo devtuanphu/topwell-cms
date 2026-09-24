@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_copy_newsletter",
+  "info": {
+    "displayName": "Đăng ký nhận tin"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "emailLabel": {
+      "type": "string",
+      "required": true
+    },
+    "placeholder": {
+      "type": "string",
+      "required": true
+    },
+    "submit": {
+      "type": "string",
+      "required": true
+    },
+    "pending": {
+      "type": "string",
+      "required": true
+    },
+    "consent": {
+      "type": "string",
+      "required": true
+    },
+    "privacyLabel": {
+      "type": "string",
+      "required": true
+    },
+    "success": {
+      "type": "string",
+      "required": true
+    },
+    "failure": {
+      "type": "string",
+      "required": true
+    },
+    "requestName": {
+      "type": "string",
+      "required": true
+    },
+    "requestSubject": {
+      "type": "string",
+      "required": true
+    },
+    "requestMessage": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_copy_metadata",
+  "info": {
+    "displayName": "Thông tin tìm kiếm và chia sẻ"
+  },
+  "attributes": {
+    "language": {
+      "type": "string",
+      "required": true
+    },
+    "locale": {
+      "type": "string",
+      "required": true
+    },
+    "openGraphLocale": {
+      "type": "string",
+      "required": true
+    },
+    "siteName": {
+      "type": "string",
+      "required": true
+    },
+    "defaultTitle": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "ogLineOne": {
+      "type": "string",
+      "required": true
+    },
+    "ogLineTwo": {
+      "type": "string",
+      "required": true
+    },
+    "ogTagline": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

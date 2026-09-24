@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_article_steps",
+  "info": {
+    "displayName": "Các bước trong bài viết"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

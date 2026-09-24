@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_project_challenge",
+  "info": {
+    "displayName": "Thách thức dự án"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

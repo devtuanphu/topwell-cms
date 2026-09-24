@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_copy_assets",
+  "info": {
+    "displayName": "Hình ảnh giao diện"
+  },
+  "attributes": {
+    "phoneIcon": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    }
+  }
+}

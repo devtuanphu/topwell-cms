@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_sections_about_hero",
+  "info": {
+    "displayName": "Banner giới thiệu"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "ctaHref": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "story": {
+      "type": "component",
+      "component": "sections.about-story",
+      "repeatable": false
+    },
+    "images": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": true
+    },
+    "eyebrowIcon": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    }
+  }
+}

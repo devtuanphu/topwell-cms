@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_faq",
+  "info": {
+    "displayName": "Câu hỏi thường gặp"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

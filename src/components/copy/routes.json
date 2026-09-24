@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_copy_routes",
+  "info": {
+    "displayName": "Nhãn điều hướng"
+  },
+  "attributes": {
+    "home": {
+      "type": "string",
+      "required": true
+    },
+    "services": {
+      "type": "string",
+      "required": true
+    },
+    "projects": {
+      "type": "string",
+      "required": true
+    },
+    "news": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "privacy": {
+      "type": "string",
+      "required": true
+    },
+    "standards": {
+      "type": "string",
+      "required": true
+    },
+    "siteSurvey": {
+      "type": "string",
+      "required": true
+    },
+    "serviceBase": {
+      "type": "string",
+      "required": true
+    },
+    "projectBase": {
+      "type": "string",
+      "required": true
+    },
+    "articleBase": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

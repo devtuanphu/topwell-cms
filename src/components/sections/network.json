@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_sections_network",
+  "info": {
+    "displayName": "Mạng lưới"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "mapUrl": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaHref": {
+      "type": "string"
+    }
+  }
+}

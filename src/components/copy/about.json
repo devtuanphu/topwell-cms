@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_copy_about",
+  "info": {
+    "displayName": "Giới thiệu"
+  },
+  "attributes": {
+    "rating": {
+      "type": "string",
+      "required": true
+    },
+    "ratingStars": {
+      "type": "string",
+      "required": true
+    },
+    "ratingCaption": {
+      "type": "string",
+      "required": true
+    },
+    "valueLabel": {
+      "type": "string",
+      "required": true
+    },
+    "valueHref": {
+      "type": "string",
+      "required": true
+    },
+    "readStory": {
+      "type": "string",
+      "required": true
+    },
+    "readingTime": {
+      "type": "string",
+      "required": true
+    },
+    "close": {
+      "type": "string",
+      "required": true
+    },
+    "storyContact": {
+      "type": "string",
+      "required": true
+    },
+    "storyContactHref": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

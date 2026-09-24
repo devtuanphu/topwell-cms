@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_sections_services",
+  "info": {
+    "displayName": "Dịch vụ"
+  },
+  "attributes": {
+    "ctaHref": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "secondaryLabel": {
+      "type": "string"
+    },
+    "secondaryHref": {
+      "type": "string"
+    }
+  }
+}

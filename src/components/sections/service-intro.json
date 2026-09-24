@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_sections_service_intro",
+  "info": {
+    "displayName": "Giới thiệu dịch vụ"
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "body": {
+      "type": "text"
+    },
+    "images": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": true
+    }
+  }
+}

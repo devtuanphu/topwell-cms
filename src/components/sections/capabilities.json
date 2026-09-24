@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_capabilities",
+  "info": {
+    "displayName": "Năng lực"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

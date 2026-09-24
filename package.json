@@ -1,0 +1,36 @@
+{
+  "name": "topwell-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TOP WELL Strapi CMS",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "seed": "node scripts/seed.js",
+    "seed:check": "node scripts/seed.js --check"
+  },
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^8.0.0",
+    "@strapi/plugin-cloud": "5.52.3",
+    "@strapi/plugin-users-permissions": "5.52.3",
+    "@strapi/strapi": "5.52.3",
+    "better-sqlite3": "12.6.2",
+    "pg": "8.18.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.6",
+    "styled-components": "6.3.9"
+  },
+  "engines": {
+    "node": ">=22.0.0 <=26.x.x"
+  },
+  "strapi": {
+    "uuid": "c079a721-6823-4983-a834-76c6cf669039"
+  },
+  "overrides": {
+    "vite": "6.4.3",
+    "postcss": "8.5.28"
+  }
+}

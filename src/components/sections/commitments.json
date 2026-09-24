@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_commitments",
+  "info": {
+    "displayName": "Cam kết"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

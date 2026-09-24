@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_sections_article_body",
+  "info": {
+    "displayName": "Nội dung bài viết"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "imageTag": {
+      "type": "string"
+    },
+    "imageCaption": {
+      "type": "string"
+    },
+    "imageNote": {
+      "type": "string"
+    }
+  }
+}

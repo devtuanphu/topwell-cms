@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_timeline",
+  "info": {
+    "displayName": "Các mốc phát triển"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

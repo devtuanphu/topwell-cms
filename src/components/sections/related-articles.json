@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_sections_related_articles",
+  "info": {
+    "displayName": "Bài viết liên quan"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

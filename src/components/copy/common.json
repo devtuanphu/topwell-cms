@@ -1,0 +1,119 @@
+{
+  "collectionName": "components_copy_common",
+  "info": {
+    "displayName": "Nhãn dùng chung"
+  },
+  "attributes": {
+    "home": {
+      "type": "string",
+      "required": true
+    },
+    "services": {
+      "type": "string",
+      "required": true
+    },
+    "projects": {
+      "type": "string",
+      "required": true
+    },
+    "news": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "readMore": {
+      "type": "string",
+      "required": true
+    },
+    "readNext": {
+      "type": "string",
+      "required": true
+    },
+    "learnMore": {
+      "type": "string",
+      "required": true
+    },
+    "viewService": {
+      "type": "string",
+      "required": true
+    },
+    "projectDetails": {
+      "type": "string",
+      "required": true
+    },
+    "allProjects": {
+      "type": "string",
+      "required": true
+    },
+    "allNews": {
+      "type": "string",
+      "required": true
+    },
+    "allArticles": {
+      "type": "string",
+      "required": true
+    },
+    "loadMore": {
+      "type": "string",
+      "required": true
+    },
+    "all": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "search": {
+      "type": "string",
+      "required": true
+    },
+    "searchPlaceholder": {
+      "type": "string",
+      "required": true
+    },
+    "noResults": {
+      "type": "string",
+      "required": true
+    },
+    "previous": {
+      "type": "string",
+      "required": true
+    },
+    "next": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": "string",
+      "required": true
+    },
+    "previousArticle": {
+      "type": "string",
+      "required": true
+    },
+    "nextArticle": {
+      "type": "string",
+      "required": true
+    },
+    "viewProject": {
+      "type": "string"
+    },
+    "viewGoogleMaps": {
+      "type": "string"
+    },
+    "directions": {
+      "type": "string"
+    },
+    "onlineStatus": {
+      "type": "string"
+    },
+    "view": {
+      "type": "string"
+    }
+  }
+}

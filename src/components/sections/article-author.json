@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_article_author",
+  "info": {
+    "displayName": "Tác giả bài viết"
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.image",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}

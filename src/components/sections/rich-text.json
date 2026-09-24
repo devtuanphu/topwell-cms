@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_rich_texts",
+  "info": {
+    "displayName": "Nội dung tự do (CKEditor)",
+    "icon": "pencil",
+    "description": "Soạn thảo tự do: tiêu đề, đoạn văn, in đậm, danh sách, bảng, ảnh, trích dẫn, video"
+  },
+  "attributes": {
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "collectionName": "components_copy_forms",
+  "info": {
+    "displayName": "Nhãn biểu mẫu"
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "namePlaceholder": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "emailPlaceholder": {
+      "type": "string",
+      "required": true
+    },
+    "subject": {
+      "type": "string",
+      "required": true
+    },
+    "subjectPlaceholder": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "string",
+      "required": true
+    },
+    "messagePlaceholder": {
+      "type": "string",
+      "required": true
+    },
+    "consent": {
+      "type": "string",
+      "required": true
+    },
+    "privacyLabel": {
+      "type": "string",
+      "required": true
+    },
+    "submit": {
+      "type": "string",
+      "required": true
+    },
+    "pending": {
+      "type": "string",
+      "required": true
+    },
+    "success": {
+      "type": "string",
+      "required": true
+    },
+    "failure": {
+      "type": "string",
+      "required": true
+    },
+    "invalid": {
+      "type": "string",
+      "required": true
+    },
+    "invalidField": {
+      "type": "string",
+      "required": true
+    },
+    "tooLong": {
+      "type": "string",
+      "required": true
+    },
+    "rateLimit": {
+      "type": "string",
+      "required": true
+    },
+    "invalidOrigin": {
+      "type": "string",
+      "required": true
+    },
+    "helpTitle": {
+      "type": "string",
+      "required": true
+    },
+    "helpDescription": {
+      "type": "string",
+      "required": true
+    },
+    "eyebrow": {
+      "type": "string",
+      "required": true
+    },
+    "subtitleHighlight": {
+      "type": "string",
+      "required": true
+    },
+    "siteSurvey": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phonePlaceholder": {
+      "type": "string"
+    },
+    "nameShort": {
+      "type": "string"
+    },
+    "emailShort": {
+      "type": "string"
+    },
+    "messageShort": {
+      "type": "string"
+    },
+    "topicsTitle": {
+      "type": "string"
+    },
+    "quoteName": {
+      "type": "string"
+    },
+    "quoteEmail": {
+      "type": "string"
+    },
+    "quoteCompany": {
+      "type": "string"
+    },
+    "quoteService": {
+      "type": "string"
+    },
+    "quoteDate": {
+      "type": "string"
+    },
+    "privacyNotice": {
+      "type": "string"
+    },
+    "quoteSuccess": {
+      "type": "string"
+    }
+  }
+}

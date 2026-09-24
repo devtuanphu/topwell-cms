@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inquirys",
+  "info": {
+    "singularName": "inquiry",
+    "pluralName": "inquiries",
+    "displayName": "Yêu cầu tư vấn"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "subject": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200
+    },
+    "message": {
+      "type": "text",
+      "required": true,
+      "maxLength": 5000
+    },
+    "consent": {
+      "type": "boolean",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "in-progress",
+        "resolved"
+      ],
+      "default": "new"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "preferredDate": {
+      "type": "date"
+    },
+    "topics": {
+      "type": "string"
+    }
+  }
+}
