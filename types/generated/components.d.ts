@@ -298,8 +298,6 @@ export interface SectionsAbout extends Struct.ComponentSchema {
   attributes: {
     badges: Schema.Attribute.Component<'shared.card', true>;
     cards: Schema.Attribute.Component<'shared.card', true>;
-    contactText: Schema.Attribute.String;
-    contactTitle: Schema.Attribute.String;
     ctaHref: Schema.Attribute.String;
     ctaLabel: Schema.Attribute.String;
     description: Schema.Attribute.Text;

@@ -42,12 +42,6 @@
     "ctaHref": {
       "type": "string"
     },
-    "contactTitle": {
-      "type": "string"
-    },
-    "contactText": {
-      "type": "string"
-    },
     "variant": {
       "type": "string"
     },

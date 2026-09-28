@@ -119,8 +119,6 @@ const CONTENT = {
           ],
           ctaLabel: 'Explore services',
           ctaHref: '/dich-vu',
-          contactTitle: 'Contact TOP WELL',
-          contactText: 'Solution consulting & technical support.',
         },
         {
           __component: 'sections.services',
