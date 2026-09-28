@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_metrics_strips",
+  "info": {
+    "displayName": "Dải số liệu nền tối",
+    "description": "Dải nền tối với các con số nổi bật màu vàng"
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  }
+}

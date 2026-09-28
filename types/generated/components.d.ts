@@ -92,6 +92,7 @@ export interface CopyCommon extends Struct.ComponentSchema {
     category: Schema.Attribute.String & Schema.Attribute.Required;
     contact: Schema.Attribute.String & Schema.Attribute.Required;
     directions: Schema.Attribute.String;
+    exploreDetail: Schema.Attribute.String;
     home: Schema.Attribute.String & Schema.Attribute.Required;
     learnMore: Schema.Attribute.String & Schema.Attribute.Required;
     loadMore: Schema.Attribute.String & Schema.Attribute.Required;
@@ -238,6 +239,7 @@ export interface CopyRoutes extends Struct.ComponentSchema {
     projectBase: Schema.Attribute.String & Schema.Attribute.Required;
     projects: Schema.Attribute.String & Schema.Attribute.Required;
     serviceBase: Schema.Attribute.String & Schema.Attribute.Required;
+    serviceGroupBase: Schema.Attribute.String;
     services: Schema.Attribute.String & Schema.Attribute.Required;
     siteSurvey: Schema.Attribute.String & Schema.Attribute.Required;
     standards: Schema.Attribute.String & Schema.Attribute.Required;
@@ -516,7 +518,6 @@ export interface SectionsHeroSlider extends Struct.ComponentSchema {
   };
   attributes: {
     cards: Schema.Attribute.Component<'shared.card', true>;
-    stats: Schema.Attribute.Component<'shared.card', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -529,6 +530,17 @@ export interface SectionsMetrics extends Struct.ComponentSchema {
   attributes: {
     cards: Schema.Attribute.Component<'shared.card', true>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsMetricsStrip extends Struct.ComponentSchema {
+  collectionName: 'components_sections_metrics_strips';
+  info: {
+    description: 'D\u1EA3i n\u1EC1n t\u1ED1i v\u1EDBi c\u00E1c con s\u1ED1 n\u1ED5i b\u1EADt m\u00E0u v\u00E0ng';
+    displayName: 'D\u1EA3i s\u1ED1 li\u1EC7u n\u1EC1n t\u1ED1i';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'shared.card', true>;
   };
 }
 
@@ -589,6 +601,20 @@ export interface SectionsPartners extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     eyebrow: Schema.Attribute.String;
     highlight: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsProcessSteps extends Struct.ComponentSchema {
+  collectionName: 'components_sections_process_steps';
+  info: {
+    description: 'D\u1EA3i th\u1EBB \u0111\u00E1nh s\u1ED1 01\u201304 m\u00F4 t\u1EA3 quy tr\u00ECnh ti\u1EBFp nh\u1EADn v\u00E0 tri\u1EC3n khai';
+    displayName: 'Quy tr\u00ECnh 4 b\u01B0\u1EDBc';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'shared.card', true>;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -713,7 +739,6 @@ export interface SectionsServiceIntro extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Component<'shared.image', false>;
     images: Schema.Attribute.Component<'shared.image', true>;
-    quote: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -793,6 +818,16 @@ export interface SectionsVideoCta extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBullet extends Struct.ComponentSchema {
+  collectionName: 'components_shared_bullets';
+  info: {
+    displayName: 'G\u1EA1ch \u0111\u1EA7u d\u00F2ng';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_card';
   info: {
@@ -806,6 +841,8 @@ export interface SharedCard extends Struct.ComponentSchema {
     icon: Schema.Attribute.Component<'shared.image', false>;
     image: Schema.Attribute.Component<'shared.image', false>;
     label: Schema.Attribute.String;
+    secondaryHref: Schema.Attribute.String;
+    secondaryLabel: Schema.Attribute.String;
     tags: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -885,10 +922,12 @@ declare module '@strapi/strapi' {
       'sections.gallery': SectionsGallery;
       'sections.hero-slider': SectionsHeroSlider;
       'sections.metrics': SectionsMetrics;
+      'sections.metrics-strip': SectionsMetricsStrip;
       'sections.network': SectionsNetwork;
       'sections.news': SectionsNews;
       'sections.page-hero': SectionsPageHero;
       'sections.partners': SectionsPartners;
+      'sections.process-steps': SectionsProcessSteps;
       'sections.project-challenge': SectionsProjectChallenge;
       'sections.project-overview': SectionsProjectOverview;
       'sections.project-process': SectionsProjectProcess;
@@ -903,6 +942,7 @@ declare module '@strapi/strapi' {
       'sections.timeline': SectionsTimeline;
       'sections.values': SectionsValues;
       'sections.video-cta': SectionsVideoCta;
+      'shared.bullet': SharedBullet;
       'shared.card': SharedCard;
       'shared.footer-column': SharedFooterColumn;
       'shared.image': SharedImage;

@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_shared_bullets",
+  "info": {
+    "displayName": "Gạch đầu dòng"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

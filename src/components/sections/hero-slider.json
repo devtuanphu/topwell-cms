@@ -11,11 +11,6 @@
     },
     "title": {
       "type": "string"
-    },
-    "stats": {
-      "type": "component",
-      "component": "shared.card",
-      "repeatable": true
     }
   }
 }

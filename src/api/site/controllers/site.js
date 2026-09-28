@@ -15,7 +15,12 @@ const PAGE_TYPES = [
   'site-settings',
   'footer',
 ];
-const COLLECTIONS = { services: 'service', projects: 'project', articles: 'article' };
+const COLLECTIONS = {
+  services: 'service',
+  projects: 'project',
+  articles: 'article',
+  'service-groups': 'service-group',
+};
 // Derive explicit deep population from the section schemas; no client-controlled query.
 function populateFor(strapi, uid, depth = 0) {
   if (depth > 5) return {};

@@ -36,7 +36,7 @@ Lần đầu chạy với `SEED_DATA=true`, hệ thống nhập nội dung mẫu
 
 **Single Types**: Trang chủ, Trang Giới thiệu, Trang Dịch vụ, Trang Dự án, Trang Tin tức, Trang Liên hệ, Trang Chính sách bảo mật, Trang Tiêu chuẩn, Cấu hình chung, Đầu trang, Chân trang, Cài đặt website.
 
-**Collection Types**: Dịch vụ (10), Dự án (6), Bài viết (7), Yêu cầu tư vấn (dữ liệu form khách gửi).
+**Collection Types**: Nhóm dịch vụ (2), Dịch vụ (10), Dự án (6), Bài viết (7), Yêu cầu tư vấn (dữ liệu form khách gửi).
 
 Mỗi trang có Dynamic Zone `sections` ghép từ các component trong `src/components/sections`. Bài viết dùng thêm component **Nội dung tự do (CKEditor)** để biên tập viên soạn thân bài tự do.
 
@@ -59,7 +59,18 @@ npm run seed:check              # kiểm tra dữ liệu và ảnh trước khi 
 npm run seed                    # chỉ bổ sung bản ghi còn thiếu
 npm run seed -- --replace       # nạp lại nội dung thuộc bộ seed
 npm run seed -- --replace --only=articles   # chỉ nạp lại một nhóm
+npm run seed -- --only=serviceGroups        # nhập nhóm dịch vụ còn thiếu
 ```
+
+## Cập nhật theo bản Figma V1 (3)
+
+```bash
+npm run migrate:v3
+```
+
+Sửa dữ liệu đã có cho khớp thiết kế mới: trang Dịch vụ chuyển sang thẻ nhóm dịch vụ, trang
+Giới thiệu bỏ khối Ban lãnh đạo, điền hai chuỗi giao diện mới nếu còn trống. Lệnh không ghi đè
+nội dung biên tập viên đã nhập. Chi tiết thay đổi: `design-reference/figma-v3/CHANGES.md` trong repo gốc.
 
 Dừng Strapi trước khi chạy CLI seed, nhất là khi dùng SQLite. Sao lưu database trước khi dùng `--replace` trên dữ liệu đã biên tập. Lệnh không xóa tài khoản admin hay Yêu cầu tư vấn.
 

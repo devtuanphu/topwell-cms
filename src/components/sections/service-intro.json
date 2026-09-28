@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "quote": {
-      "type": "text"
-    },
     "body": {
       "type": "text"
     },

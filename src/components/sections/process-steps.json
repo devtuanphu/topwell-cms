@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_process_steps",
+  "info": {
+    "displayName": "Quy trình 4 bước",
+    "description": "Dải thẻ đánh số 01–04 mô tả quy trình tiếp nhận và triển khai"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  }
+}

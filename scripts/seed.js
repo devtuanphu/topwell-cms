@@ -54,12 +54,6 @@ const CONTENT = {
               label: 'View our projects',
             },
           ],
-          stats: [
-            { title: '45+', description: 'Satisfied clients' },
-            { title: '150+', description: 'Countries covered' },
-            { title: '98.7%', description: 'On-time delivery' },
-            { title: '24/7', description: 'Global support' },
-          ],
         },
         {
           __component: 'sections.about',
@@ -231,6 +225,8 @@ const CONTENT = {
           __component: 'sections.about',
           variant: 'company',
           eyebrow: 'WHY CHOOSE TOP WELL',
+          // Figma v3 ghi chú "chèn logo": ô trống phía trên tiêu đề dành cho logo đối tác.
+          logo: { $file: 'fv2-79973b4b.png', alt: 'Partner logo' },
           title: 'VM International Trading Company',
           description: 'Responsible for international trade and representation in Vietnam.',
           image: { $file: 'fv2-dc711df0.jpg', alt: 'Container ship sailing on the open ocean' },
@@ -314,45 +310,6 @@ const CONTENT = {
           ],
         },
         {
-          __component: 'sections.team',
-          eyebrow: 'OUR EXPERTS',
-          title: 'Leadership & senior technical advisors',
-          description:
-            'Industry specialists from global manufacturing groups, bringing precision and discipline to every project.',
-          cards: [
-            {
-              eyebrow: '20+ YRS EXP',
-              title: 'Tran Minh Hoang',
-              label: 'Chief Executive Officer (CEO)',
-              description:
-                'Former technical director at a Taiwanese tooling group, specialising in integrated industrial supply-chain strategy.',
-              tags: 'M.Eng. Automation',
-              image: { $file: 'fv2-e14082d3.jpg', alt: 'Tran Minh Hoang' },
-              icon: { $file: 'fv2-1923b9a5.svg', alt: 'Profile icon' },
-            },
-            {
-              eyebrow: 'EX-TOYOTA',
-              title: 'Kenji Takahashi',
-              label: 'Chief Technical Advisor (CTO)',
-              description:
-                'Tolerance-control and multi-axis CNC optimisation specialist with more than 25 years advising Japanese machining plants.',
-              tags: 'Lean Six Sigma Master Black Belt',
-              image: { $file: 'fv2-0cf1e2df.jpg', alt: 'Kenji Takahashi' },
-              icon: { $file: 'fv2-83d6b2a4.svg', alt: 'Certified icon' },
-            },
-            {
-              eyebrow: 'GLOBAL SCM',
-              title: 'Nguyen Phuong Thao',
-              label: 'Director of Supply Chain & External Affairs',
-              description:
-                'Runs the emergency spare-parts warehouse network and connects directly with international equipment suppliers.',
-              tags: 'APICS CSCP Certified',
-              image: { $file: 'fv2-18114dc9.jpg', alt: 'Nguyen Phuong Thao' },
-              icon: { $file: 'fv2-0fb11988.svg', alt: 'Archive icon' },
-            },
-          ],
-        },
-        {
           __component: 'sections.cta',
           eyebrow: 'TAKE ACTION FOR WHAT MATTERS',
           title: 'Partner with TOP WELL to break through your production capacity.',
@@ -398,7 +355,9 @@ const CONTENT = {
           __component: 'sections.services',
           title: 'Synchronised operations – international-standard processes',
           eyebrow: 'SERVICE ECOSYSTEM',
-          variant: 'logistics',
+          description:
+            'We work with global partners to optimise supply chains, smart warehousing infrastructure and sustainable operating performance.',
+          variant: 'groups',
         },
         {
           __component: 'sections.video-cta',
@@ -3123,11 +3082,6 @@ const CONTENT = {
       label: 'Book your free quote',
       href: '/lien-he',
     },
-    workingHours: [
-      { title: 'Monday - Wednesday:', description: '08:30 AM to 09:30 PM' },
-      { title: 'Thursday - Friday:', description: '10:00 AM to 08:30 PM' },
-      { title: 'Saturday & Sunday:', description: '08:00 AM to 01:00 PM' },
-    ],
     navigation: [
       {
         title: 'Home',
@@ -3375,6 +3329,185 @@ CONTENT['site-settings'] = {
     ogTagline: 'Precision \u00b7 Technology \u00b7 Logistics',
   },
 };
+// Website Redesign V1 (3): the services page lists two service groups; each group has its own page
+// with the service grid, the four-step process and the technical metrics strip.
+CONTENT.serviceGroups = [
+  {
+    title: 'Equipment & solutions',
+    slug: 'thiet-bi-va-giai-phap',
+    key: 'industrial',
+    eyebrow: 'COMPLETE & OPTIMISED',
+    summary:
+      'Production lines, machine tools, moulds and technical services from international manufacturers, with commissioning, training and after-sales support in Vietnam.',
+    image: { $file: 'fv2-8c9dac4c.jpg', alt: 'Smart automated production line by TOP WELL' },
+    icon: { $file: 'fv2-835ed70e.svg', alt: 'Equipment icon' },
+    badge: '★ 4.9/5',
+    badgeNote: 'Trusted rating',
+    features: [
+      { title: 'Japanese & European standards' },
+      { title: 'On-site commissioning' },
+      { title: 'Genuine spare parts' },
+      { title: 'Response under 2 hours' },
+    ],
+    ctaLabel: 'Explore details',
+    bannerImage: { $file: 'fv2-abbe3331.png', alt: 'TOP WELL technician at work' },
+    seo: {
+      metaTitle: 'Equipment & solutions | TOP WELL International',
+      metaDescription:
+        'Production lines, machine tools, moulds and technical services delivered and supported by TOP WELL in Vietnam.',
+      noIndex: false,
+      keywords: 'industrial equipment, production lines, moulds, technical services',
+    },
+    sections: [
+      {
+        __component: 'sections.services',
+        eyebrow: 'SERVICE ECOSYSTEM',
+        title: 'Equipment and technical solutions',
+      },
+      {
+        __component: 'sections.process-steps',
+        eyebrow: 'DELIVERY WORKFLOW',
+        title: 'Technical intake and rollout process',
+        description:
+          'Every milestone is controlled, from feasibility review to stable handover under strict quality standards.',
+        cards: [
+          {
+            eyebrow: 'INPUT ASSESSMENT STAGE',
+            title: 'Survey & requirements',
+            description:
+              'We receive CAD/STEP drawings, survey the shop floor in person and measure load parameters within 24 hours.',
+          },
+          {
+            eyebrow: 'DESIGN & ROI OPTIMISATION',
+            title: 'DFM & solution simulation',
+            description:
+              'Design-for-manufacturing analysis, cycle-time calculation and a quotation for the feasible option.',
+          },
+          {
+            eyebrow: 'MANUFACTURING & FACTORY TESTING',
+            title: 'Production & FAT testing',
+            description:
+              'Manufacturing, assembly and factory acceptance testing before the equipment leaves our workshop.',
+          },
+          {
+            eyebrow: 'HANDOVER & OPERATIONS SUPPORT',
+            title: 'SAT handover & O&M SOP',
+            description:
+              'Installation at your plant (SAT), SOP training for your engineers and a scheduled maintenance commitment.',
+          },
+        ],
+      },
+      {
+        __component: 'sections.metrics-strip',
+        cards: [
+          {
+            title: '98.5%',
+            eyebrow: 'Spare parts in stock',
+            description: 'A local buffer warehouse for immediate replacement without line downtime.',
+          },
+          {
+            title: '< 2h',
+            eyebrow: 'Emergency technical response',
+            description: 'Electro-mechanical technicians on site to handle faults 24/7.',
+          },
+          {
+            title: '±0.002mm',
+            eyebrow: 'Micro precision',
+            description: 'Positional tolerance and repeatability on high-end 5-axis CNC machines.',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Logistics & supply chain',
+    slug: 'logistics-va-chuoi-cung-ung',
+    key: 'logistics',
+    eyebrow: 'AUTOMATED & CONNECTED',
+    summary:
+      'Multimodal freight by sea, air, rail and road, combined with smart warehousing, distribution and customs clearance for industrial cargo.',
+    image: { $file: 'fv2-dc711df0.jpg', alt: 'Container ship sailing on the open ocean' },
+    icon: { $file: 'fv2-28f3a07f.svg', alt: 'Components icon' },
+    badge: '★ 4.9/5',
+    badgeNote: 'Trusted rating',
+    features: [
+      { title: 'Coverage in 150+ countries' },
+      { title: 'GPS tracking 24/7' },
+      { title: 'Fast customs clearance' },
+      { title: 'On-time rate 98.7%' },
+    ],
+    ctaLabel: 'Explore details',
+    bannerImage: { $file: 'fv2-abbe3331.png', alt: 'TOP WELL technician at work' },
+    seo: {
+      metaTitle: 'Logistics & supply chain | TOP WELL International',
+      metaDescription:
+        'Multimodal freight, smart warehousing, distribution and customs clearance for industrial equipment and machinery.',
+      noIndex: false,
+      keywords: 'logistics, freight, warehousing, customs clearance, supply chain',
+    },
+    sections: [
+      {
+        __component: 'sections.services',
+        eyebrow: 'SERVICE ECOSYSTEM',
+        title: 'Logistics and supply-chain services',
+      },
+      {
+        __component: 'sections.process-steps',
+        eyebrow: 'DELIVERY WORKFLOW',
+        title: 'How a shipment is planned and delivered',
+        description:
+          'From cargo survey to final handover, every stage is tracked and reported transparently.',
+        cards: [
+          {
+            eyebrow: 'CARGO ASSESSMENT',
+            title: 'Survey & routing plan',
+            description:
+              'We review dimensions, weight and timing, then propose the transport mode and route.',
+          },
+          {
+            eyebrow: 'DOCUMENTS & CUSTOMS',
+            title: 'Paperwork & clearance',
+            description:
+              'Import and export documents, HS codes and clearance handled by our in-house team.',
+          },
+          {
+            eyebrow: 'TRANSPORT & MONITORING',
+            title: 'Shipping & tracking',
+            description:
+              'Multimodal transport with online tracking and proactive updates at every milestone.',
+          },
+          {
+            eyebrow: 'WAREHOUSE & DISTRIBUTION',
+            title: 'Storage & final delivery',
+            description:
+              'Smart warehousing, inventory control and delivery to the plant on the agreed date.',
+          },
+        ],
+      },
+      {
+        __component: 'sections.metrics-strip',
+        cards: [
+          {
+            title: '150+',
+            eyebrow: 'Countries covered',
+            description: 'A partner network spanning the main industrial trade lanes.',
+          },
+          {
+            title: '98.7%',
+            eyebrow: 'On-time delivery',
+            description: 'Measured across industrial and oversized cargo shipments.',
+          },
+          {
+            title: '24/7',
+            eyebrow: 'Shipment tracking',
+            description: 'Online monitoring and a coordinator reachable at any hour.',
+          },
+        ],
+      },
+    ],
+  },
+];
+
 CONTENT.footer = {
   logo: CONTENT.global.logo,
   logoHref: '/',
@@ -3660,13 +3793,11 @@ CONTENT.footer.socialLinks = [
 ];
 
 // Website Redesign V1 (Figma "TOP WELL — Website Redesign V1"): service detail pages use one
-// rich intro block (image, headline, quote, two photos, body) followed by the FAQ accordion.
+// rich intro block (image, headline, two photos, body) followed by the FAQ accordion.
 const SERVICE_V1 = {
   'production-lines': {
     headline: 'Optimising productivity with Industry 4.0 automation',
     lead: 'TOP WELL International designs, builds and integrates smart automated production lines. We work with FDI groups and leading manufacturers to optimise production through multi-axis industrial robots, AGV/AMR guided vehicles, heavy-duty pallet conveyors and automated assembly and test modules.',
-    quote:
-      '"Lines are controlled in sync and monitored in real time through a SCADA/MES platform connected directly to industrial PLCs (Siemens, Mitsubishi, Omron). TOP WELL solutions help factories reduce labour cost and technical errors, reach OEE above 92% and meet the demanding standards of Industry 4.0."',
     second:
       'Every automated line delivered by TOP WELL goes through rigorous load testing, with on-schedule handover and stable operating indicators before commercial production begins.',
     images: [
@@ -3677,48 +3808,30 @@ const SERVICE_V1 = {
   },
   machinery: {
     headline: 'Selecting the right machinery for every process',
-    quote:
-      '"We match CNC machining, forming and measurement equipment to the part, the material and the required tolerance, then verify capability before the machine reaches your floor."',
   },
   'spare-parts-molds': {
     headline: 'Precision tooling and compatible spare parts',
-    quote:
-      '"Mold design, trial runs and dimensional reports are agreed up front, so replacement parts and tooling fit first time and keep your lines running."',
   },
   'technical-services': {
     headline: 'Commissioning, calibration and maintenance you can rely on',
-    quote:
-      '"Our engineers document every calibration and inspection, train your operators and stay available for preventive maintenance after handover."',
   },
   'van-chuyen-hang-hoa': {
     headline: 'End-to-end freight coordination',
-    quote:
-      '"One team plans the route, prepares documents and tracks every milestone, so your cargo moves on time with a single point of contact."',
   },
   'van-tai-duong-bien': {
     headline: 'Reliable ocean freight for international cargo',
-    quote:
-      '"Route optimisation and real-time tracking help us keep FCL and LCL shipments on schedule, with documentation checked before departure."',
   },
   'van-tai-hang-khong': {
     headline: 'Air freight when time matters most',
-    quote:
-      '"We book capacity, prepare dangerous-goods and customs documents and coordinate pickup and delivery for urgent, high-value shipments."',
   },
   'van-tai-duong-sat': {
     headline: 'Cost-effective rail freight across the region',
-    quote:
-      '"Rail combines predictable transit times with lower cost per tonne for heavy and bulky cargo moving between Vietnam and China."',
   },
   'phan-phoi-kho-hang': {
     headline: 'Smart warehousing and distribution',
-    quote:
-      '"Inventory, picking and last-mile delivery are managed in one system, giving you clear stock visibility and dependable order fulfilment."',
   },
   'thu-tuc-hai-quan': {
     headline: 'Customs clearance without surprises',
-    quote:
-      '"Our specialists classify goods, prepare declarations and liaise with authorities to clear shipments quickly and compliantly."',
   },
 };
 const LOGISTICS_V1 = {
@@ -3754,7 +3867,6 @@ CONTENT.services.forEach((service) => {
       description: [v1.lead || intro.description, v1.second || commitments?.description]
         .filter(Boolean)
         .join('\n\n'),
-      quote: v1.quote,
       image: v1.image || service.image || intro.image,
       images: v1.images || (gallery ? gallery.cards.slice(0, 2).map((c) => c.image) : DETAIL_PHOTOS),
       body: describe(commitments?.cards) || describe(features?.cards),
@@ -3803,7 +3915,7 @@ function validateContent() {
     for (const [name, item] of Object.entries(value)) visit(item, name, `${trail}.${name}`);
   }
   visit(CONTENT);
-  for (const group of ['services', 'projects', 'articles']) {
+  for (const group of ['serviceGroups', 'services', 'projects', 'articles']) {
     const slugs = CONTENT[group].map((item) => item.slug);
     if (new Set(slugs).size !== slugs.length) throw new Error(`Duplicate slug in ${group}`);
   }
@@ -3811,6 +3923,7 @@ function validateContent() {
     pages: Object.keys(CONTENT.pages).length,
     global: 1,
     header: 1,
+    serviceGroups: CONTENT.serviceGroups.length,
     services: CONTENT.services.length,
     projects: CONTENT.projects.length,
     articles: CONTENT.articles.length,
@@ -4132,6 +4245,7 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
     );
     if (code !== SOURCE_LOCALE) missing[code] = localized.missing;
     for (const [group, name] of [
+      ['serviceGroups', 'service-group'],
       ['services', 'service'],
       ['projects', 'project'],
       ['articles', 'article'],
@@ -4205,7 +4319,7 @@ if (require.main === module) {
         await seed(app, {
           replace: args.has('--replace'),
           upgradeUi: args.has('--ui-upgrade'),
-          // e.g. --only=articles,services (groups: services, projects, articles, pages, global, header, site-settings, footer)
+          // e.g. --only=articles,services (groups: serviceGroups, services, projects, articles, pages, global, header, site-settings, footer)
           only: onlyArg ? new Set(onlyArg.slice(7).split(',')) : null,
         });
       } finally {

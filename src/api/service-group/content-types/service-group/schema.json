@@ -1,10 +1,10 @@
 {
-  "kind": "singleType",
-  "collectionName": "globals",
+  "kind": "collectionType",
+  "collectionName": "service_groups",
   "info": {
-    "singularName": "global",
-    "pluralName": "globals",
-    "displayName": "Cấu hình chung"
+    "singularName": "service-group",
+    "pluralName": "service-groups",
+    "displayName": "Nhóm dịch vụ"
   },
   "options": {
     "draftAndPublish": true
@@ -17,39 +17,38 @@
   "attributes": {
     "title": {
       "type": "string",
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "logo": {
-      "type": "component",
-      "component": "shared.image",
-      "repeatable": false,
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "description": {
-      "type": "text",
+    "key": {
+      "type": "enumeration",
+      "enum": [
+        "industrial",
+        "logistics"
+      ],
+      "required": true,
+      "default": "industrial",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "email": {
-      "type": "email",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "phone": {
+    "eyebrow": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -57,7 +56,7 @@
         }
       }
     },
-    "address": {
+    "summary": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
@@ -65,7 +64,7 @@
         }
       }
     },
-    "supportImage": {
+    "image": {
       "type": "component",
       "component": "shared.image",
       "repeatable": false,
@@ -75,10 +74,44 @@
         }
       }
     },
-    "navigation": {
+    "icon": {
       "type": "component",
-      "component": "shared.card",
+      "component": "shared.image",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "badge": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "badgeNote": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "features": {
+      "type": "component",
+      "component": "shared.bullet",
       "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ctaLabel": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -95,26 +128,28 @@
         }
       }
     },
-    "supportEmail": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "supportPhone": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "promo": {
+    "seo": {
       "type": "component",
-      "component": "shared.card",
+      "component": "shared.seo",
       "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.page-hero",
+        "sections.services",
+        "sections.process-steps",
+        "sections.metrics-strip",
+        "sections.faq",
+        "sections.gallery",
+        "sections.video-cta",
+        "sections.cta"
+      ],
       "pluginOptions": {
         "i18n": {
           "localized": true
