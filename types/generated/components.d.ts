@@ -582,6 +582,15 @@ export interface SectionsNews extends Struct.ComponentSchema {
     ctaHref: Schema.Attribute.String;
     ctaLabel: Schema.Attribute.String;
     eyebrow: Schema.Attribute.String;
+    limit: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 12;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<3>;
     promo: Schema.Attribute.Component<'shared.card', false>;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.String;
@@ -688,6 +697,14 @@ export interface SectionsProjects extends Struct.ComponentSchema {
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
+    limit: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 12;
+          min: 1;
+        },
+        number
+      >;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.String;
   };
@@ -762,7 +779,18 @@ export interface SectionsServices extends Struct.ComponentSchema {
     ctaHref: Schema.Attribute.String;
     ctaLabel: Schema.Attribute.String;
     eyebrow: Schema.Attribute.String;
+    group: Schema.Attribute.Enumeration<['industrial', 'logistics', 'all']> &
+      Schema.Attribute.DefaultTo<'industrial'>;
     highlight: Schema.Attribute.String;
+    limit: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 12;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<3>;
     secondaryHref: Schema.Attribute.String;
     secondaryLabel: Schema.Attribute.String;
     title: Schema.Attribute.String;

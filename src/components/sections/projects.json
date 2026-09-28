@@ -12,6 +12,11 @@
     },
     "variant": {
       "type": "string"
+    },
+    "limit": {
+      "type": "integer",
+      "min": 1,
+      "max": 12
     }
   }
 }

@@ -132,6 +132,21 @@ async function migrate(strapi) {
       let touched = false;
       const heroSource = heroSection(code);
       for (const section of sections) {
+        // Số mục hiển thị và nhóm dịch vụ trước đây gán cứng trong code.
+        if (section.__component === 'sections.services' && section.variant === 'compact') {
+          if (!section.group) {
+            section.group = 'industrial';
+            touched = true;
+          }
+          if (!section.limit) {
+            section.limit = 3;
+            touched = true;
+          }
+        }
+        if (section.__component === 'sections.news' && !section.limit) {
+          section.limit = 3;
+          touched = true;
+        }
         if (section.__component !== 'sections.hero-slider') continue;
         if (!section.slideSeconds && heroSource) {
           section.slideSeconds = heroSource.slideSeconds;
