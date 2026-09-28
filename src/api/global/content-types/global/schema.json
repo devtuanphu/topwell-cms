@@ -75,16 +75,6 @@
         }
       }
     },
-    "navigation": {
-      "type": "component",
-      "component": "shared.card",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "bannerImage": {
       "type": "component",
       "component": "shared.image",

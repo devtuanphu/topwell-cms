@@ -38,16 +38,6 @@
         }
       }
     },
-    "navigation": {
-      "type": "component",
-      "component": "shared.card",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "buttonLabel": {
       "type": "string",
       "required": true,
