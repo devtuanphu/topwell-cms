@@ -10,17 +10,49 @@
  *
  * Chạy: npm run migrate:v3
  */
+const crypto = require('node:crypto');
+const fs = require('node:fs');
+const path = require('node:path');
 const { LOCALES } = require('../src/locales');
 const { CONTENT, localizeContent } = require('./seed');
 
+/**
+ * Nhãn đầu mục bản mock trước đây là một câu dài đặt dưới tiêu đề. Ảnh tham chiếu trong
+ * Figma (191:1564) dùng nhãn ngắn viết hoa đặt trên tiêu đề, nên các câu này được thay lại.
+ */
+const LEGACY_EYEBROWS = new Set([
+  'Connecting smart factories, logistics hubs and the mechanical supply chain.',
+  'Multi-axis CNC, automated lines and precision tooling from leading manufacturers.',
+  'Sea, air, rail and road freight with smart warehousing across 150+ countries.',
+  'International equipment partners and engineers with you from survey to handover.',
+  'Kết nối nhà máy thông minh, logistics hub và chuỗi cung ứng cơ khí.',
+  'Máy CNC đa trục, dây chuyền tự động và khuôn mẫu chính xác từ các nhà sản xuất hàng đầu.',
+  'Vận tải biển, hàng không, đường sắt và đường bộ cùng kho thông minh tại hơn 150 quốc gia.',
+  'Đối tác thiết bị quốc tế và đội ngũ kỹ sư đồng hành từ khảo sát đến bàn giao.',
+  '连接智能工厂、物流枢纽与机械供应链。',
+  '来自一流制造商的多轴 CNC、自动化产线与精密模具。',
+  '海运、空运、铁路与公路运输，并在 150 多个国家提供智能仓储。',
+  '国际设备伙伴与工程师团队，从勘察到交付全程相伴。',
+]);
+
+/** Tìm ảnh đã có trong Media Library theo tên mà bộ seed đặt (không upload lại). */
+async function findSeedMedia(strapi, file) {
+  const filepath = path.join(process.env.SEED_ASSETS_DIR || 'seed-assets', file);
+  if (!fs.existsSync(filepath)) return null;
+  const digest = crypto.createHash('sha256').update(fs.readFileSync(filepath)).digest('hex');
+  const name = `topwell-seed-${digest}${path.extname(filepath).toLowerCase()}`;
+  const found = await strapi.db.query('plugin::upload.file').findOne({ where: { name } });
+  return found ? found.id : null;
+}
+
 /** Nội dung mẫu cho banner trang chủ, lấy từ bộ seed và khớp theo link của nút chính. */
-function heroCopy(code) {
+function heroSection(code) {
   const localized = localizeContent(CONTENT, code);
-  const content = localized.content || localized;
-  const hero = content.pages['home-page'].sections.find(
-    (s) => s.__component === 'sections.hero-slider',
-  );
-  return new Map((hero?.cards || []).map((card) => [card.href, card]));
+  const tree = localized.content || localized;
+  return tree.pages['home-page'].sections.find((s) => s.__component === 'sections.hero-slider');
+}
+function heroCopy(code) {
+  return new Map((heroSection(code)?.cards || []).map((card) => [card.href, card]));
 }
 
 async function migrate(strapi) {
@@ -98,12 +130,24 @@ async function migrate(strapi) {
       const sections = strip(homePage.sections || []);
       const copy = heroCopy(code);
       let touched = false;
+      const heroSource = heroSection(code);
       for (const section of sections) {
         if (section.__component !== 'sections.hero-slider') continue;
+        if (!section.reviewLabel && heroSource) {
+          section.reviewRating = heroSource.reviewRating;
+          section.reviewLabel = heroSource.reviewLabel;
+          const ids = [];
+          for (const avatar of heroSource.reviewAvatars || []) {
+            const id = await findSeedMedia(strapi, avatar.$file);
+            if (id) ids.push({ media: id, alt: avatar.alt });
+          }
+          if (ids.length) section.reviewAvatars = ids;
+          touched = true;
+        }
         for (const card of section.cards || []) {
           const source = copy.get(card.href);
           if (!source) continue;
-          if (!card.eyebrow && source.eyebrow) {
+          if ((!card.eyebrow || LEGACY_EYEBROWS.has(card.eyebrow)) && source.eyebrow) {
             card.eyebrow = source.eyebrow;
             touched = true;
           }

@@ -518,6 +518,9 @@ export interface SectionsHeroSlider extends Struct.ComponentSchema {
   };
   attributes: {
     cards: Schema.Attribute.Component<'shared.card', true>;
+    reviewAvatars: Schema.Attribute.Component<'shared.image', true>;
+    reviewLabel: Schema.Attribute.String;
+    reviewRating: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
