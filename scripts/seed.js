@@ -25,6 +25,9 @@ const CONTENT = {
               image: { $file: 'fv2-e5b8d05f.jpg', alt: 'Freight truck on a coastal highway at sunset' },
               href: '/lien-he',
               label: 'Contact us',
+              eyebrow: 'Connecting smart factories, logistics hubs and the mechanical supply chain.',
+              secondaryLabel: 'Explore our services',
+              secondaryHref: '/dich-vu',
             },
             {
               title: 'Advanced machinery. Better production.',
@@ -34,6 +37,9 @@ const CONTENT = {
               image: { $file: 'fv2-8c9dac4c.jpg', alt: 'Automated production line with industrial robots' },
               href: '/dich-vu/production-lines',
               label: 'Explore our solutions',
+              eyebrow: 'Multi-axis CNC, automated lines and precision tooling from leading manufacturers.',
+              secondaryLabel: 'Request a quote',
+              secondaryHref: '/lien-he',
             },
             {
               title: 'Run global logistics seamlessly and safely.',
@@ -43,6 +49,9 @@ const CONTENT = {
               image: { $file: 'fv2-dc711df0.jpg', alt: 'Container ship sailing on the open ocean' },
               href: '/dich-vu/phan-phoi-kho-hang',
               label: 'Explore logistics',
+              eyebrow: 'Sea, air, rail and road freight with smart warehousing across 150+ countries.',
+              secondaryLabel: 'Talk to an expert',
+              secondaryHref: '/lien-he',
             },
             {
               title: 'Sustainable connections. Global partnerships.',
@@ -52,6 +61,9 @@ const CONTENT = {
               image: { $file: 'fv2-c006e544.jpg', alt: 'Container port at night' },
               href: '/du-an',
               label: 'View our projects',
+              eyebrow: 'International equipment partners and engineers with you from survey to handover.',
+              secondaryLabel: 'About TOP WELL',
+              secondaryHref: '/ve-chung-toi',
             },
           ],
         },
@@ -4268,7 +4280,7 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
   return stats;
 }
 
-module.exports = { CONTENT, seed, validateContent };
+module.exports = { CONTENT, seed, validateContent, localizeContent };
 
 if (require.main === module) {
   (async () => {

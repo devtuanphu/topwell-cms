@@ -11,9 +11,20 @@
  * Chạy: npm run migrate:v3
  */
 const { LOCALES } = require('../src/locales');
+const { CONTENT, localizeContent } = require('./seed');
+
+/** Nội dung mẫu cho banner trang chủ, lấy từ bộ seed và khớp theo link của nút chính. */
+function heroCopy(code) {
+  const localized = localizeContent(CONTENT, code);
+  const content = localized.content || localized;
+  const hero = content.pages['home-page'].sections.find(
+    (s) => s.__component === 'sections.hero-slider',
+  );
+  return new Map((hero?.cards || []).map((card) => [card.href, card]));
+}
 
 async function migrate(strapi) {
-  const changes = { servicesPage: 0, aboutPage: 0, siteSettings: 0 };
+  const changes = { servicesPage: 0, aboutPage: 0, siteSettings: 0, homePage: 0 };
   // Chuỗi mới của bản V1 (3); chỉ điền khi ô còn trống.
   const NEW_COPY = {
     vi: { serviceGroupBase: '/dich-vu/nhom/', exploreDetail: 'Khám phá chi tiết' },
@@ -74,6 +85,43 @@ async function migrate(strapi) {
           status: 'published',
         });
         changes.servicesPage++;
+      }
+    }
+
+    // Banner trang chủ: điền dòng chữ vàng và nút phụ của thiết kế mới vào các ô còn trống.
+    const home = strapi.documents('api::home-page.home-page');
+    const homePage = await home.findFirst({
+      locale: code,
+      populate: populateSections('api::home-page.home-page'),
+    });
+    if (homePage) {
+      const sections = strip(homePage.sections || []);
+      const copy = heroCopy(code);
+      let touched = false;
+      for (const section of sections) {
+        if (section.__component !== 'sections.hero-slider') continue;
+        for (const card of section.cards || []) {
+          const source = copy.get(card.href);
+          if (!source) continue;
+          if (!card.eyebrow && source.eyebrow) {
+            card.eyebrow = source.eyebrow;
+            touched = true;
+          }
+          if (!card.secondaryLabel && source.secondaryLabel) {
+            card.secondaryLabel = source.secondaryLabel;
+            card.secondaryHref = card.secondaryHref || source.secondaryHref;
+            touched = true;
+          }
+        }
+      }
+      if (touched) {
+        await home.update({
+          documentId: homePage.documentId,
+          locale: code,
+          data: { sections },
+          status: 'published',
+        });
+        changes.homePage++;
       }
     }
 
