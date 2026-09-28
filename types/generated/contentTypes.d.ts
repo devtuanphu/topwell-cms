@@ -872,6 +872,12 @@ export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    menu: Schema.Attribute.Component<'shared.nav-item', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     navigation: Schema.Attribute.Component<'shared.card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

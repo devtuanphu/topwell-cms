@@ -56,7 +56,7 @@ function heroCopy(code) {
 }
 
 async function migrate(strapi) {
-  const changes = { servicesPage: 0, aboutPage: 0, siteSettings: 0, homePage: 0 };
+  const changes = { servicesPage: 0, aboutPage: 0, siteSettings: 0, homePage: 0, header: 0 };
   // Chuỗi mới của bản V1 (3); chỉ điền khi ô còn trống.
   const NEW_COPY = {
     vi: { serviceGroupBase: '/dich-vu/nhom/', exploreDetail: 'Khám phá chi tiết' },
@@ -185,6 +185,30 @@ async function migrate(strapi) {
           status: 'published',
         });
         changes.homePage++;
+      }
+    }
+
+    // Thanh menu: chuyển danh sách điều hướng cũ sang trường mới có menu con.
+    const header = strapi.documents('api::header.header');
+    const headerDoc = await header.findFirst({
+      locale: code,
+      populate: { navigation: true, menu: { populate: { links: true } } },
+    });
+    if (headerDoc && !(headerDoc.menu || []).length) {
+      const source = { '/dich-vu': 'services', '/du-an': 'projects' };
+      const menu = strip(headerDoc.navigation || []).map((item) => ({
+        title: item.title,
+        href: item.href,
+        source: source[item.href] || 'none',
+      }));
+      if (menu.length) {
+        await header.update({
+          documentId: headerDoc.documentId,
+          locale: code,
+          data: { menu },
+          status: 'published',
+        });
+        changes.header = (changes.header || 0) + 1;
       }
     }
 

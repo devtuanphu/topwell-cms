@@ -908,6 +908,23 @@ export interface SharedImage extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedNavItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_nav_items';
+  info: {
+    description: 'M\u1ED9t m\u1EE5c tr\u00EAn thanh menu, c\u00F3 th\u1EC3 k\u00E8m menu con';
+    displayName: 'M\u1EE5c menu';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    links: Schema.Attribute.Component<'shared.card', true>;
+    source: Schema.Attribute.Enumeration<
+      ['none', 'manual', 'services', 'projects', 'service-groups']
+    > &
+      Schema.Attribute.DefaultTo<'none'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seo';
   info: {
@@ -984,6 +1001,7 @@ declare module '@strapi/strapi' {
       'shared.card': SharedCard;
       'shared.footer-column': SharedFooterColumn;
       'shared.image': SharedImage;
+      'shared.nav-item': SharedNavItem;
       'shared.seo': SharedSeo;
     }
   }

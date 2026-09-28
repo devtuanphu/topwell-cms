@@ -3139,10 +3139,20 @@ const CONTENT = {
   },
 };
 
+// Thanh menu: mục Dịch vụ và Dự án mở menu con lấy từ bộ sưu tập tương ứng.
+const MENU_SOURCE = {
+  '/dich-vu': 'services',
+  '/du-an': 'projects',
+};
 CONTENT.header = {
   logo: { $file: 'fv2-79973b4b.png', alt: 'TOP WELL International logo' },
   logoAlt: 'TOP WELL International logo',
   navigation: CONTENT.global.navigation,
+  menu: CONTENT.global.navigation.map((item) => ({
+    title: item.title,
+    href: item.href,
+    source: MENU_SOURCE[item.href] || 'none',
+  })),
   buttonLabel: 'Request a quote',
   buttonHref: '/lien-he',
 };
