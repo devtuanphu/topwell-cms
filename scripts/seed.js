@@ -16,6 +16,7 @@ const CONTENT = {
         {
           __component: 'sections.hero-slider',
           title: 'Smart industry. Connected logistics.',
+          slideSeconds: 5,
           reviewRating: '5',
           reviewLabel: '4k+ reviews',
           reviewAvatars: [

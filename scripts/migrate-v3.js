@@ -133,6 +133,10 @@ async function migrate(strapi) {
       const heroSource = heroSection(code);
       for (const section of sections) {
         if (section.__component !== 'sections.hero-slider') continue;
+        if (!section.slideSeconds && heroSource) {
+          section.slideSeconds = heroSource.slideSeconds;
+          touched = true;
+        }
         if (!section.reviewLabel && heroSource) {
           section.reviewRating = heroSource.reviewRating;
           section.reviewLabel = heroSource.reviewLabel;

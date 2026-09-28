@@ -521,6 +521,15 @@ export interface SectionsHeroSlider extends Struct.ComponentSchema {
     reviewAvatars: Schema.Attribute.Component<'shared.image', true>;
     reviewLabel: Schema.Attribute.String;
     reviewRating: Schema.Attribute.String;
+    slideSeconds: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 30;
+          min: 2;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<5>;
     title: Schema.Attribute.String;
   };
 }
