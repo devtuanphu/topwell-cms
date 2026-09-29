@@ -3681,15 +3681,14 @@ CONTENT.projects[0].sections = [
 ];
 
 // Redesign V1: home service cards, featured projects, article metadata and footer social icons.
-const SERVICE_TAGS = {
-  'production-lines': ['Production & Integration', '3d88dd2d-b196-4d51-a60d-9f2c6cfcf572.png'],
-  machinery: ['Machinery & Automation', 'fv2-8c9dac4c.jpg'],
-  'spare-parts-molds': ['Molds & Engineering', 'fv2-f1ac49ad.jpg'],
-  'technical-services': ['Technical Services', 'fv2-81b58488.jpg'],
+const SERVICE_IMAGES = {
+  'production-lines': '3d88dd2d-b196-4d51-a60d-9f2c6cfcf572.png',
+  machinery: 'fv2-8c9dac4c.jpg',
+  'spare-parts-molds': 'fv2-f1ac49ad.jpg',
+  'technical-services': 'fv2-81b58488.jpg',
 };
 CONTENT.services.forEach((service) => {
-  const [tag, image] = SERVICE_TAGS[service.slug] || [];
-  if (tag) service.tag = tag;
+  const image = SERVICE_IMAGES[service.slug];
   if (image) service.image = { $file: image, alt: service.title };
 });
 const FEATURED = {

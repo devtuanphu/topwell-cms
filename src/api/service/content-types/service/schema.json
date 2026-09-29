@@ -4,7 +4,7 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "Dịch vụ"
+    "displayName": "D\u1ecbch v\u1ee5"
   },
   "options": {
     "draftAndPublish": true
@@ -108,14 +108,6 @@
       ],
       "required": true,
       "default": "industrial",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "tag": {
-      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
