@@ -48,10 +48,49 @@ function rootServices(code) {
 }
 
 async function migrate(strapi) {
-  const changes = { roots: 0, linked: 0, homePage: 0, servicesPage: 0, projectsPage: 0, header: 0, testimonials: 0, projectCta: 0 };
+  const changes = { roots: 0, merged: 0, linked: 0, homePage: 0, servicesPage: 0, projectsPage: 0, header: 0, testimonials: 0, projectCta: 0 };
   const services = strapi.documents('api::service.service');
 
-  for (const { code } of LOCALES) {
+  // Ngôn ngữ nguồn phải chạy trước để các bản dịch là localization của cùng một tài liệu.
+  const codes = [
+    SOURCE_LOCALE,
+    ...LOCALES.map((l) => l.code).filter((c) => c !== SOURCE_LOCALE),
+  ];
+
+  // 0. Gộp các mục gốc bị tạo trùng thành một tài liệu duy nhất.
+  const rootSlugs = rootServices(SOURCE_LOCALE).map((r) => r.slug);
+  const replaced = new Map();
+  for (const slug of rootSlugs) {
+    const docs = new Map();
+    for (const code of codes) {
+      const found = await services.findFirst({ filters: { slug }, locale: code });
+      if (found) docs.set(found.documentId, docs.get(found.documentId) || []);
+      if (found) docs.get(found.documentId).push({ code, doc: found });
+    }
+    if (docs.size < 2) continue;
+    const keeperId =
+      [...docs.entries()].find(([, rows]) => rows.some((r) => r.code === SOURCE_LOCALE))?.[0] ||
+      [...docs.keys()][0];
+    for (const [documentId, rows] of docs) {
+      if (documentId === keeperId) continue;
+      for (const { code, doc } of rows) {
+        const existing = await services.findFirst({ documentId: keeperId, locale: code });
+        if (!existing) {
+          const data = await withMedia(strapi, { ...doc });
+          for (const key of ['id', 'documentId', 'createdAt', 'updatedAt', 'publishedAt', 'locale'])
+            delete data[key];
+          delete data.parent;
+          delete data.children;
+          await services.update({ documentId: keeperId, locale: code, data, status: 'published' });
+        }
+      }
+      await services.delete({ documentId });
+      replaced.set(documentId, keeperId);
+      changes.merged++;
+    }
+  }
+
+  for (const code of codes) {
     // 1. Hai mục dịch vụ gốc.
     for (const root of rootServices(code)) {
       const existing = await services.findFirst({ filters: { slug: root.slug }, locale: code });
@@ -86,7 +125,9 @@ async function migrate(strapi) {
     for (const doc of all) {
       if (rootSlugs.has(doc.slug)) continue;
       const data = {};
-      if (!doc.parent && roots.get(doc.group)) data.parent = roots.get(doc.group);
+      // Gán lại mục cha khi còn trống hoặc đang trỏ vào tài liệu trùng đã xóa.
+      if ((!doc.parent || replaced.has(doc.parent.documentId)) && roots.get(doc.group))
+        data.parent = roots.get(doc.group);
       if (doc.order === null || doc.order === undefined)
         data.order = seedServices.find((x) => x.slug === doc.slug)?.order ?? 0;
       if (!Object.keys(data).length) continue;
@@ -125,7 +166,7 @@ async function migrate(strapi) {
     return out;
   };
 
-  for (const { code } of LOCALES) {
+  for (const code of codes) {
     for (const [uid, key, apply] of [
       [
         'api::home-page.home-page',
