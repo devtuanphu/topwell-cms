@@ -1340,14 +1340,6 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    group: Schema.Attribute.Enumeration<['industrial', 'logistics']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }> &
-      Schema.Attribute.DefaultTo<'industrial'>;
     icon: Schema.Attribute.Component<'shared.image', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

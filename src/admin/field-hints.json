@@ -1,0 +1,19 @@
+{
+  "api::service.service": {
+    "parent": "Để trống = dịch vụ cấp 2 (hiện ở trang Dịch vụ). Chọn một dịch vụ cấp 2 = dịch vụ cấp 3. Tối đa 3 cấp. Mục có mục con dùng layout trang cha, mục không có mục con dùng layout trang chi tiết.",
+    "order": "Số nhỏ đứng trước trong menu, danh sách và menu cùng cấp."
+  },
+  "api::project.project": {
+    "parent": "Để trống = dự án cấp 2 (hiện ở trang Dự án). Chọn một dự án cấp 2 = dự án cấp 3. Tối đa 3 cấp. Dự án có dự án con dùng layout trang cha, không có thì dùng layout chi tiết.",
+    "order": "Số nhỏ đứng trước trong menu và danh sách."
+  },
+  "sections.services": {
+    "source": "roots = các dịch vụ cấp 2 · children = dịch vụ con của trang đang mở · parent = dịch vụ con của mục ghi ở ô \"Mã mục cha cần liệt kê\"."
+  },
+  "sections.projects": {
+    "source": "roots = các dự án cấp 2 · children = dự án con của trang đang mở · parent = dự án con của mục ghi ở ô \"Mã mục cha cần liệt kê\"."
+  },
+  "shared.nav-item": {
+    "source": "services / projects = menu con nhiều tầng lấy tự động từ cây Dịch vụ / Dự án · manual = tự nhập từng liên kết · none = không có menu con."
+  }
+}

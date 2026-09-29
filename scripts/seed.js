@@ -50,7 +50,7 @@ const CONTENT = {
                 $file: 'fv2-8c9dac4c.jpg',
                 alt: 'Automated production line with industrial robots',
               },
-              href: '/dich-vu/production-lines',
+              href: '/dich-vu/thiet-bi-va-giai-phap/day-chuyen-san-xuat',
               label: 'Explore our solutions',
               eyebrow: 'PRECISION MANUFACTURING',
               secondaryLabel: 'Request a quote',
@@ -62,7 +62,7 @@ const CONTENT = {
               description:
                 'Smart warehousing and multimodal transport for industrial equipment, machinery and oversized cargo.',
               image: { $file: 'fv2-dc711df0.jpg', alt: 'Container ship sailing on the open ocean' },
-              href: '/dich-vu/phan-phoi-kho-hang',
+              href: '/dich-vu',
               label: 'Explore logistics',
               eyebrow: 'CONNECTED LOGISTICS',
               secondaryLabel: 'Talk to an expert',
@@ -3889,6 +3889,159 @@ CONTENT.services.forEach((service) => {
   ];
 });
 
+// Cây Dịch vụ và Dự án theo Figma "Website Redesign V1" (I7AI3bFueHVCpfJetnSWsZ), tối đa 3 cấp:
+//   cấp 1  trang Dịch vụ / trang Dự án
+//   cấp 2  mục gốc trong bộ sưu tập (PAREN PAGE 208:133, 171:2)
+//   cấp 3  mục con của mục gốc (CHILD PAGE 208:4449, 208:5097, 208:5674, 208:5289, 208:5480)
+// Mục có mục con dùng layout trang cha; mục không có mục con dùng layout trang chi tiết.
+(() => {
+  const clone = (value) => structuredClone(value);
+  const bySlug = (list, slug) => clone(list.find((item) => item.slug === slug));
+  const seo = (title, description, keywords) => ({
+    metaTitle: `${title} | TOP WELL International`,
+    metaDescription: description,
+    noIndex: false,
+    keywords,
+  });
+  const equipment = bySlug(CONTENT.services, 'thiet-bi-va-giai-phap');
+  // Hai trang cấp 2 dùng chung quy trình 4 bước và dải kêu gọi như bản thiết kế.
+  const shared = equipment.sections.filter((s) => s.__component !== 'sections.services');
+  const parts = {
+    ...clone(equipment),
+    title: 'Spare parts & components',
+    slug: 'phu-tung-va-linh-kien',
+    eyebrow: 'GENUINE & COMPATIBLE',
+    summary:
+      'Replacement parts, moulds and components for production equipment, with technical support to identify, source and install the right part quickly.',
+    image: { $file: 'fv2-f1ac49ad.jpg', alt: 'Precision spare parts and tooling' },
+    icon: { $file: 'fv2-28f3a07f.svg', alt: 'Components icon' },
+    features: [
+      { title: 'Genuine spare parts' },
+      { title: 'Compatible alternatives' },
+      { title: 'Fast sourcing' },
+      { title: 'Response under 2 hours' },
+    ],
+    seo: seo(
+      'Spare parts & components',
+      'Replacement parts, moulds and components for industrial equipment, sourced and supported by TOP WELL in Vietnam.',
+      'spare parts, components, moulds, technical support',
+    ),
+    sections: [
+      {
+        __component: 'sections.services',
+        eyebrow: 'SERVICE ECOSYSTEM',
+        title: 'Spare parts and component solutions',
+        source: 'children',
+      },
+      ...clone(shared),
+    ],
+  };
+  const child = (from, parent, order, overrides) => {
+    const base = bySlug(CONTENT.services, from);
+    const entry = { ...base, ...overrides, parent, order };
+    entry.seo = seo(entry.title, entry.summary, base.seo.keywords);
+    return entry;
+  };
+  const turnkey = child('production-lines', 'thiet-bi-va-giai-phap', 2, {
+    title: 'Turnkey projects',
+    slug: 'du-an-chia-khoa-trao-tay',
+    summary:
+      'End-to-end delivery of complete production facilities, from process design and equipment supply to installation, commissioning and handover.',
+    image: {
+      $file: 'fv2-57b86b40.jpg',
+      alt: 'TOP WELL engineers presenting a turnkey project plan',
+    },
+    icon: { $file: 'f7eeab15-fe3a-4b8a-b9ba-982793ff1c67.svg', alt: 'Turnkey projects icon' },
+  });
+  const intro = turnkey.sections.find((s) => s.__component === 'sections.service-intro');
+  Object.assign(intro, {
+    title: 'One partner from design to handover',
+    description:
+      'TOP WELL takes full responsibility for turnkey industrial projects: process design, equipment selection and procurement, installation, commissioning and operator training. A single project team coordinates every supplier and milestone, so your plant starts production on schedule.\n\nEach turnkey project is delivered against agreed performance indicators, with factory and site acceptance tests documented before handover.',
+    image: {
+      $file: 'fv2-57b86b40.jpg',
+      alt: 'TOP WELL engineers presenting a turnkey project plan',
+    },
+    body: 'Process design: layout, capacity and utility requirements agreed with your team. Procurement: equipment sourced from qualified international manufacturers. Installation & commissioning: mechanical, electrical and control integration on site. Handover: acceptance tests, SOP training and after-sales support.',
+  });
+  CONTENT.services = [
+    { ...equipment, order: 0 },
+    { ...parts, order: 1 },
+    child('machinery', 'thiet-bi-va-giai-phap', 0, { title: 'Equipment', slug: 'thiet-bi' }),
+    child('production-lines', 'thiet-bi-va-giai-phap', 1, {
+      title: 'Production Lines',
+      slug: 'day-chuyen-san-xuat',
+    }),
+    turnkey,
+    child('spare-parts-molds', 'phu-tung-va-linh-kien', 0, {
+      title: 'Replacement parts supply',
+      slug: 'cung-cap-phu-tung-thay-the',
+    }),
+    child('technical-services', 'phu-tung-va-linh-kien', 1, {
+      title: 'Technical support & component solutions',
+      slug: 'ho-tro-ky-thuat-giai-phap-linh-kien',
+    }),
+  ];
+  CONTENT.services.forEach((service) => delete service.group);
+
+  // Hai dự án của bản thiết kế (CHILD PAGE – DỰ ÁN 208:2894, 208:3670) dùng chung bố cục
+  // của hồ sơ dự án mẫu; thẻ trang chủ và chân trang lấy tên riêng của từng dự án.
+  const template = clone(CONTENT.projects[0]);
+  const project = (from, slug, extra) => {
+    const home = bySlug(CONTENT.projects, from);
+    const entry = {
+      ...clone(template),
+      title: home.homeTitle,
+      slug,
+      category: home.homeCategory,
+      summary: home.homeSummary,
+      tags: home.tags,
+      featured: true,
+      homeOrder: home.homeOrder,
+      homeTitle: home.homeTitle,
+      homeSummary: home.homeSummary,
+      homeCategory: home.homeCategory,
+      homeImage: home.homeImage,
+      image: home.homeImage,
+      order: home.homeOrder,
+      ...extra,
+    };
+    entry.seo = seo(entry.title, entry.summary, template.seo.keywords);
+    entry.sections.find((s) => s.__component === 'sections.project-overview').title = entry.title;
+    return entry;
+  };
+  CONTENT.projects = [
+    project('kho-thong-minh-asrs', 'oulide-ada-smart-warehouse', {
+      location: 'Binh Duong',
+      year: '2025',
+      publishedDate: '2026-05-17',
+    }),
+    project('khuon-ep-nhua-y-te', 'tongjun-environmental-new-materials', {
+      location: 'Hai Phong',
+      year: '2025',
+      publishedDate: '2026-04-22',
+    }),
+  ];
+
+  // Chân trang liệt kê đúng các trang đang có.
+  const pathOf = (entry, list, base) => {
+    const parts = [entry.slug];
+    let parent = entry.parent && list.find((x) => x.slug === entry.parent);
+    while (parent) {
+      parts.unshift(parent.slug);
+      parent = parent.parent && list.find((x) => x.slug === parent.parent);
+    }
+    return base + parts.join('/');
+  };
+  CONTENT.footer.columns[0].links = CONTENT.projects.map((p) => ({
+    title: p.title,
+    href: pathOf(p, CONTENT.projects, '/du-an/'),
+  }));
+  CONTENT.footer.columns[1].links = CONTENT.services
+    .filter((s) => s.parent)
+    .map((s) => ({ title: s.title, href: pathOf(s, CONTENT.services, '/dich-vu/') }));
+})();
+
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
@@ -3976,7 +4129,9 @@ function loadTranslations(code) {
   const dir = path.join(__dirname, 'translations');
   const dictionary = {};
   if (!fs.existsSync(dir)) return dictionary;
-  for (const file of fs.readdirSync(dir).sort())
+  // `<code>.extra.json` nạp sau cùng để các bản dịch bổ sung ghi đè bản gốc.
+  const order = (file) => (file.includes('.extra.') ? 1 : 0);
+  for (const file of fs.readdirSync(dir).sort((a, b) => order(a) - order(b) || a.localeCompare(b)))
     if (file.startsWith(`${code}.`) && file.endsWith('.json'))
       Object.assign(dictionary, JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8')));
   return dictionary;
@@ -4263,17 +4418,6 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
       for (const doc of docs) {
         const changes = { value: false };
         const data = await serialize(doc, uid, changes);
-        if (name === 'service') {
-          const group = CONTENT.services.find((s) => s.slug === doc.slug)?.group;
-          if (group && doc.group !== group) {
-            data.group = group;
-            changes.value = true;
-          }
-        }
-        if (name === 'site-settings' && !doc.assets) {
-          data.assets = await transform(CONTENT['site-settings'].assets);
-          changes.value = true;
-        }
         if (changes.value) {
           await service.update({ documentId: doc.documentId, data, status: 'published' });
           stats.updated++;

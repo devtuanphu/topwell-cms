@@ -18,9 +18,7 @@
         "none",
         "manual",
         "services",
-        "services-all",
-        "projects",
-        "projects-all"
+        "projects"
       ],
       "default": "none"
     },

@@ -1,10 +1,13 @@
 'use strict';
 /**
- * Kiểm tra Dịch vụ và Dự án tạo được nhiều cấp ngay trong CMS, không cần build lại web.
+ * Kiểm tra cây Dịch vụ và Dự án tối đa 3 cấp, tạo động ngay trong CMS, không cần build lại web.
  *
- * Script tạo tạm một nhánh ba cấp cho cả hai bộ sưu tập đúng như biên tập viên thao tác
- * (chọn "Thuộc mục cha"), gọi vào web đang chạy để kiểm tra đường dẫn, breadcrumb, layout
- * và danh sách mục con, rồi xóa sạch phần vừa tạo dù có lỗi hay không.
+ * Script thao tác đúng như biên tập viên (chọn "Thuộc mục cha"), gọi vào web đang chạy rồi xóa
+ * sạch phần vừa tạo dù có lỗi hay không:
+ *   - Thêm một dịch vụ cấp 3 dưới dịch vụ cấp 2 → có trang, layout chi tiết, breadcrumb đủ bậc.
+ *   - Thêm một dự án cấp 3 dưới dự án cấp 2 → dự án cha tự chuyển sang layout trang cha và liệt kê
+ *     dự án con; dự án con dùng layout chi tiết.
+ *   - Thử tạo cấp 4, hoặc đưa mục đang có mục con xuống làm mục con → CMS phải từ chối.
  *
  * Chạy: npm run check:tree            (web ở http://localhost:3100)
  *       SITE_URL=https://topwell.co npm run check:tree
@@ -13,50 +16,12 @@ const path = require('node:path');
 
 const SITE = (process.env.SITE_URL || 'http://localhost:3100').replace(/\/$/, '');
 const LOCALE = 'vi';
-
-/** Nhánh tạm: một mục Dịch vụ cấp ba và hai mục Dự án cấp hai, cấp ba. */
 const TEMP = [
+  ['api::service.service', 'kiem-tra-cay-cap-4'],
   ['api::service.service', 'kiem-tra-cay-dich-vu'],
-  ['api::project.project', 'kiem-tra-cay-du-an-cap-2'],
-  ['api::project.project', 'kiem-tra-cay-du-an-cap-3'],
+  ['api::project.project', 'kiem-tra-cay-du-an-cap-4'],
+  ['api::project.project', 'kiem-tra-cay-du-an'],
 ];
-
-const CHILD_LIST = (title) => ({
-  __component: 'sections.projects',
-  eyebrow: 'KIỂM TRA',
-  title,
-  source: 'children',
-});
-
-/** Populate sâu cho Dynamic Zone để không làm rơi ảnh khi ghi lại. */
-function populateSections(strapi, uid) {
-  const dz = strapi.contentTypes[uid].attributes.sections;
-  const populate = (componentUid, depth = 0) => {
-    if (depth > 5) return {};
-    const schema = strapi.components[componentUid];
-    const out = {};
-    for (const [key, attr] of Object.entries(schema?.attributes || {})) {
-      if (attr.type === 'media') out[key] = true;
-      if (attr.type === 'component') out[key] = { populate: populate(attr.component, depth + 1) };
-    }
-    return out;
-  };
-  return {
-    sections: { on: Object.fromEntries(dz.components.map((c) => [c, { populate: populate(c) }])) },
-  };
-}
-
-/** Bỏ khóa hệ thống để ghi lại Dynamic Zone mà không tạo bản sao lỗi. */
-function strip(value) {
-  if (Array.isArray(value)) return value.map(strip);
-  if (!value || typeof value !== 'object') return value;
-  const out = {};
-  for (const [key, item] of Object.entries(value)) {
-    if (['id', 'documentId', 'createdAt', 'updatedAt', 'publishedAt'].includes(key)) continue;
-    out[key] = key === 'media' && item ? item.id : strip(item);
-  }
-  return out;
-}
 
 async function html(url) {
   const response = await fetch(`${SITE}${url}`);
@@ -64,152 +29,117 @@ async function html(url) {
   return response.text();
 }
 
+const crumbs = (page) =>
+  (page.match(/<nav class="breadcrumb[\s\S]*?<\/nav>/)?.[0].match(/<a /g) || []).length;
+
 function expect(condition, message) {
   if (!condition) throw new Error(message);
   return `  ✓ ${message}`;
 }
 
-async function run(strapi, state) {
+async function rejects(action, message) {
+  try {
+    await action();
+  } catch (error) {
+    return expect(/cấp|mục con/.test(error.message), `${message} (CMS báo: "${error.message}")`);
+  }
+  throw new Error(`${message}: CMS vẫn cho lưu`);
+}
+
+async function run(strapi) {
+  const lines = [];
   const services = strapi.documents('api::service.service');
   const projects = strapi.documents('api::project.project');
-  const first = (store, slug) => store.findFirst({ filters: { slug }, locale: LOCALE });
-  const lines = [];
-
-  // Mục Dịch vụ cấp ba: con của một mục vốn đã là con của mục gốc.
-  const roots = await services.findMany({ locale: LOCALE, populate: { parent: true }, limit: 500 });
-  const branch = roots.find((s) => s.parent && roots.some((r) => r.slug === s.parent.slug));
-  if (!branch) throw new Error('Chưa có mục Dịch vụ cấp hai để gắn thêm cấp ba');
-  await services.create({
+  const temp = (title, slug, parent) => ({
     locale: LOCALE,
     status: 'published',
-    data: {
-      title: 'Kiểm tra cây dịch vụ',
-      slug: TEMP[0][1],
-      summary: 'Mục tạm do npm run check:tree tạo ra.',
-      parent: branch.documentId,
-      order: 999,
-    },
+    data: { title, slug, summary: 'Mục tạm do npm run check:tree tạo ra.', parent, order: 999 },
   });
+  const roots = async (store) =>
+    (await store.findMany({ locale: LOCALE, populate: { parent: true }, sort: 'order' })).filter(
+      (entry) => !entry.parent,
+    );
 
-  // Mục Dự án cấp hai và cấp ba, mỗi cấp cha kèm khối liệt kê mục con.
-  const projectRoots = await projects.findMany({
-    locale: LOCALE,
-    populate: { parent: true },
-    limit: 500,
-  });
-  const projectRoot = projectRoots.find((p) => !p.parent);
-  if (!projectRoot) throw new Error('Chưa có dự án gốc để gắn thêm cấp hai');
-  const stage = await projects.create({
-    locale: LOCALE,
-    status: 'published',
-    data: {
-      title: 'Kiểm tra cây dự án cấp 2',
-      slug: TEMP[1][1],
-      summary: 'Mục tạm do npm run check:tree tạo ra.',
-      parent: projectRoot.documentId,
-      order: 999,
-      sections: [CHILD_LIST('Mục con cấp ba')],
-    },
-  });
-  await projects.create({
-    locale: LOCALE,
-    status: 'published',
-    data: {
-      title: 'Kiểm tra cây dự án cấp 3',
-      slug: TEMP[2][1],
-      summary: 'Mục tạm do npm run check:tree tạo ra.',
-      parent: stage.documentId,
-      order: 999,
-    },
-  });
-  const rootDoc = await projects.findOne({
-    documentId: projectRoot.documentId,
-    locale: LOCALE,
-    populate: populateSections(strapi, 'api::project.project'),
-  });
-  const rootSections = strip(rootDoc.sections || []);
-  // Ghi ngay vào state để phần dọn dẹp trả lại nguyên trạng kể cả khi kiểm tra thất bại.
-  state.projectRoot = projectRoot.documentId;
-  state.addedRootList = !rootSections.some((s) => s.__component === 'sections.projects');
-  if (state.addedRootList) rootSections.push(CHILD_LIST('Mục con cấp hai'));
-  await projects.update({
-    documentId: projectRoot.documentId,
-    locale: LOCALE,
-    data: { sections: rootSections },
-    status: 'published',
-  });
-
-  const servicePath = `/dich-vu/${branch.parent.slug}/${branch.slug}/${TEMP[0][1]}`;
-  const stagePath = `/du-an/${projectRoot.slug}/${TEMP[1][1]}`;
-  const leafPath = `${stagePath}/${TEMP[2][1]}`;
-
-  const serviceLeaf = await html(servicePath);
-  lines.push(
-    expect(serviceLeaf.includes('class="service-detail"'), `${servicePath} dùng layout chi tiết`),
+  // Dịch vụ: cấp 2 là mục để trống "Thuộc mục cha".
+  const [serviceRoot, otherRoot] = await roots(services);
+  if (!serviceRoot) throw new Error('Chưa có dịch vụ cấp 2');
+  const level3 = await services.create(
+    temp('Kiểm tra cây dịch vụ', TEMP[1][1], serviceRoot.documentId),
   );
+  const servicePath = `/dich-vu/${serviceRoot.slug}/${TEMP[1][1]}`;
+  const servicePage = await html(servicePath);
   lines.push(
     expect(
-      (serviceLeaf.match(/<nav class="breadcrumb[\s\S]*?<\/nav>/)?.[0].match(/<a /g) || [])
-        .length === 4,
-      'Breadcrumb dịch vụ cấp ba có đủ bốn liên kết tổ tiên',
-    ),
-  );
-
-  const rootHtml = await html(`/du-an/${projectRoot.slug}`);
-  lines.push(
-    expect(
-      rootHtml.includes('class="projects-listing"'),
-      `/du-an/${projectRoot.slug} dùng layout trang cha`,
+      servicePage.includes('class="service-detail"'),
+      `${servicePath} có trang, layout chi tiết`,
     ),
   );
   lines.push(
-    expect(rootHtml.includes(`href="${stagePath}"`), 'Dự án gốc liệt kê đúng mục con của nó'),
+    expect(crumbs(servicePage) === 3, 'Breadcrumb dịch vụ cấp 3: Trang chủ / Dịch vụ / mục cấp 2'),
   );
-
-  const stageHtml = await html(stagePath);
+  const parentPage = await html(`/dich-vu/${serviceRoot.slug}`);
   lines.push(
     expect(
-      stageHtml.includes('class="projects-listing"'),
-      `${stagePath} dùng lại layout trang cha`,
+      parentPage.includes(`href="${servicePath}"`),
+      'Trang dịch vụ cấp 2 liệt kê ngay mục mới',
     ),
   );
   lines.push(
-    expect(stageHtml.includes(`href="${leafPath}"`), 'Mục cấp hai liệt kê đúng mục con cấp ba'),
-  );
-
-  const leafHtml = await html(leafPath);
-  lines.push(expect(leafHtml.includes('class="case-study"'), `${leafPath} dùng layout chi tiết`));
-  lines.push(
-    expect(
-      (leafHtml.match(/<nav class="breadcrumb[\s\S]*?<\/nav>/)?.[0].match(/<a /g) || []).length ===
-        4,
-      'Breadcrumb dự án cấp ba có đủ bốn liên kết tổ tiên',
+    await rejects(
+      () => services.create(temp('Cấp 4', TEMP[0][1], level3.documentId)),
+      'Không tạo được dịch vụ cấp 4',
     ),
   );
+  if (otherRoot)
+    lines.push(
+      await rejects(
+        () =>
+          services.update({
+            documentId: serviceRoot.documentId,
+            locale: LOCALE,
+            data: { parent: otherRoot.documentId },
+          }),
+        'Không đưa được mục cấp 2 đang có mục con xuống làm mục con',
+      ),
+    );
 
+  // Dự án: dự án cấp 2 chưa có con dùng layout chi tiết; thêm con thì tự thành trang cha.
+  const [projectRoot] = await roots(projects);
+  if (!projectRoot) throw new Error('Chưa có dự án cấp 2');
+  const projectPath = `/du-an/${projectRoot.slug}`;
+  if (!(await html(projectPath)).includes('class="projects-listing"'))
+    lines.push(expect(true, `${projectPath} lúc chưa có dự án con dùng layout chi tiết`));
+  const projectChild = await projects.create(
+    temp('Kiểm tra cây dự án', TEMP[3][1], projectRoot.documentId),
+  );
+  const childPath = `${projectPath}/${TEMP[3][1]}`;
+  const rootPage = await html(projectPath);
+  lines.push(
+    expect(
+      rootPage.includes('class="projects-listing"'),
+      `${projectPath} tự chuyển sang layout trang cha`,
+    ),
+  );
+  lines.push(expect(rootPage.includes(`href="${childPath}"`), 'Dự án cha liệt kê đúng dự án con'));
+  const childPage = await html(childPath);
+  lines.push(expect(childPage.includes('class="case-study"'), `${childPath} dùng layout chi tiết`));
+  lines.push(
+    expect(crumbs(childPage) === 3, 'Breadcrumb dự án cấp 3: Trang chủ / Dự án / dự án cấp 2'),
+  );
+  lines.push(
+    await rejects(
+      () => projects.create(temp('Cấp 4', TEMP[2][1], projectChild.documentId)),
+      'Không tạo được dự án cấp 4',
+    ),
+  );
   return lines;
 }
 
-async function cleanup(strapi, state) {
+async function cleanup(strapi) {
   for (const [uid, slug] of TEMP) {
     const store = strapi.documents(uid);
     const doc = await store.findFirst({ filters: { slug }, locale: LOCALE });
-    if (doc) await store.delete({ documentId: doc.documentId });
-  }
-  if (state && state.addedRootList) {
-    const projects = strapi.documents('api::project.project');
-    const doc = await projects.findOne({
-      documentId: state.projectRoot,
-      locale: LOCALE,
-      populate: populateSections(strapi, 'api::project.project'),
-    });
-    const sections = strip(doc.sections || []).filter((s) => s.__component !== 'sections.projects');
-    await projects.update({
-      documentId: state.projectRoot,
-      locale: LOCALE,
-      data: { sections },
-      status: 'published',
-    });
+    if (doc) await store.delete({ documentId: doc.documentId, locale: '*' });
   }
 }
 
@@ -221,17 +151,17 @@ if (require.main === module) {
     process.env.STRAPI_TELEMETRY_DISABLED = 'true';
     const { createStrapi } = require('@strapi/strapi');
     const app = createStrapi({ appDir: ROOT, distDir: ROOT });
-    const state = {};
     let failure;
     try {
       await app.load();
-      const lines = await run(app, state);
-      console.log(`Cây Dịch vụ và Dự án nhiều cấp, kiểm tra trên ${SITE}:`);
+      await cleanup(app);
+      const lines = await run(app);
+      console.log(`Cây Dịch vụ và Dự án tối đa 3 cấp, kiểm tra trên ${SITE}:`);
       lines.forEach((line) => console.log(line));
     } catch (error) {
       failure = error;
     } finally {
-      await cleanup(app, state).catch((error) => console.error('Dọn dẹp lỗi:', error.message));
+      await cleanup(app).catch((error) => console.error('Dọn dẹp lỗi:', error.message));
       await new Promise((resolve) => setTimeout(resolve, 1500));
       await app.destroy().catch(() => {});
     }
@@ -242,4 +172,4 @@ if (require.main === module) {
   })();
 }
 
-module.exports = { run, cleanup, populateSections, TEMP };
+module.exports = { run, cleanup, TEMP };

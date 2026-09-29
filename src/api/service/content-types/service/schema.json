@@ -100,20 +100,6 @@
         }
       }
     },
-    "group": {
-      "type": "enumeration",
-      "enum": [
-        "industrial",
-        "logistics"
-      ],
-      "required": true,
-      "default": "industrial",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "bannerImage": {
       "type": "component",
       "component": "shared.image",

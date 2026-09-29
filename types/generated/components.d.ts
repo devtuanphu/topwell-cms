@@ -891,9 +891,7 @@ export interface SharedNavItem extends Struct.ComponentSchema {
   attributes: {
     href: Schema.Attribute.String;
     links: Schema.Attribute.Component<'shared.card', true>;
-    source: Schema.Attribute.Enumeration<
-      ['none', 'manual', 'services', 'services-all', 'projects', 'projects-all']
-    > &
+    source: Schema.Attribute.Enumeration<['none', 'manual', 'services', 'projects']> &
       Schema.Attribute.DefaultTo<'none'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
