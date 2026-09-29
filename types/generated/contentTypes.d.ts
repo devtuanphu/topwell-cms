@@ -788,12 +788,6 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    supportEmail: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     supportImage: Schema.Attribute.Component<'shared.image', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1519,12 +1513,6 @@ export interface ApiSiteSettingsSiteSettings extends Struct.SingleTypeSchema {
       }>;
     article: Schema.Attribute.Component<'copy.article', false> &
       Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    assets: Schema.Attribute.Component<'copy.assets', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

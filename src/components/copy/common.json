@@ -1,7 +1,7 @@
 {
   "collectionName": "components_copy_common",
   "info": {
-    "displayName": "Nhãn dùng chung"
+    "displayName": "Nh\u00e3n d\u00f9ng chung"
   },
   "attributes": {
     "home": {
@@ -28,31 +28,11 @@
       "type": "string",
       "required": true
     },
-    "readNext": {
-      "type": "string",
-      "required": true
-    },
     "learnMore": {
       "type": "string",
       "required": true
     },
     "viewService": {
-      "type": "string",
-      "required": true
-    },
-    "projectDetails": {
-      "type": "string",
-      "required": true
-    },
-    "allProjects": {
-      "type": "string",
-      "required": true
-    },
-    "allNews": {
-      "type": "string",
-      "required": true
-    },
-    "allArticles": {
       "type": "string",
       "required": true
     },
@@ -92,14 +72,6 @@
       "type": "string",
       "required": true
     },
-    "previousArticle": {
-      "type": "string",
-      "required": true
-    },
-    "nextArticle": {
-      "type": "string",
-      "required": true
-    },
     "viewProject": {
       "type": "string"
     },
@@ -107,9 +79,6 @@
       "type": "string"
     },
     "directions": {
-      "type": "string"
-    },
-    "onlineStatus": {
       "type": "string"
     },
     "view": {

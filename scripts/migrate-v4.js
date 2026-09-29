@@ -333,6 +333,31 @@ async function migrate(strapi) {
       }
     }
 
+    // Ghi chú bản đồ ở trang Liên hệ trước đây không có ô nhập nên chưa từng lưu được.
+    {
+      const uid = 'api::contact-page.contact-page';
+      const store = strapi.documents(uid);
+      const doc = await store.findFirst({ locale: code, populate: populateSections(uid) });
+      const seeded = localizeContent(CONTENT, code);
+      const source = (seeded.content || seeded).pages['contact-page'].sections.find(
+        (s) => s.__component === 'sections.network',
+      );
+      if (doc && source?.supportLabel) {
+        const sections = strip(doc.sections || []);
+        const target = sections.find((s) => s.__component === 'sections.network');
+        if (target && !target.supportLabel) {
+          target.supportLabel = source.supportLabel;
+          await store.update({
+            documentId: doc.documentId,
+            locale: code,
+            data: { sections },
+            status: 'published',
+          });
+          changes.mapCredit = (changes.mapCredit || 0) + 1;
+        }
+      }
+    }
+
     // Trang dự án kết bằng dải kêu gọi nền tối.
     {
       const projects = strapi.documents('api::project.project');

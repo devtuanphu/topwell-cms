@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_about_hero",
   "info": {
-    "displayName": "Banner giới thiệu"
+    "displayName": "Banner gi\u1edbi thi\u1ec7u"
   },
   "attributes": {
     "cards": {
@@ -31,11 +31,6 @@
     },
     "highlight": {
       "type": "string"
-    },
-    "story": {
-      "type": "component",
-      "component": "sections.about-story",
-      "repeatable": false
     },
     "images": {
       "type": "component",

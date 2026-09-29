@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_contact_form",
   "info": {
-    "displayName": "Biểu mẫu liên hệ"
+    "displayName": "Bi\u1ec3u m\u1eabu li\u00ean h\u1ec7"
   },
   "attributes": {
     "description": {
@@ -14,9 +14,6 @@
       "type": "component",
       "component": "shared.image",
       "repeatable": false
-    },
-    "subtitle": {
-      "type": "string"
     },
     "title": {
       "type": "string"

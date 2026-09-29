@@ -1,22 +1,14 @@
 {
   "collectionName": "components_copy_sidebar",
   "info": {
-    "displayName": "Thanh bên"
+    "displayName": "Thanh b\u00ean"
   },
   "attributes": {
     "servicesTitle": {
       "type": "string",
       "required": true
     },
-    "supportTitle": {
-      "type": "string",
-      "required": true
-    },
     "supportLabel": {
-      "type": "string",
-      "required": true
-    },
-    "supportHref": {
       "type": "string",
       "required": true
     },
@@ -43,21 +35,6 @@
     "articleHref": {
       "type": "string",
       "required": true
-    },
-    "hoursTitle": {
-      "type": "string"
-    },
-    "contactTitle": {
-      "type": "string"
-    },
-    "instagramTitle": {
-      "type": "string"
-    },
-    "tagsTitle": {
-      "type": "string"
-    },
-    "recentPostsTitle": {
-      "type": "string"
     },
     "consultText": {
       "type": "string"

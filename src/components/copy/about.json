@@ -1,26 +1,10 @@
 {
   "collectionName": "components_copy_about",
   "info": {
-    "displayName": "Giới thiệu"
+    "displayName": "Gi\u1edbi thi\u1ec7u"
   },
   "attributes": {
     "rating": {
-      "type": "string",
-      "required": true
-    },
-    "ratingStars": {
-      "type": "string",
-      "required": true
-    },
-    "ratingCaption": {
-      "type": "string",
-      "required": true
-    },
-    "valueLabel": {
-      "type": "string",
-      "required": true
-    },
-    "valueHref": {
       "type": "string",
       "required": true
     },

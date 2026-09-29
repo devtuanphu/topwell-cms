@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_network",
   "info": {
-    "displayName": "Mạng lưới"
+    "displayName": "M\u1ea1ng l\u01b0\u1edbi"
   },
   "attributes": {
     "cards": {
@@ -36,6 +36,9 @@
       "type": "string"
     },
     "ctaHref": {
+      "type": "string"
+    },
+    "supportLabel": {
       "type": "string"
     }
   }

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "site-settings",
     "pluralName": "site-settingss",
-    "displayName": "Cài đặt website"
+    "displayName": "C\u00e0i \u0111\u1eb7t website"
   },
   "options": {
     "draftAndPublish": true
@@ -130,16 +130,6 @@
       "component": "copy.metadata",
       "repeatable": false,
       "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "assets": {
-      "type": "component",
-      "component": "copy.assets",
-      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true

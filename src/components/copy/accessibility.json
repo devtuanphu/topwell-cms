@@ -1,7 +1,7 @@
 {
   "collectionName": "components_copy_accessibility",
   "info": {
-    "displayName": "Nhãn hỗ trợ truy cập"
+    "displayName": "Nh\u00e3n h\u1ed7 tr\u1ee3 truy c\u1eadp"
   },
   "attributes": {
     "skip": {
@@ -48,15 +48,7 @@
       "type": "string",
       "required": true
     },
-    "pause": {
-      "type": "string",
-      "required": true
-    },
     "partners": {
-      "type": "string",
-      "required": true
-    },
-    "projectFilters": {
       "type": "string",
       "required": true
     },

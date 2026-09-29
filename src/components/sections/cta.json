@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_cta",
   "info": {
-    "displayName": "Kêu gọi hành động"
+    "displayName": "K\u00eau g\u1ecdi h\u00e0nh \u0111\u1ed9ng"
   },
   "attributes": {
     "cards": {
@@ -30,9 +30,6 @@
       "type": "string"
     },
     "variant": {
-      "type": "string"
-    },
-    "subtitle": {
       "type": "string"
     },
     "eyebrow": {

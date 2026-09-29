@@ -4,7 +4,7 @@
   "info": {
     "singularName": "global",
     "pluralName": "globals",
-    "displayName": "Cấu hình chung"
+    "displayName": "C\u1ea5u h\u00ecnh chung"
   },
   "options": {
     "draftAndPublish": true
@@ -79,14 +79,6 @@
       "type": "component",
       "component": "shared.image",
       "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "supportEmail": {
-      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true

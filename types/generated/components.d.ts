@@ -8,14 +8,10 @@ export interface CopyAbout extends Struct.ComponentSchema {
   attributes: {
     close: Schema.Attribute.String & Schema.Attribute.Required;
     rating: Schema.Attribute.String & Schema.Attribute.Required;
-    ratingCaption: Schema.Attribute.String & Schema.Attribute.Required;
-    ratingStars: Schema.Attribute.String & Schema.Attribute.Required;
     readingTime: Schema.Attribute.String & Schema.Attribute.Required;
     readStory: Schema.Attribute.String & Schema.Attribute.Required;
     storyContact: Schema.Attribute.String & Schema.Attribute.Required;
     storyContactHref: Schema.Attribute.String & Schema.Attribute.Required;
-    valueHref: Schema.Attribute.String & Schema.Attribute.Required;
-    valueLabel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -40,10 +36,8 @@ export interface CopyAccessibility extends Struct.ComponentSchema {
     nextSlide: Schema.Attribute.String & Schema.Attribute.Required;
     pagination: Schema.Attribute.String & Schema.Attribute.Required;
     partners: Schema.Attribute.String & Schema.Attribute.Required;
-    pause: Schema.Attribute.String & Schema.Attribute.Required;
     play: Schema.Attribute.String & Schema.Attribute.Required;
     previousSlide: Schema.Attribute.String & Schema.Attribute.Required;
-    projectFilters: Schema.Attribute.String & Schema.Attribute.Required;
     skip: Schema.Attribute.String & Schema.Attribute.Required;
     slide: Schema.Attribute.String & Schema.Attribute.Required;
     zoomIn: Schema.Attribute.String & Schema.Attribute.Required;
@@ -69,16 +63,6 @@ export interface CopyArticle extends Struct.ComponentSchema {
   };
 }
 
-export interface CopyAssets extends Struct.ComponentSchema {
-  collectionName: 'components_copy_assets';
-  info: {
-    displayName: 'H\u00ECnh \u1EA3nh giao di\u1EC7n';
-  };
-  attributes: {
-    phoneIcon: Schema.Attribute.Component<'shared.image', false>;
-  };
-}
-
 export interface CopyCommon extends Struct.ComponentSchema {
   collectionName: 'components_copy_common';
   info: {
@@ -86,9 +70,6 @@ export interface CopyCommon extends Struct.ComponentSchema {
   };
   attributes: {
     all: Schema.Attribute.String & Schema.Attribute.Required;
-    allArticles: Schema.Attribute.String & Schema.Attribute.Required;
-    allNews: Schema.Attribute.String & Schema.Attribute.Required;
-    allProjects: Schema.Attribute.String & Schema.Attribute.Required;
     category: Schema.Attribute.String & Schema.Attribute.Required;
     contact: Schema.Attribute.String & Schema.Attribute.Required;
     directions: Schema.Attribute.String;
@@ -98,15 +79,10 @@ export interface CopyCommon extends Struct.ComponentSchema {
     loadMore: Schema.Attribute.String & Schema.Attribute.Required;
     news: Schema.Attribute.String & Schema.Attribute.Required;
     next: Schema.Attribute.String & Schema.Attribute.Required;
-    nextArticle: Schema.Attribute.String & Schema.Attribute.Required;
     noResults: Schema.Attribute.String & Schema.Attribute.Required;
-    onlineStatus: Schema.Attribute.String;
     previous: Schema.Attribute.String & Schema.Attribute.Required;
-    previousArticle: Schema.Attribute.String & Schema.Attribute.Required;
-    projectDetails: Schema.Attribute.String & Schema.Attribute.Required;
     projects: Schema.Attribute.String & Schema.Attribute.Required;
     readMore: Schema.Attribute.String & Schema.Attribute.Required;
-    readNext: Schema.Attribute.String & Schema.Attribute.Required;
     search: Schema.Attribute.String & Schema.Attribute.Required;
     searchPlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
     services: Schema.Attribute.String & Schema.Attribute.Required;
@@ -125,16 +101,7 @@ export interface CopyCta extends Struct.ComponentSchema {
   };
   attributes: {
     articleEyebrow: Schema.Attribute.String & Schema.Attribute.Required;
-    consultationEyebrow: Schema.Attribute.String & Schema.Attribute.Required;
     eyebrow: Schema.Attribute.String & Schema.Attribute.Required;
-    heroSecondaryHref: Schema.Attribute.String & Schema.Attribute.Required;
-    heroSecondaryLabel: Schema.Attribute.String & Schema.Attribute.Required;
-    questionDescription: Schema.Attribute.String & Schema.Attribute.Required;
-    questionHref: Schema.Attribute.String & Schema.Attribute.Required;
-    questionLabel: Schema.Attribute.String & Schema.Attribute.Required;
-    questionTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    supportDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    supportHref: Schema.Attribute.String & Schema.Attribute.Required;
     supportLabel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -147,20 +114,15 @@ export interface CopyForms extends Struct.ComponentSchema {
   attributes: {
     consent: Schema.Attribute.String & Schema.Attribute.Required;
     email: Schema.Attribute.String & Schema.Attribute.Required;
-    emailPlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
     emailShort: Schema.Attribute.String;
     eyebrow: Schema.Attribute.String & Schema.Attribute.Required;
     failure: Schema.Attribute.String & Schema.Attribute.Required;
-    helpDescription: Schema.Attribute.String & Schema.Attribute.Required;
-    helpTitle: Schema.Attribute.String & Schema.Attribute.Required;
     invalid: Schema.Attribute.String & Schema.Attribute.Required;
     invalidField: Schema.Attribute.String & Schema.Attribute.Required;
     invalidOrigin: Schema.Attribute.String & Schema.Attribute.Required;
     message: Schema.Attribute.String & Schema.Attribute.Required;
-    messagePlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
     messageShort: Schema.Attribute.String;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    namePlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
     nameShort: Schema.Attribute.String;
     pending: Schema.Attribute.String & Schema.Attribute.Required;
     phone: Schema.Attribute.String;
@@ -176,9 +138,7 @@ export interface CopyForms extends Struct.ComponentSchema {
     rateLimit: Schema.Attribute.String & Schema.Attribute.Required;
     siteSurvey: Schema.Attribute.String & Schema.Attribute.Required;
     subject: Schema.Attribute.String & Schema.Attribute.Required;
-    subjectPlaceholder: Schema.Attribute.String & Schema.Attribute.Required;
     submit: Schema.Attribute.String & Schema.Attribute.Required;
-    subtitleHighlight: Schema.Attribute.String & Schema.Attribute.Required;
     success: Schema.Attribute.String & Schema.Attribute.Required;
     tooLong: Schema.Attribute.String & Schema.Attribute.Required;
     topicsTitle: Schema.Attribute.String;
@@ -257,18 +217,11 @@ export interface CopySidebar extends Struct.ComponentSchema {
     articleTitle: Schema.Attribute.String & Schema.Attribute.Required;
     categoriesTitle: Schema.Attribute.String & Schema.Attribute.Required;
     consultText: Schema.Attribute.String;
-    contactTitle: Schema.Attribute.String;
     hotlineLabel: Schema.Attribute.String;
-    hoursTitle: Schema.Attribute.String;
-    instagramTitle: Schema.Attribute.String;
     onlineLabel: Schema.Attribute.String;
-    recentPostsTitle: Schema.Attribute.String;
     recentTitle: Schema.Attribute.String & Schema.Attribute.Required;
     servicesTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    supportHref: Schema.Attribute.String & Schema.Attribute.Required;
     supportLabel: Schema.Attribute.String & Schema.Attribute.Required;
-    supportTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    tagsTitle: Schema.Attribute.String;
     viewAllArticles: Schema.Attribute.String;
   };
 }
@@ -327,21 +280,6 @@ export interface SectionsAboutHero extends Struct.ComponentSchema {
     highlight: Schema.Attribute.String;
     image: Schema.Attribute.Component<'shared.image', false>;
     images: Schema.Attribute.Component<'shared.image', true>;
-    story: Schema.Attribute.Component<'sections.about-story', false>;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface SectionsAboutStory extends Struct.ComponentSchema {
-  collectionName: 'components_sections_about_stories';
-  info: {
-    displayName: 'H\u1ED9p tho\u1EA1i c\u00E2u chuy\u1EC7n';
-  };
-  attributes: {
-    cards: Schema.Attribute.Component<'shared.card', true>;
-    description: Schema.Attribute.Text;
-    eyebrow: Schema.Attribute.String;
-    image: Schema.Attribute.Component<'shared.image', false>;
     title: Schema.Attribute.String;
   };
 }
@@ -440,7 +378,6 @@ export interface SectionsContactForm extends Struct.ComponentSchema {
     panelTitle: Schema.Attribute.String;
     requestText: Schema.Attribute.Text;
     requestTitle: Schema.Attribute.String;
-    subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -463,7 +400,6 @@ export interface SectionsCta extends Struct.ComponentSchema {
     panelLabel: Schema.Attribute.String;
     panelText: Schema.Attribute.Text;
     panelTitle: Schema.Attribute.String;
-    subtitle: Schema.Attribute.String;
     supportIcon: Schema.Attribute.Component<'shared.image', false>;
     supportLabel: Schema.Attribute.String;
     supportValue: Schema.Attribute.String;
@@ -584,6 +520,7 @@ export interface SectionsNetwork extends Struct.ComponentSchema {
     image: Schema.Attribute.Component<'shared.image', false>;
     mapUrl: Schema.Attribute.String;
     rating: Schema.Attribute.String;
+    supportLabel: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -989,7 +926,6 @@ declare module '@strapi/strapi' {
       'copy.about': CopyAbout;
       'copy.accessibility': CopyAccessibility;
       'copy.article': CopyArticle;
-      'copy.assets': CopyAssets;
       'copy.common': CopyCommon;
       'copy.cta': CopyCta;
       'copy.forms': CopyForms;
@@ -1000,7 +936,6 @@ declare module '@strapi/strapi' {
       'copy.system': CopySystem;
       'sections.about': SectionsAbout;
       'sections.about-hero': SectionsAboutHero;
-      'sections.about-story': SectionsAboutStory;
       'sections.article-author': SectionsArticleAuthor;
       'sections.article-body': SectionsArticleBody;
       'sections.article-comparison': SectionsArticleComparison;
