@@ -672,7 +672,6 @@ export interface SectionsProjectOverview extends Struct.ComponentSchema {
     displayName: 'T\u1ED5ng quan d\u1EF1 \u00E1n';
   };
   attributes: {
-    cards: Schema.Attribute.Component<'shared.card', true>;
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Component<'shared.image', false>;
     title: Schema.Attribute.String;

@@ -48,14 +48,23 @@ function rootServices(code) {
 }
 
 async function migrate(strapi) {
-  const changes = { roots: 0, merged: 0, linked: 0, homePage: 0, servicesPage: 0, projectsPage: 0, header: 0, testimonials: 0, projectCta: 0 };
+  const changes = {
+    roots: 0,
+    merged: 0,
+    linked: 0,
+    homePage: 0,
+    servicesPage: 0,
+    projectsPage: 0,
+    header: 0,
+    testimonials: 0,
+    projectCta: 0,
+    newsPromo: 0,
+    rootText: 0,
+  };
   const services = strapi.documents('api::service.service');
 
   // Ngôn ngữ nguồn phải chạy trước để các bản dịch là localization của cùng một tài liệu.
-  const codes = [
-    SOURCE_LOCALE,
-    ...LOCALES.map((l) => l.code).filter((c) => c !== SOURCE_LOCALE),
-  ];
+  const codes = [SOURCE_LOCALE, ...LOCALES.map((l) => l.code).filter((c) => c !== SOURCE_LOCALE)];
 
   // 0. Gộp các mục gốc bị tạo trùng thành một tài liệu duy nhất.
   const rootSlugs = rootServices(SOURCE_LOCALE).map((r) => r.slug);
@@ -131,7 +140,12 @@ async function migrate(strapi) {
       if (doc.order === null || doc.order === undefined)
         data.order = seedServices.find((x) => x.slug === doc.slug)?.order ?? 0;
       if (!Object.keys(data).length) continue;
-      await services.update({ documentId: doc.documentId, locale: code, data, status: 'published' });
+      await services.update({
+        documentId: doc.documentId,
+        locale: code,
+        data,
+        status: 'published',
+      });
       changes.linked++;
     }
   }
@@ -223,6 +237,43 @@ async function migrate(strapi) {
       }
     }
 
+    // Mục dịch vụ gốc tạo ở lần chạy trước có thể còn sót chữ tiếng Anh vì thiếu từ điển.
+    if (code !== SOURCE_LOCALE) {
+      const english = rootServices(SOURCE_LOCALE);
+      for (const root of rootServices(code)) {
+        const origin = english.find((r) => r.slug === root.slug);
+        const doc = await services.findFirst({
+          filters: { slug: root.slug },
+          locale: code,
+          populate: populateSections('api::service.service'),
+        });
+        if (!doc || !origin) continue;
+        const sections = strip(doc.sections || []);
+        let touched = false;
+        sections.forEach((section, index) => {
+          const from = origin.sections?.[index];
+          const to = root.sections?.[index];
+          if (!from || !to || from.__component !== section.__component) return;
+          for (const [key, value] of Object.entries(to)) {
+            if (key === '__component' || typeof value !== 'string') continue;
+            if (section[key] === from[key] && section[key] !== value) {
+              section[key] = value;
+              touched = true;
+            }
+          }
+        });
+        if (touched) {
+          await services.update({
+            documentId: doc.documentId,
+            locale: code,
+            data: { sections },
+            status: 'published',
+          });
+          changes.rootText = (changes.rootText || 0) + 1;
+        }
+      }
+    }
+
     // Khối Đánh giá khách hàng mới của trang Dịch vụ, chèn trước thư viện ảnh.
     {
       const uid = 'api::services-page.services-page';
@@ -244,6 +295,35 @@ async function migrate(strapi) {
             status: 'published',
           });
           changes.testimonials = (changes.testimonials || 0) + 1;
+        }
+      }
+    }
+
+    // Thẻ hỗ trợ tư vấn trang Tin tức đổi sang bố cục mới: ảnh trên, hotline và nút bên dưới.
+    {
+      const uid = 'api::news-page.news-page';
+      const store = strapi.documents(uid);
+      const doc = await store.findFirst({ locale: code, populate: populateSections(uid) });
+      const seeded = localizeContent(CONTENT, code);
+      const source = (seeded.content || seeded).pages['news-page'].sections.find(
+        (s) => s.__component === 'sections.news' && s.promo,
+      );
+      if (doc && source) {
+        const sections = strip(doc.sections || []);
+        const target = sections.find((s) => s.__component === 'sections.news' && s.promo);
+        if (target && !target.promo.highlight) {
+          target.promo = {
+            ...target.promo,
+            ...(await withMedia(strapi, { ...source.promo, image: undefined })),
+            image: target.promo.image,
+          };
+          await store.update({
+            documentId: doc.documentId,
+            locale: code,
+            data: { sections },
+            status: 'published',
+          });
+          changes.newsPromo = (changes.newsPromo || 0) + 1;
         }
       }
     }

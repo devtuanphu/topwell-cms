@@ -31,7 +31,10 @@ const CONTENT = {
               highlight: 'action',
               description:
                 'Partner with us for smarter logistics solutions that drive the growth of your business.',
-              image: { $file: 'fv2-e5b8d05f.jpg', alt: 'Freight truck on a coastal highway at sunset' },
+              image: {
+                $file: 'fv2-e5b8d05f.jpg',
+                alt: 'Freight truck on a coastal highway at sunset',
+              },
               href: '/lien-he',
               label: 'Contact us',
               eyebrow: "LET'S GET TO WORK",
@@ -43,7 +46,10 @@ const CONTENT = {
               highlight: 'Better production.',
               description:
                 'Coordinate automation, equipment and engineering expertise to support your next production milestone.',
-              image: { $file: 'fv2-8c9dac4c.jpg', alt: 'Automated production line with industrial robots' },
+              image: {
+                $file: 'fv2-8c9dac4c.jpg',
+                alt: 'Automated production line with industrial robots',
+              },
               href: '/dich-vu/production-lines',
               label: 'Explore our solutions',
               eyebrow: 'PRECISION MANUFACTURING',
@@ -88,8 +94,14 @@ const CONTENT = {
             { $file: 'fv2-dd8c76c7.jpg', alt: 'Construction team working on a steel structure' },
           ],
           badges: [
-            { title: 'Equipment\n& solutions', icon: { $file: 'fv2-835ed70e.svg', alt: 'Equipment icon' } },
-            { title: 'Spare parts\n& components', icon: { $file: 'fv2-28f3a07f.svg', alt: 'Components icon' } },
+            {
+              title: 'Equipment\n& solutions',
+              icon: { $file: 'fv2-835ed70e.svg', alt: 'Equipment icon' },
+            },
+            {
+              title: 'Spare parts\n& components',
+              icon: { $file: 'fv2-28f3a07f.svg', alt: 'Components icon' },
+            },
           ],
           cards: [
             {
@@ -179,7 +191,10 @@ const CONTENT = {
           __component: 'sections.quote-form',
           eyebrow: 'Quote',
           title: 'Free quotation',
-          image: { $file: 'e6a442d9-b41d-4e0b-989a-b170c442303f.png', alt: 'TOP WELL support engineer' },
+          image: {
+            $file: 'e6a442d9-b41d-4e0b-989a-b170c442303f.png',
+            alt: 'TOP WELL support engineer',
+          },
           ctaLabel: 'Get a quote now',
           panelEyebrow: 'PEOPLE TRUST',
           panelTitle: 'Why we are the best',
@@ -188,17 +203,20 @@ const CONTENT = {
           cards: [
             {
               title: 'Timely services',
-              description: 'Fast responses, clear schedules and on-time delivery for every request.',
+              description:
+                'Fast responses, clear schedules and on-time delivery for every request.',
               icon: { $file: 'fv2-6e4fdc21.svg', alt: 'Timely services icon' },
             },
             {
               title: 'Top rated service',
-              description: 'Trusted by manufacturers for consistent quality and transparent communication.',
+              description:
+                'Trusted by manufacturers for consistent quality and transparent communication.',
               icon: { $file: 'fv2-bd409995.svg', alt: 'Top rated service icon' },
             },
             {
               title: 'Licensed technicians',
-              description: 'Certified engineers for installation, calibration and maintenance work.',
+              description:
+                'Certified engineers for installation, calibration and maintenance work.',
               icon: { $file: 'fv2-2ea78564.svg', alt: 'Licensed technicians icon' },
             },
           ],
@@ -306,13 +324,17 @@ const CONTENT = {
           title: 'Civil and commercial services',
           description:
             'From survey to handover, one coordinated team delivers installation, maintenance and upgrades for offices, factories and commercial buildings.',
-          image: { $file: 'fv2-ddf8012f.jpg', alt: 'Technicians installing a ceiling air conditioner' },
+          image: {
+            $file: 'fv2-ddf8012f.jpg',
+            alt: 'Technicians installing a ceiling air conditioner',
+          },
           videoUrl: '',
           videoLabel: 'Watch the process introduction',
           cards: [
             {
               title: 'Licensed technicians',
-              description: 'Certified engineers who follow documented safety and quality procedures.',
+              description:
+                'Certified engineers who follow documented safety and quality procedures.',
               icon: { $file: 'fv2-f5967815.svg', alt: 'Shield icon' },
             },
             {
@@ -436,12 +458,39 @@ const CONTENT = {
           description:
             'A real record of fabrication, installation, machinery maintenance, technical systems and standards inspection at our workshop and partner sites.',
           cards: [
-            { title: 'Mechanical fabrication', image: { $file: 'fv2-21fe2075.jpg', alt: 'Mechanical fabrication' } },
-            { title: 'CNC machining & calibration', image: { $file: 'fv2-81b58488.jpg', alt: 'CNC machining and calibration' } },
-            { title: 'Laser CMM inspection', image: { $file: 'fv2-f1ac49ad.jpg', alt: 'Laser CMM inspection' } },
-            { title: 'Equipment inspection & acceptance', image: { $file: '1e93f881-b66f-4bb3-a73e-f1076b8ca947.png', alt: 'Equipment inspection and acceptance' } },
-            { title: 'Training & technology transfer', image: { $file: '494aa562-c7ff-4fa2-a662-b24d370eb84a.png', alt: 'Training and technology transfer' } },
-            { title: 'Handover & operational support', image: { $file: 'cae00984-c1db-4beb-85f6-f017cca38d01.png', alt: 'Handover and operational support' } },
+            {
+              title: 'Mechanical fabrication',
+              image: { $file: 'fv2-21fe2075.jpg', alt: 'Mechanical fabrication' },
+            },
+            {
+              title: 'CNC machining & calibration',
+              image: { $file: 'fv2-81b58488.jpg', alt: 'CNC machining and calibration' },
+            },
+            {
+              title: 'Laser CMM inspection',
+              image: { $file: 'fv2-f1ac49ad.jpg', alt: 'Laser CMM inspection' },
+            },
+            {
+              title: 'Equipment inspection & acceptance',
+              image: {
+                $file: '1e93f881-b66f-4bb3-a73e-f1076b8ca947.png',
+                alt: 'Equipment inspection and acceptance',
+              },
+            },
+            {
+              title: 'Training & technology transfer',
+              image: {
+                $file: '494aa562-c7ff-4fa2-a662-b24d370eb84a.png',
+                alt: 'Training and technology transfer',
+              },
+            },
+            {
+              title: 'Handover & operational support',
+              image: {
+                $file: 'cae00984-c1db-4beb-85f6-f017cca38d01.png',
+                alt: 'Handover and operational support',
+              },
+            },
           ],
         },
       ],
@@ -494,12 +543,18 @@ const CONTENT = {
           title: 'The latest developments in industry.',
           variant: 'listing',
           promo: {
-            eyebrow: 'Charli Castro',
-            description: 'Electrician',
-            title: 'Need help from an experienced electrician?',
-            label: 'Contact now',
+            eyebrow: 'Online 24/7',
+            title: 'Need advice on warehousing and mechanical solutions?',
+            description:
+              'The TOP WELL engineering team is ready to review your current setup and draft an optimised layout free of charge.',
+            tags: 'Technical hotline',
+            highlight: '(+84) 1900 8899',
+            label: 'Talk to a consultant',
             href: '/lien-he',
-            image: { $file: 'fv2-cd7bf797.jpg', alt: 'Operator using a touchscreen in a warehouse' },
+            image: {
+              $file: 'fv2-cd7bf797.jpg',
+              alt: 'Operator using a touchscreen in a warehouse',
+            },
           },
         },
       ],
@@ -1664,24 +1719,6 @@ const CONTENT = {
             $file: '3d88dd2d-b196-4d51-a60d-9f2c6cfcf572.png',
             alt: 'EV Assembly Line Automation',
           },
-          cards: [
-            {
-              title: 'YEAR',
-              description: '2024',
-            },
-            {
-              title: 'CLIENT',
-              description: 'Industrial manufacturing partner',
-            },
-            {
-              title: 'SECTOR',
-              description: 'Robotics & MES',
-            },
-            {
-              title: 'LOCATION',
-              description: 'Hai Phong',
-            },
-          ],
         },
         {
           __component: 'sections.project-challenge',
@@ -1807,24 +1844,6 @@ const CONTENT = {
             $file: '1042bb5f-727a-4e6a-8d93-f5a994f3f31e.png',
             alt: 'Five-Axis Aerospace Machining Centre',
           },
-          cards: [
-            {
-              title: 'YEAR',
-              description: '2024',
-            },
-            {
-              title: 'CLIENT',
-              description: 'Industrial manufacturing partner',
-            },
-            {
-              title: 'SECTOR',
-              description: '5-Axis Aerospace',
-            },
-            {
-              title: 'LOCATION',
-              description: 'Hoa Lac',
-            },
-          ],
         },
         {
           __component: 'sections.project-challenge',
@@ -1950,24 +1969,6 @@ const CONTENT = {
             $file: 'e4721e6c-9989-4abb-a974-7aeabad5daca.png',
             alt: 'Precision Molds for Medical Components',
           },
-          cards: [
-            {
-              title: 'YEAR',
-              description: '2023',
-            },
-            {
-              title: 'CLIENT',
-              description: 'Industrial manufacturing partner',
-            },
-            {
-              title: 'SECTOR',
-              description: 'Tooling & Mold',
-            },
-            {
-              title: 'LOCATION',
-              description: 'Bac Ninh',
-            },
-          ],
         },
         {
           __component: 'sections.project-challenge',
@@ -2083,24 +2084,6 @@ const CONTENT = {
             $file: 'eb41f649-f2f8-4cfc-b119-23089d6da91e.png',
             alt: 'Laser Calibration & Dynamic Balancing',
           },
-          cards: [
-            {
-              title: 'YEAR',
-              description: '2023',
-            },
-            {
-              title: 'CLIENT',
-              description: 'Industrial manufacturing partner',
-            },
-            {
-              title: 'SECTOR',
-              description: 'Laser Metrology',
-            },
-            {
-              title: 'LOCATION',
-              description: 'Vinh Phuc',
-            },
-          ],
         },
         {
           __component: 'sections.project-challenge',
@@ -2216,24 +2199,6 @@ const CONTENT = {
             $file: '3d88dd2d-b196-4d51-a60d-9f2c6cfcf572.png',
             alt: 'Smart AS/RS Warehouse & AGV System',
           },
-          cards: [
-            {
-              title: 'YEAR',
-              description: '2022',
-            },
-            {
-              title: 'CLIENT',
-              description: 'Industrial manufacturing partner',
-            },
-            {
-              title: 'SECTOR',
-              description: 'Intralogistics & AGV',
-            },
-            {
-              title: 'LOCATION',
-              description: 'Binh Duong',
-            },
-          ],
         },
         {
           __component: 'sections.project-challenge',
@@ -2359,24 +2324,6 @@ const CONTENT = {
             $file: 'e4721e6c-9989-4abb-a974-7aeabad5daca.png',
             alt: 'Wear-Resistant Machining & PVD Coating',
           },
-          cards: [
-            {
-              title: 'YEAR',
-              description: '2022',
-            },
-            {
-              title: 'CLIENT',
-              description: 'Industrial manufacturing partner',
-            },
-            {
-              title: 'SECTOR',
-              description: 'PVD Surface & Tool',
-            },
-            {
-              title: 'LOCATION',
-              description: 'Dong Nai',
-            },
-          ],
         },
         {
           __component: 'sections.project-challenge',
@@ -3147,36 +3094,36 @@ const CONTENT = {
 
 // Thanh menu: mục Dịch vụ và Dự án mở menu con lấy từ bộ sưu tập tương ứng.
 const NAVIGATION = [
-      {
-        title: 'Home',
-        description: '',
-        href: '/',
-      },
-      {
-        title: 'About us',
-        description: '',
-        href: '/ve-chung-toi',
-      },
-      {
-        title: 'Services',
-        description: '',
-        href: '/dich-vu',
-      },
-      {
-        title: 'Projects',
-        description: '',
-        href: '/du-an',
-      },
-      {
-        title: 'News',
-        description: '',
-        href: '/tin-tuc',
-      },
-      {
-        title: 'Contact',
-        description: '',
-        href: '/lien-he',
-      },
+  {
+    title: 'Home',
+    description: '',
+    href: '/',
+  },
+  {
+    title: 'About us',
+    description: '',
+    href: '/ve-chung-toi',
+  },
+  {
+    title: 'Services',
+    description: '',
+    href: '/dich-vu',
+  },
+  {
+    title: 'Projects',
+    description: '',
+    href: '/du-an',
+  },
+  {
+    title: 'News',
+    description: '',
+    href: '/tin-tuc',
+  },
+  {
+    title: 'Contact',
+    description: '',
+    href: '/lien-he',
+  },
 ];
 const MENU_SOURCE = {
   '/dich-vu': 'services',
@@ -3307,7 +3254,8 @@ CONTENT['site-settings'] = {
     instagramTitle: 'Instagram:',
     tagsTitle: 'Keywords:',
     recentPostsTitle: 'Recent posts:',
-    consultText: 'Our technical specialists are ready to assess your site and prepare an optimised layout free of charge.',
+    consultText:
+      'Our technical specialists are ready to assess your site and prepare an optimised layout free of charge.',
     hotlineLabel: 'Technical hotline',
     onlineLabel: 'Online 24/7',
     viewAllArticles: 'View all articles in the news list',
@@ -3667,9 +3615,7 @@ CONTENT.services = [
     group: key,
     order: index,
     sections: group.sections.map((section) =>
-      section.__component === 'sections.services'
-        ? { ...section, source: 'children' }
-        : section,
+      section.__component === 'sections.services' ? { ...section, source: 'children' } : section,
     ),
   })),
   ...CONTENT.services.map((service, index) => ({
@@ -3680,16 +3626,21 @@ CONTENT.services = [
 ];
 delete CONTENT.serviceGroups;
 
-
 // Redesign V1 project cards show an author and a date; the flagship case study follows Figma 143:3485.
-const PROJECT_DATES = ['2026-05-17', '2026-04-22', '2026-03-12', '2026-02-06', '2025-12-18', '2025-11-04'];
+const PROJECT_DATES = [
+  '2026-05-17',
+  '2026-04-22',
+  '2026-03-12',
+  '2026-02-06',
+  '2025-12-18',
+  '2025-11-04',
+];
 // Trang dự án kết bằng dải kêu gọi nền tối như thiết kế (Figma 208:2894).
 const PROJECT_CTA = {
   __component: 'sections.cta-bar',
   eyebrow: 'TECHNICAL & PROJECT SUPPORT',
   title: 'Need technical advice or a quotation for your project?',
-  description:
-    'The TOP WELL team is ready to review your site and prepare a plan within 24 hours.',
+  description: 'The TOP WELL team is ready to review your site and prepare a plan within 24 hours.',
   phoneLabel: 'Hotline:',
   ctaLabel: 'Talk to us',
   ctaHref: '/lien-he',
@@ -3697,19 +3648,12 @@ const PROJECT_CTA = {
 CONTENT.projects.forEach((project, index) => {
   project.author ||= 'TOP WELL Engineering';
   project.publishedDate ||= PROJECT_DATES[index % PROJECT_DATES.length];
-  const overview = project.sections.find((s) => s.__component === 'sections.project-overview');
-  if (overview?.cards) {
-    const value = (label) => overview.cards.find((c) => c.title === label)?.description || '';
-    overview.cards = [
-      { title: 'DATE', description: project.year },
-      { title: 'CLIENT', description: value('CLIENT') },
-      { title: 'CATEGORY', description: project.category },
-      { title: 'LOCATION', description: project.location },
-    ];
-  }
 });
 Object.assign(CONTENT.projects[0], {
-  image: { $file: 'fv2-8c9dac4c.jpg', alt: 'EV assembly line automation and precision manufacturing' },
+  image: {
+    $file: 'fv2-8c9dac4c.jpg',
+    alt: 'EV assembly line automation and precision manufacturing',
+  },
 });
 CONTENT.projects[0].sections = [
   {
@@ -3717,13 +3661,10 @@ CONTENT.projects[0].sections = [
     title: 'EV Assembly Line Automation',
     description:
       'Optimise production cycle time and eliminate cumulative machining error across complex mechanical assemblies. The customer faced high scrap rates and unplanned maintenance costs, requiring a synchronised automation line with strict micro-tolerance inspection standards.',
-    image: { $file: 'fv2-8c9dac4c.jpg', alt: 'EV assembly line automation and precision manufacturing' },
-    cards: [
-      { title: 'DATE', description: 'January 23, 2026' },
-      { title: 'CLIENT', description: 'FDI manufacturing partner' },
-      { title: 'CATEGORY', description: 'Robotics & MES' },
-      { title: 'LOCATION', description: 'Hai Phong, Vietnam' },
-    ],
+    image: {
+      $file: 'fv2-8c9dac4c.jpg',
+      alt: 'EV assembly line automation and precision manufacturing',
+    },
   },
   {
     __component: 'sections.project-challenge',
@@ -3734,8 +3675,12 @@ CONTENT.projects[0].sections = [
     cards: [
       { title: 'Eliminated dynamic vibration and thermal drift during 24/7 CNC operation.' },
       { title: 'Automated blank feeding and non-contact optical measurement to ±0.002 mm.' },
-      { title: 'Integrated SCADA/MES industrial communication for real-time equipment monitoring.' },
-      { title: 'Transferred standardised SOP operation procedures to the on-site engineering team.' },
+      {
+        title: 'Integrated SCADA/MES industrial communication for real-time equipment monitoring.',
+      },
+      {
+        title: 'Transferred standardised SOP operation procedures to the on-site engineering team.',
+      },
     ],
   },
   {
@@ -3745,9 +3690,18 @@ CONTENT.projects[0].sections = [
     description:
       'Delivery followed German and Japanese industrial practice: site survey, 3D DFM/Moldflow simulation, finishing on 5-axis machining centres, Renishaw laser calibration and on-site FAT/SAT acceptance before connecting to live production.',
     cards: [
-      { title: 'Survey & equipment planning', image: { $file: 'fv2-21fe2075.jpg', alt: 'Site survey and equipment planning' } },
-      { title: '5-axis CNC machining & tuning', image: { $file: 'fv2-81b58488.jpg', alt: '5-axis CNC machining and tuning' } },
-      { title: 'Laser CMM inspection & FAT', image: { $file: 'fv2-f1ac49ad.jpg', alt: 'Laser CMM inspection and factory acceptance' } },
+      {
+        title: 'Survey & equipment planning',
+        image: { $file: 'fv2-21fe2075.jpg', alt: 'Site survey and equipment planning' },
+      },
+      {
+        title: '5-axis CNC machining & tuning',
+        image: { $file: 'fv2-81b58488.jpg', alt: '5-axis CNC machining and tuning' },
+      },
+      {
+        title: 'Laser CMM inspection & FAT',
+        image: { $file: 'fv2-f1ac49ad.jpg', alt: 'Laser CMM inspection and factory acceptance' },
+      },
     ],
   },
   {
@@ -3759,7 +3713,10 @@ CONTENT.projects[0].sections = [
     cards: [
       { title: '35% lower operating cost', description: 'and 98% less unplanned downtime.' },
       { title: 'Overall equipment effectiveness (OEE)', description: 'raised from 76% to 94.2%.' },
-      { title: 'Return on investment (ROI)', description: 'achieved after 14 months of operation.' },
+      {
+        title: 'Return on investment (ROI)',
+        description: 'achieved after 14 months of operation.',
+      },
       { title: 'International quality certification', description: 'to ISO 9001 and AS9100.' },
     ],
   },
@@ -3784,7 +3741,10 @@ const FEATURED = {
     homeCategory: 'ADA & Logistics / Warehouse automation',
     homeSummary:
       'A smart storage solution integrating the Ada System Platform and AS/RS technology to optimise material flow and automate industrial logistics.',
-    homeImage: { $file: 'fv2-b4d08d8a.jpg', alt: 'AGV robots carrying pallets in a smart warehouse' },
+    homeImage: {
+      $file: 'fv2-b4d08d8a.jpg',
+      alt: 'AGV robots carrying pallets in a smart warehouse',
+    },
     tags: 'Ada System Platform, Smart AS/RS, AI Warehouse',
   },
   'khuon-ep-nhua-y-te': {
@@ -3798,7 +3758,11 @@ const FEATURED = {
   },
 };
 CONTENT.projects.forEach((project) => {
-  Object.assign(project, { featured: Boolean(FEATURED[project.slug]) }, FEATURED[project.slug] || {});
+  Object.assign(
+    project,
+    { featured: Boolean(FEATURED[project.slug]) },
+    FEATURED[project.slug] || {},
+  );
 });
 CONTENT.projects.forEach((project) => {
   if (!project.sections.some((s) => s.__component === 'sections.cta-bar'))
@@ -3806,7 +3770,10 @@ CONTENT.projects.forEach((project) => {
 });
 
 const ARTICLE_V1 = {
-  'quy-trinh-gia-cong-cnc-5-truc': ['fv2-c6d3b0a7.jpg', 'CNC Machining, Five-Axis, TOP WELL Alliance, Hai Phong Automation'],
+  'quy-trinh-gia-cong-cnc-5-truc': [
+    'fv2-c6d3b0a7.jpg',
+    'CNC Machining, Five-Axis, TOP WELL Alliance, Hai Phong Automation',
+  ],
   'chuoi-cung-ung-ben-vung': ['fv2-12b2d5eb.jpg', 'Supply Chain, Green Logistics, Sustainability'],
   'xu-huong-tu-dong-hoa-kho-hang': ['fv2-0e3b547a.jpg', 'Warehouse Automation, Conveyors, AS/RS'],
   'kho-bai-thong-minh': ['fv2-6fe4f3e8.jpg', 'Smart Warehouse, Inventory, WMS'],
@@ -3957,7 +3924,8 @@ CONTENT.services.forEach((service) => {
         .filter(Boolean)
         .join('\n\n'),
       image: v1.image || service.image || intro.image,
-      images: v1.images || (gallery ? gallery.cards.slice(0, 2).map((c) => c.image) : DETAIL_PHOTOS),
+      images:
+        v1.images || (gallery ? gallery.cards.slice(0, 2).map((c) => c.image) : DETAIL_PHOTOS),
       body: describe(commitments?.cards) || describe(features?.cards),
     },
     ...(faq ? [{ ...faq, title: 'Frequently asked questions' }] : []),
@@ -4022,9 +3990,25 @@ function validateContent() {
 const { LOCALES, SOURCE_LOCALE, ensureLocales } = require('../src/locales');
 // Values under these keys are identifiers, links or media references, never translated.
 const UNTRANSLATED_KEYS = new Set([
-  'slug', '$file', '__component', 'variant', 'group', 'publishedDate', 'keywords', 'language',
-  'locale', 'openGraphLocale', 'routes', 'videoUrl', 'mapUrl', 'homeOrder', 'featured',
-  'parent', 'parentSlug', 'order', 'source',
+  'slug',
+  '$file',
+  '__component',
+  'variant',
+  'group',
+  'publishedDate',
+  'keywords',
+  'language',
+  'locale',
+  'openGraphLocale',
+  'routes',
+  'videoUrl',
+  'mapUrl',
+  'homeOrder',
+  'featured',
+  'parent',
+  'parentSlug',
+  'order',
+  'source',
 ]);
 const LOCALE_METADATA = {
   en: { language: 'en', locale: 'en-US', openGraphLocale: 'en_US' },
@@ -4068,7 +4052,10 @@ function localizeContent(content, code) {
 }
 
 const escapeHtml = (text) =>
-  String(text).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+  String(text).replace(
+    /[&<>"]/g,
+    (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c],
+  );
 // Article bodies are edited in CKEditor: turn the seed's heading/paragraph cards into one HTML block.
 function articleRichText(content) {
   for (const article of content.articles) {
@@ -4090,7 +4077,12 @@ function articleRichText(content) {
         return `<h2>${escapeHtml(card.title)}</h2>${paragraphs}`;
       })
       .join('');
-    article.sections.splice(index, 1, { ...body, cards: [] }, { __component: 'sections.rich-text', content: html });
+    article.sections.splice(
+      index,
+      1,
+      { ...body, cards: [] },
+      { __component: 'sections.rich-text', content: html },
+    );
   }
   return content;
 }
@@ -4203,7 +4195,8 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
     // Other languages are stored as localizations of the source-language document.
     const source =
       found ||
-      (locale !== SOURCE_LOCALE && (await service.findFirst({ ...filters, locale: SOURCE_LOCALE })));
+      (locale !== SOURCE_LOCALE &&
+        (await service.findFirst({ ...filters, locale: SOURCE_LOCALE })));
     if (source) {
       await service.update({
         documentId: source.documentId,
@@ -4335,7 +4328,10 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
   }
   await ensureLocales(strapi);
   const missing = {};
-  for (const code of [SOURCE_LOCALE, ...LOCALES.map((l) => l.code).filter((c) => c !== SOURCE_LOCALE)]) {
+  for (const code of [
+    SOURCE_LOCALE,
+    ...LOCALES.map((l) => l.code).filter((c) => c !== SOURCE_LOCALE),
+  ]) {
     const localized = localizeContent(CONTENT, code);
     const content = articleRichText(
       structuredClone(code === SOURCE_LOCALE ? CONTENT : localized.content),
@@ -4360,7 +4356,9 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
   }
   if (Object.values(missing).some(Boolean))
     strapi.log.warn(`Untranslated seed strings kept in English: ${JSON.stringify(missing)}`);
-  strapi.log.info(`Seed complete (${LOCALES.map((l) => l.code).join(', ')}): ${JSON.stringify({ ...expected, ...stats })}`);
+  strapi.log.info(
+    `Seed complete (${LOCALES.map((l) => l.code).join(', ')}): ${JSON.stringify({ ...expected, ...stats })}`,
+  );
   return stats;
 }
 
