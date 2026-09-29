@@ -198,7 +198,12 @@ async function migrate(strapi) {
         'api::projects-page.projects-page',
         'projectsPage',
         (section) => {
-          if (section.__component !== 'sections.projects' || section.description) return false;
+          if (section.__component !== 'sections.projects') return false;
+          if (!section.source) {
+            section.source = 'roots';
+            if (section.description) return true;
+          }
+          if (section.description) return false;
           section.description =
             {
               vi: 'Đồng hành cùng đối tác toàn cầu tối ưu hóa chuỗi cung ứng, hạ tầng kho bãi thông minh và gia tăng hiệu suất vận hành bền vững.',

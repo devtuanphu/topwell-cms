@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_projects",
   "info": {
-    "displayName": "Dự án"
+    "displayName": "D\u1ef1 \u00e1n"
   },
   "attributes": {
     "eyebrow": {
@@ -20,6 +20,18 @@
     },
     "description": {
       "type": "text"
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": [
+        "roots",
+        "children",
+        "parent"
+      ],
+      "default": "roots"
+    },
+    "parentSlug": {
+      "type": "string"
     }
   }
 }

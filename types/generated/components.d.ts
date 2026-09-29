@@ -720,6 +720,9 @@ export interface SectionsProjects extends Struct.ComponentSchema {
         },
         number
       >;
+    parentSlug: Schema.Attribute.String;
+    source: Schema.Attribute.Enumeration<['roots', 'children', 'parent']> &
+      Schema.Attribute.DefaultTo<'roots'>;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.String;
   };
@@ -952,7 +955,7 @@ export interface SharedNavItem extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     links: Schema.Attribute.Component<'shared.card', true>;
     source: Schema.Attribute.Enumeration<
-      ['none', 'manual', 'services', 'services-all', 'projects']
+      ['none', 'manual', 'services', 'services-all', 'projects', 'projects-all']
     > &
       Schema.Attribute.DefaultTo<'none'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
