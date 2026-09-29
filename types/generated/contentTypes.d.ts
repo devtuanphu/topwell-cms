@@ -1105,6 +1105,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    children: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     featured: Schema.Attribute.Boolean &
@@ -1165,6 +1166,14 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
+    parent: Schema.Attribute.Relation<'manyToOne', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     publishedDate: Schema.Attribute.Date &
       Schema.Attribute.SetPluginOptions<{
@@ -1174,10 +1183,13 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       }>;
     sections: Schema.Attribute.DynamicZone<
       [
-        'sections.project-overview',
+        'sections.cta-bar',
+        'sections.page-hero',
         'sections.project-challenge',
+        'sections.project-overview',
         'sections.project-process',
         'sections.project-results',
+        'sections.projects',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1273,12 +1285,12 @@ export interface ApiProjectsPageProjectsPage extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiServiceGroupServiceGroup extends Struct.CollectionTypeSchema {
-  collectionName: 'service_groups';
+export interface ApiServiceService extends Struct.CollectionTypeSchema {
+  collectionName: 'services';
   info: {
-    displayName: 'Nh\u00F3m d\u1ECBch v\u1EE5';
-    pluralName: 'service-groups';
-    singularName: 'service-group';
+    displayName: 'D\u1ECBch v\u1EE5';
+    pluralName: 'services';
+    singularName: 'service';
   };
   options: {
     draftAndPublish: true;
@@ -1307,6 +1319,13 @@ export interface ApiServiceGroupServiceGroup extends Struct.CollectionTypeSchema
           localized: true;
         };
       }>;
+    category: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    children: Schema.Attribute.Relation<'oneToMany', 'api::service.service'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     ctaLabel: Schema.Attribute.String &
@@ -1327,107 +1346,6 @@ export interface ApiServiceGroupServiceGroup extends Struct.CollectionTypeSchema
           localized: true;
         };
       }>;
-    icon: Schema.Attribute.Component<'shared.image', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    image: Schema.Attribute.Component<'shared.image', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    key: Schema.Attribute.Enumeration<['industrial', 'logistics']> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }> &
-      Schema.Attribute.DefaultTo<'industrial'>;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::service-group.service-group'>;
-    publishedAt: Schema.Attribute.DateTime;
-    sections: Schema.Attribute.DynamicZone<
-      [
-        'sections.page-hero',
-        'sections.services',
-        'sections.process-steps',
-        'sections.metrics-strip',
-        'sections.faq',
-        'sections.gallery',
-        'sections.video-cta',
-        'sections.cta',
-      ]
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    seo: Schema.Attribute.Component<'shared.seo', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    slug: Schema.Attribute.UID<'title'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    summary: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    title: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
-  };
-}
-
-export interface ApiServiceService extends Struct.CollectionTypeSchema {
-  collectionName: 'services';
-  info: {
-    displayName: 'D\u1ECBch v\u1EE5';
-    pluralName: 'services';
-    singularName: 'service';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    bannerImage: Schema.Attribute.Component<'shared.image', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    category: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> & Schema.Attribute.Private;
     group: Schema.Attribute.Enumeration<['industrial', 'logistics']> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -1450,14 +1368,27 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::service.service'>;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
+    parent: Schema.Attribute.Relation<'manyToOne', 'api::service.service'>;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
-        'sections.service-intro',
-        'sections.feature-grid',
         'sections.commitments',
-        'sections.gallery',
+        'sections.cta-bar',
         'sections.faq',
+        'sections.feature-grid',
+        'sections.gallery',
+        'sections.metrics-strip',
+        'sections.page-hero',
+        'sections.process-steps',
+        'sections.service-intro',
+        'sections.services',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1524,7 +1455,14 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::services-page.services-page'>;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
-      ['sections.page-hero', 'sections.services', 'sections.video-cta', 'sections.gallery']
+      [
+        'sections.cta-bar',
+        'sections.gallery',
+        'sections.page-hero',
+        'sections.services',
+        'sections.testimonials',
+        'sections.video-cta',
+      ]
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2144,7 +2082,6 @@ declare module '@strapi/strapi' {
       'api::privacy-page.privacy-page': ApiPrivacyPagePrivacyPage;
       'api::project.project': ApiProjectProject;
       'api::projects-page.projects-page': ApiProjectsPageProjectsPage;
-      'api::service-group.service-group': ApiServiceGroupServiceGroup;
       'api::service.service': ApiServiceService;
       'api::services-page.services-page': ApiServicesPageServicesPage;
       'api::site-settings.site-settings': ApiSiteSettingsSiteSettings;

@@ -14,7 +14,13 @@
     },
     "source": {
       "type": "enumeration",
-      "enum": ["none", "manual", "services", "projects", "service-groups"],
+      "enum": [
+        "none",
+        "manual",
+        "services",
+        "services-all",
+        "projects"
+      ],
       "default": "none"
     },
     "links": {

@@ -83,11 +83,16 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "sections.service-intro",
-        "sections.feature-grid",
         "sections.commitments",
+        "sections.cta-bar",
+        "sections.faq",
+        "sections.feature-grid",
         "sections.gallery",
-        "sections.faq"
+        "sections.metrics-strip",
+        "sections.page-hero",
+        "sections.process-steps",
+        "sections.service-intro",
+        "sections.services"
       ],
       "pluginOptions": {
         "i18n": {
@@ -121,6 +126,69 @@
       "type": "component",
       "component": "shared.image",
       "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service",
+      "inversedBy": "children"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "parent"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "eyebrow": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "badge": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "badgeNote": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ctaLabel": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "features": {
+      "type": "component",
+      "component": "shared.bullet",
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true

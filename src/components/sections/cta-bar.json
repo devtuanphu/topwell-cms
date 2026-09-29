@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_cta_bars",
+  "info": {
+    "displayName": "Dải kêu gọi nền tối",
+    "description": "Dải nền tối với nhãn, tiêu đề, mô tả, hotline và nút"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "phoneLabel": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaHref": {
+      "type": "string"
+    }
+  }
+}

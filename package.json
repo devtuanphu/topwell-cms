@@ -10,7 +10,7 @@
     "strapi": "strapi",
     "seed": "node scripts/seed.js",
     "seed:check": "node scripts/seed.js --check",
-    "migrate:v3": "node scripts/migrate-v3.js"
+    "migrate:v4": "node scripts/migrate-v4.js"
   },
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^8.0.0",

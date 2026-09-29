@@ -125,7 +125,8 @@ const CONTENT = {
           eyebrow: 'Services',
           title: 'A solid engineering foundation for every large-scale production line.',
           variant: 'compact',
-          group: 'industrial',
+          source: 'parent',
+          parentSlug: 'thiet-bi-va-giai-phap',
           limit: 3,
           ctaLabel: 'View all services',
           ctaHref: '/dich-vu',
@@ -380,6 +381,7 @@ const CONTENT = {
           description:
             'We work with global partners to optimise supply chains, smart warehousing infrastructure and sustainable operating performance.',
           variant: 'groups',
+          source: 'roots',
         },
         {
           __component: 'sections.video-cta',
@@ -392,6 +394,40 @@ const CONTENT = {
           videoLabel: 'Watch the maintenance service introduction',
           ctaLabel: 'Explore more',
           ctaHref: '/tin-tuc',
+        },
+        {
+          __component: 'sections.testimonials',
+          eyebrow: 'REAL REVIEWS & FEEDBACK',
+          title: 'Trusted by FDI businesses and manufacturing groups',
+          description:
+            'Satisfaction and reliability proven through demanding technical service standards, on-site response times and the quality of our industrial spare-part supply.',
+          score: '4.9',
+          scoreLabel: 'Quality score',
+          statusTitle: '99.4% satisfied customers',
+          statusNote: 'More than 180 mechanical and automation projects delivered',
+          cards: [
+            {
+              tags: 'CNC PRECISION',
+              description:
+                '"TOP WELL met a ±0.002mm tolerance on the high-speed press assembly. Transparent 3D CMM inspection with Zeiss-standard certificates made exporting to Japan straightforward."',
+              title: 'Toru Shinohara',
+              eyebrow: 'Technical Director, Mitsuba Vietnam',
+            },
+            {
+              tags: 'AUTOMATION ROBOTICS',
+              description:
+                '"The automated pick-and-place packing line with KUKA robots and SCADA monitoring was commissioned on schedule. Cycle time fell 32% in the first month of trial operation."',
+              title: 'Nguyen Van Tuan',
+              eyebrow: 'Head of Operations & Automation, Hansol Electronics',
+            },
+            {
+              tags: 'LASER METROLOGY & SLA',
+              description:
+                '"The two-hour emergency SLA team arrived and fixed a spindle misalignment within 90 minutes. Scheduled Renishaw laser interferometer alignment keeps unplanned downtime to a minimum."',
+              title: 'Michael Krause',
+              eyebrow: 'Plant Operations Lead, Bosch Rexroth Industrial Facility',
+            },
+          ],
         },
         {
           __component: 'sections.gallery',
@@ -430,6 +466,8 @@ const CONTENT = {
           __component: 'sections.projects',
           eyebrow: 'PROJECT PORTFOLIO',
           title: 'Synchronised delivery – international-standard processes',
+          description:
+            'We work with global partners to optimise supply chains, smart warehousing infrastructure and sustainable operating performance.',
           variant: 'listing',
         },
       ],
@@ -3429,24 +3467,14 @@ CONTENT.serviceGroups = [
         ],
       },
       {
-        __component: 'sections.metrics-strip',
-        cards: [
-          {
-            title: '98.5%',
-            eyebrow: 'Spare parts in stock',
-            description: 'A local buffer warehouse for immediate replacement without line downtime.',
-          },
-          {
-            title: '< 2h',
-            eyebrow: 'Emergency technical response',
-            description: 'Electro-mechanical technicians on site to handle faults 24/7.',
-          },
-          {
-            title: '±0.002mm',
-            eyebrow: 'Micro precision',
-            description: 'Positional tolerance and repeatability on high-end 5-axis CNC machines.',
-          },
-        ],
+        __component: 'sections.cta-bar',
+        eyebrow: 'TECHNICAL & PROJECT SUPPORT',
+        title: 'Need technical advice or a quotation for your project?',
+        description:
+          'The TOP WELL team is ready to review your site and prepare a plan within 24 hours.',
+        phoneLabel: 'Hotline:',
+        ctaLabel: 'Talk to us',
+        ctaHref: '/lien-he',
       },
     ],
   },
@@ -3516,24 +3544,14 @@ CONTENT.serviceGroups = [
         ],
       },
       {
-        __component: 'sections.metrics-strip',
-        cards: [
-          {
-            title: '150+',
-            eyebrow: 'Countries covered',
-            description: 'A partner network spanning the main industrial trade lanes.',
-          },
-          {
-            title: '98.7%',
-            eyebrow: 'On-time delivery',
-            description: 'Measured across industrial and oversized cargo shipments.',
-          },
-          {
-            title: '24/7',
-            eyebrow: 'Shipment tracking',
-            description: 'Online monitoring and a coordinator reachable at any hour.',
-          },
-        ],
+        __component: 'sections.cta-bar',
+        eyebrow: 'TECHNICAL & PROJECT SUPPORT',
+        title: 'Need technical advice or a quotation for your project?',
+        description:
+          'The TOP WELL team is ready to review your site and prepare a plan within 24 hours.',
+        phoneLabel: 'Hotline:',
+        ctaLabel: 'Talk to us',
+        ctaHref: '/lien-he',
       },
     ],
   },
@@ -3641,8 +3659,41 @@ CONTENT.services.forEach((service) => {
   service.group = service.category === 'Logistics' ? 'logistics' : 'industrial';
 });
 
+// Dịch vụ xếp theo cây: hai mục gốc (Thiết bị & giải pháp, Logistics) và các mục con bên dưới.
+// Mục gốc dùng layout trang cha; mục con dùng layout trang chi tiết.
+CONTENT.services = [
+  ...CONTENT.serviceGroups.map(({ key, ...group }, index) => ({
+    ...group,
+    group: key,
+    order: index,
+    sections: group.sections.map((section) =>
+      section.__component === 'sections.services'
+        ? { ...section, source: 'children' }
+        : section,
+    ),
+  })),
+  ...CONTENT.services.map((service, index) => ({
+    ...service,
+    order: index,
+    parent: CONTENT.serviceGroups.find((g) => g.key === service.group).slug,
+  })),
+];
+delete CONTENT.serviceGroups;
+
+
 // Redesign V1 project cards show an author and a date; the flagship case study follows Figma 143:3485.
 const PROJECT_DATES = ['2026-05-17', '2026-04-22', '2026-03-12', '2026-02-06', '2025-12-18', '2025-11-04'];
+// Trang dự án kết bằng dải kêu gọi nền tối như thiết kế (Figma 208:2894).
+const PROJECT_CTA = {
+  __component: 'sections.cta-bar',
+  eyebrow: 'TECHNICAL & PROJECT SUPPORT',
+  title: 'Need technical advice or a quotation for your project?',
+  description:
+    'The TOP WELL team is ready to review your site and prepare a plan within 24 hours.',
+  phoneLabel: 'Hotline:',
+  ctaLabel: 'Talk to us',
+  ctaHref: '/lien-he',
+};
 CONTENT.projects.forEach((project, index) => {
   project.author ||= 'TOP WELL Engineering';
   project.publishedDate ||= PROJECT_DATES[index % PROJECT_DATES.length];
@@ -3749,6 +3800,11 @@ const FEATURED = {
 CONTENT.projects.forEach((project) => {
   Object.assign(project, { featured: Boolean(FEATURED[project.slug]) }, FEATURED[project.slug] || {});
 });
+CONTENT.projects.forEach((project) => {
+  if (!project.sections.some((s) => s.__component === 'sections.cta-bar'))
+    project.sections.push({ ...PROJECT_CTA });
+});
+
 const ARTICLE_V1 = {
   'quy-trinh-gia-cong-cnc-5-truc': ['fv2-c6d3b0a7.jpg', 'CNC Machining, Five-Axis, TOP WELL Alliance, Hai Phong Automation'],
   'chuoi-cung-ung-ben-vung': ['fv2-12b2d5eb.jpg', 'Supply Chain, Green Logistics, Sustainability'],
@@ -3878,6 +3934,8 @@ const DETAIL_PHOTOS = [
   { $file: 'fv2-57b86b40.jpg', alt: 'TOP WELL engineers presenting a delivery plan' },
 ];
 CONTENT.services.forEach((service) => {
+  // Mục gốc dùng layout trang cha, không có khối giới thiệu chi tiết.
+  if (!service.parent) return;
   const v1 = SERVICE_V1[service.slug] || {};
   const find = (name) => service.sections.find((s) => s.__component === `sections.${name}`);
   const intro = find('service-intro');
@@ -3946,7 +4004,7 @@ function validateContent() {
     for (const [name, item] of Object.entries(value)) visit(item, name, `${trail}.${name}`);
   }
   visit(CONTENT);
-  for (const group of ['serviceGroups', 'services', 'projects', 'articles']) {
+  for (const group of ['services', 'projects', 'articles']) {
     const slugs = CONTENT[group].map((item) => item.slug);
     if (new Set(slugs).size !== slugs.length) throw new Error(`Duplicate slug in ${group}`);
   }
@@ -3954,7 +4012,6 @@ function validateContent() {
     pages: Object.keys(CONTENT.pages).length,
     global: 1,
     header: 1,
-    serviceGroups: CONTENT.serviceGroups.length,
     services: CONTENT.services.length,
     projects: CONTENT.projects.length,
     articles: CONTENT.articles.length,
@@ -3967,6 +4024,7 @@ const { LOCALES, SOURCE_LOCALE, ensureLocales } = require('../src/locales');
 const UNTRANSLATED_KEYS = new Set([
   'slug', '$file', '__component', 'variant', 'group', 'publishedDate', 'keywords', 'language',
   'locale', 'openGraphLocale', 'routes', 'videoUrl', 'mapUrl', 'homeOrder', 'featured',
+  'parent', 'parentSlug', 'order', 'source',
 ]);
 const LOCALE_METADATA = {
   en: { language: 'en', locale: 'en-US', openGraphLocale: 'en_US' },
@@ -4134,6 +4192,14 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
     }
     const transformed = await transform(data);
     if (uid === 'api::header.header') transformed.logo = transformed.logo.media;
+    // Quan hệ cha – con của Dịch vụ / Dự án khai báo bằng slug; đổi sang documentId khi ghi.
+    if (transformed.parent) {
+      const parent = await service.findFirst({
+        filters: { slug: transformed.parent },
+        locale: SOURCE_LOCALE,
+      });
+      transformed.parent = parent ? parent.documentId : null;
+    }
     // Other languages are stored as localizations of the source-language document.
     const source =
       found ||
@@ -4276,7 +4342,6 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
     );
     if (code !== SOURCE_LOCALE) missing[code] = localized.missing;
     for (const [group, name] of [
-      ['serviceGroups', 'service-group'],
       ['services', 'service'],
       ['projects', 'project'],
       ['articles', 'article'],
@@ -4350,7 +4415,7 @@ if (require.main === module) {
         await seed(app, {
           replace: args.has('--replace'),
           upgradeUi: args.has('--ui-upgrade'),
-          // e.g. --only=articles,services (groups: serviceGroups, services, projects, articles, pages, global, header, site-settings, footer)
+          // e.g. --only=articles,services (groups: services, projects, articles, pages, global, header, site-settings, footer)
           only: onlyArg ? new Set(onlyArg.slice(7).split(',')) : null,
         });
       } finally {

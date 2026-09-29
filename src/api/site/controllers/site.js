@@ -19,8 +19,9 @@ const COLLECTIONS = {
   services: 'service',
   projects: 'project',
   articles: 'article',
-  'service-groups': 'service-group',
 };
+// Dịch vụ và Dự án xếp theo cây cha – con; chỉ cần slug của mục cha để dựng đường dẫn.
+const TREE_TYPES = new Set(['services', 'projects']);
 // Derive explicit deep population from the section schemas; no client-controlled query.
 function populateFor(strapi, uid, depth = 0) {
   if (depth > 5) return {};
@@ -37,6 +38,8 @@ function populateFor(strapi, uid, depth = 0) {
         ),
       };
   }
+  if (depth === 0 && schema?.attributes?.parent?.relation === 'manyToOne')
+    populate.parent = { fields: ['slug', 'title'] };
   return populate;
 }
 module.exports = {
@@ -72,7 +75,12 @@ module.exports = {
           .findMany({ locale, fields: ['createdAt'], limit: 1000 }))
           if (!created.has(doc.documentId) || doc.createdAt < created.get(doc.documentId))
             created.set(doc.documentId, doc.createdAt);
-      data.sort((a, b) => String(created.get(a.documentId)).localeCompare(String(created.get(b.documentId))));
+      // Cây dịch vụ / dự án xếp theo "Thứ tự" biên tập viên đặt, sau đó tới thời điểm tạo.
+      data.sort(
+        (a, b) =>
+          (TREE_TYPES.has(type) ? (a.order || 0) - (b.order || 0) : 0) ||
+          String(created.get(a.documentId)).localeCompare(String(created.get(b.documentId))),
+      );
       ctx.body = { data };
       return;
     }

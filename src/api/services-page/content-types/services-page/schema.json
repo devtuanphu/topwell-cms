@@ -37,10 +37,12 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
+        "sections.cta-bar",
+        "sections.gallery",
         "sections.page-hero",
         "sections.services",
-        "sections.video-cta",
-        "sections.gallery"
+        "sections.testimonials",
+        "sections.video-cta"
       ],
       "pluginOptions": {
         "i18n": {

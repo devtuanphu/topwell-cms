@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_sections_testimonials",
+  "info": {
+    "displayName": "Đánh giá khách hàng",
+    "description": "Điểm chất lượng và các phản hồi thực tế của khách hàng"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "score": {
+      "type": "string"
+    },
+    "scoreLabel": {
+      "type": "string"
+    },
+    "statusTitle": {
+      "type": "string"
+    },
+    "statusNote": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  }
+}

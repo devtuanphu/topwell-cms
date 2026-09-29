@@ -239,7 +239,6 @@ export interface CopyRoutes extends Struct.ComponentSchema {
     projectBase: Schema.Attribute.String & Schema.Attribute.Required;
     projects: Schema.Attribute.String & Schema.Attribute.Required;
     serviceBase: Schema.Attribute.String & Schema.Attribute.Required;
-    serviceGroupBase: Schema.Attribute.String;
     services: Schema.Attribute.String & Schema.Attribute.Required;
     siteSurvey: Schema.Attribute.String & Schema.Attribute.Required;
     standards: Schema.Attribute.String & Schema.Attribute.Required;
@@ -473,6 +472,22 @@ export interface SectionsCta extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsCtaBar extends Struct.ComponentSchema {
+  collectionName: 'components_sections_cta_bars';
+  info: {
+    description: 'D\u1EA3i n\u1EC1n t\u1ED1i v\u1EDBi nh\u00E3n, ti\u00EAu \u0111\u1EC1, m\u00F4 t\u1EA3, hotline v\u00E0 n\u00FAt';
+    displayName: 'D\u1EA3i k\u00EAu g\u1ECDi n\u1EC1n t\u1ED1i';
+  };
+  attributes: {
+    ctaHref: Schema.Attribute.String;
+    ctaLabel: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    phoneLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsFaq extends Struct.ComponentSchema {
   collectionName: 'components_sections_faq';
   info: {
@@ -696,6 +711,7 @@ export interface SectionsProjects extends Struct.ComponentSchema {
     displayName: 'D\u1EF1 \u00E1n';
   };
   attributes: {
+    description: Schema.Attribute.Text;
     eyebrow: Schema.Attribute.String;
     limit: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
@@ -779,8 +795,6 @@ export interface SectionsServices extends Struct.ComponentSchema {
     ctaHref: Schema.Attribute.String;
     ctaLabel: Schema.Attribute.String;
     eyebrow: Schema.Attribute.String;
-    group: Schema.Attribute.Enumeration<['industrial', 'logistics', 'all']> &
-      Schema.Attribute.DefaultTo<'industrial'>;
     highlight: Schema.Attribute.String;
     limit: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
@@ -791,8 +805,11 @@ export interface SectionsServices extends Struct.ComponentSchema {
         number
       > &
       Schema.Attribute.DefaultTo<3>;
+    parentSlug: Schema.Attribute.String;
     secondaryHref: Schema.Attribute.String;
     secondaryLabel: Schema.Attribute.String;
+    source: Schema.Attribute.Enumeration<['roots', 'children', 'parent']> &
+      Schema.Attribute.DefaultTo<'children'>;
     title: Schema.Attribute.String;
     variant: Schema.Attribute.String;
   };
@@ -807,6 +824,24 @@ export interface SectionsTeam extends Struct.ComponentSchema {
     cards: Schema.Attribute.Component<'shared.card', true>;
     description: Schema.Attribute.Text;
     eyebrow: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsTestimonials extends Struct.ComponentSchema {
+  collectionName: 'components_sections_testimonials';
+  info: {
+    description: '\u0110i\u1EC3m ch\u1EA5t l\u01B0\u1EE3ng v\u00E0 c\u00E1c ph\u1EA3n h\u1ED3i th\u1EF1c t\u1EBF c\u1EE7a kh\u00E1ch h\u00E0ng';
+    displayName: '\u0110\u00E1nh gi\u00E1 kh\u00E1ch h\u00E0ng';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'shared.card', true>;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    score: Schema.Attribute.String;
+    scoreLabel: Schema.Attribute.String;
+    statusNote: Schema.Attribute.String;
+    statusTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -918,7 +953,7 @@ export interface SharedNavItem extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     links: Schema.Attribute.Component<'shared.card', true>;
     source: Schema.Attribute.Enumeration<
-      ['none', 'manual', 'services', 'projects', 'service-groups']
+      ['none', 'manual', 'services', 'services-all', 'projects']
     > &
       Schema.Attribute.DefaultTo<'none'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -972,6 +1007,7 @@ declare module '@strapi/strapi' {
       'sections.commitments': SectionsCommitments;
       'sections.contact-form': SectionsContactForm;
       'sections.cta': SectionsCta;
+      'sections.cta-bar': SectionsCtaBar;
       'sections.faq': SectionsFaq;
       'sections.feature-grid': SectionsFeatureGrid;
       'sections.gallery': SectionsGallery;
@@ -994,6 +1030,7 @@ declare module '@strapi/strapi' {
       'sections.service-intro': SectionsServiceIntro;
       'sections.services': SectionsServices;
       'sections.team': SectionsTeam;
+      'sections.testimonials': SectionsTestimonials;
       'sections.timeline': SectionsTimeline;
       'sections.values': SectionsValues;
       'sections.video-cta': SectionsVideoCta;

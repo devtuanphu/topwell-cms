@@ -83,10 +83,13 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "sections.project-overview",
+        "sections.cta-bar",
+        "sections.page-hero",
         "sections.project-challenge",
+        "sections.project-overview",
         "sections.project-process",
-        "sections.project-results"
+        "sections.project-results",
+        "sections.projects"
       ],
       "pluginOptions": {
         "i18n": {
@@ -190,6 +193,27 @@
       "type": "component",
       "component": "shared.image",
       "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "children"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "parent"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
       "pluginOptions": {
         "i18n": {
           "localized": true

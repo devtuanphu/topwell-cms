@@ -47,9 +47,6 @@
     "articleBase": {
       "type": "string",
       "required": true
-    },
-    "serviceGroupBase": {
-      "type": "string"
     }
   }
 }
