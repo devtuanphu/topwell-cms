@@ -12,17 +12,6 @@
     "title": {
       "type": "string"
     },
-    "reviewRating": {
-      "type": "string"
-    },
-    "reviewLabel": {
-      "type": "string"
-    },
-    "reviewAvatars": {
-      "type": "component",
-      "component": "shared.image",
-      "repeatable": true
-    },
     "slideSeconds": {
       "type": "integer",
       "default": 5,

@@ -1,7 +1,7 @@
 {
   "collectionName": "components_copy_accessibility",
   "info": {
-    "displayName": "Nh\u00e3n h\u1ed7 tr\u1ee3 truy c\u1eadp"
+    "displayName": "Nhãn hỗ trợ truy cập"
   },
   "attributes": {
     "skip": {
@@ -29,14 +29,6 @@
       "required": true
     },
     "hero": {
-      "type": "string",
-      "required": true
-    },
-    "previousSlide": {
-      "type": "string",
-      "required": true
-    },
-    "nextSlide": {
       "type": "string",
       "required": true
     },

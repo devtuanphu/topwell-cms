@@ -72,6 +72,22 @@
    },
    {
     "path": [
+     "accessibility",
+     "previousSlide"
+    ],
+    "from": "Slide trước",
+    "to": null
+   },
+   {
+    "path": [
+     "accessibility",
+     "nextSlide"
+    ],
+    "from": "Slide tiếp theo",
+    "to": null
+   },
+   {
+    "path": [
      "sidebar",
      "recentTitle"
     ],
@@ -184,6 +200,266 @@
    }
   ],
   "home-page": [
+   {
+    "path": [
+     "sections",
+     0,
+     "reviewRating"
+    ],
+    "from": "5",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "reviewLabel"
+    ],
+    "from": "4k+ đánh giá",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "highlight"
+    ],
+    "from": "Hành động",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "label"
+    ],
+    "from": "Liên hệ",
+    "to": "Nhận báo giá"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "eyebrow"
+    ],
+    "from": "BẮT TAY VÀO VIỆC",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "secondaryLabel"
+    ],
+    "from": "Xem dịch vụ",
+    "to": "Xem thêm"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "highlight"
+    ],
+    "from": "Sản xuất hiệu quả hơn.",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "href"
+    ],
+    "from": "/dich-vu/thiet-bi-va-giai-phap/day-chuyen-san-xuat",
+    "to": "/lien-he"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "label"
+    ],
+    "from": "Khám phá giải pháp",
+    "to": "Nhận báo giá"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "eyebrow"
+    ],
+    "from": "CHẾ TẠO CHÍNH XÁC",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "secondaryLabel"
+    ],
+    "from": "Nhận báo giá",
+    "to": "Xem thêm"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "secondaryHref"
+    ],
+    "from": "/lien-he",
+    "to": "/dich-vu/thiet-bi-va-giai-phap/day-chuyen-san-xuat"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "highlight"
+    ],
+    "from": "liền mạch và an toàn.",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "href"
+    ],
+    "from": "/dich-vu",
+    "to": "/lien-he"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "label"
+    ],
+    "from": "Khám phá logistics",
+    "to": "Nhận báo giá"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "eyebrow"
+    ],
+    "from": "LOGISTICS KẾT NỐI",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "secondaryLabel"
+    ],
+    "from": "Liên hệ tư vấn",
+    "to": "Xem thêm"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "secondaryHref"
+    ],
+    "from": "/lien-he",
+    "to": "/dich-vu"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "highlight"
+    ],
+    "from": "Đối tác toàn cầu.",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "href"
+    ],
+    "from": "/du-an",
+    "to": "/lien-he"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "label"
+    ],
+    "from": "Xem các dự án",
+    "to": "Nhận báo giá"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "eyebrow"
+    ],
+    "from": "ĐỐI TÁC TOÀN CẦU",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "secondaryLabel"
+    ],
+    "from": "Về TOP WELL",
+    "to": "Xem thêm"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "secondaryHref"
+    ],
+    "from": "/ve-chung-toi",
+    "to": "/du-an"
+   },
    {
     "path": [
      "sections",
@@ -2208,7 +2484,285 @@
     "to": "Engineering 24/7"
    }
   ],
+  "site-settings": [
+   {
+    "path": [
+     "accessibility",
+     "previousSlide"
+    ],
+    "from": "Previous slide",
+    "to": null
+   },
+   {
+    "path": [
+     "accessibility",
+     "nextSlide"
+    ],
+    "from": "Next slide",
+    "to": null
+   }
+  ],
   "home-page": [
+   {
+    "path": [
+     "sections",
+     0,
+     "reviewRating"
+    ],
+    "from": "5",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "reviewLabel"
+    ],
+    "from": "4k+ reviews",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "highlight"
+    ],
+    "from": "action",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "label"
+    ],
+    "from": "Contact us",
+    "to": "Get a quote"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "eyebrow"
+    ],
+    "from": "LET'S GET TO WORK",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "secondaryLabel"
+    ],
+    "from": "Explore our services",
+    "to": "See more"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "highlight"
+    ],
+    "from": "Better production.",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "href"
+    ],
+    "from": "/dich-vu/thiet-bi-va-giai-phap/day-chuyen-san-xuat",
+    "to": "/lien-he"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "label"
+    ],
+    "from": "Explore our solutions",
+    "to": "Get a quote"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "eyebrow"
+    ],
+    "from": "PRECISION MANUFACTURING",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "secondaryLabel"
+    ],
+    "from": "Request a quote",
+    "to": "See more"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "secondaryHref"
+    ],
+    "from": "/lien-he",
+    "to": "/dich-vu/thiet-bi-va-giai-phap/day-chuyen-san-xuat"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "highlight"
+    ],
+    "from": "seamlessly and safely.",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "href"
+    ],
+    "from": "/dich-vu",
+    "to": "/lien-he"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "label"
+    ],
+    "from": "Explore logistics",
+    "to": "Get a quote"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "eyebrow"
+    ],
+    "from": "CONNECTED LOGISTICS",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "secondaryLabel"
+    ],
+    "from": "Talk to an expert",
+    "to": "See more"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "secondaryHref"
+    ],
+    "from": "/lien-he",
+    "to": "/dich-vu"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "highlight"
+    ],
+    "from": "Global partnerships.",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "href"
+    ],
+    "from": "/du-an",
+    "to": "/lien-he"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "label"
+    ],
+    "from": "View our projects",
+    "to": "Get a quote"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "eyebrow"
+    ],
+    "from": "GLOBAL PARTNERSHIPS",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "secondaryLabel"
+    ],
+    "from": "About TOP WELL",
+    "to": "See more"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "secondaryHref"
+    ],
+    "from": "/ve-chung-toi",
+    "to": "/du-an"
+   },
    {
     "path": [
      "sections",
@@ -2740,6 +3294,286 @@
     ],
     "from": "© {year} - TOP WELL International. 保留所有权利。",
     "to": "© {year} - TOP WELL International. 版权所有。"
+   }
+  ],
+  "site-settings": [
+   {
+    "path": [
+     "accessibility",
+     "previousSlide"
+    ],
+    "from": "上一张",
+    "to": null
+   },
+   {
+    "path": [
+     "accessibility",
+     "nextSlide"
+    ],
+    "from": "下一张",
+    "to": null
+   }
+  ],
+  "home-page": [
+   {
+    "path": [
+     "sections",
+     0,
+     "reviewRating"
+    ],
+    "from": "5",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "reviewLabel"
+    ],
+    "from": "4000+ 条评价",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "highlight"
+    ],
+    "from": "行动",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "label"
+    ],
+    "from": "联系我们",
+    "to": "获取报价"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "eyebrow"
+    ],
+    "from": "即刻开始合作",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     0,
+     "secondaryLabel"
+    ],
+    "from": "查看服务",
+    "to": "查看更多"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "highlight"
+    ],
+    "from": "卓越生产。",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "href"
+    ],
+    "from": "/dich-vu/thiet-bi-va-giai-phap/day-chuyen-san-xuat",
+    "to": "/lien-he"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "label"
+    ],
+    "from": "了解我们的解决方案",
+    "to": "获取报价"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "eyebrow"
+    ],
+    "from": "精密制造",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "secondaryLabel"
+    ],
+    "from": "获取报价",
+    "to": "查看更多"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     1,
+     "secondaryHref"
+    ],
+    "from": "/lien-he",
+    "to": "/dich-vu/thiet-bi-va-giai-phap/day-chuyen-san-xuat"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "highlight"
+    ],
+    "from": "无缝衔接，安全可靠。",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "href"
+    ],
+    "from": "/dich-vu",
+    "to": "/lien-he"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "label"
+    ],
+    "from": "了解物流服务",
+    "to": "获取报价"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "eyebrow"
+    ],
+    "from": "互联物流",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "secondaryLabel"
+    ],
+    "from": "联系顾问",
+    "to": "查看更多"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     2,
+     "secondaryHref"
+    ],
+    "from": "/lien-he",
+    "to": "/dich-vu"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "highlight"
+    ],
+    "from": "全球合作。",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "href"
+    ],
+    "from": "/du-an",
+    "to": "/lien-he"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "label"
+    ],
+    "from": "查看我们的项目",
+    "to": "获取报价"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "eyebrow"
+    ],
+    "from": "全球伙伴",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "secondaryLabel"
+    ],
+    "from": "关于 TOP WELL",
+    "to": "查看更多"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "cards",
+     3,
+     "secondaryHref"
+    ],
+    "from": "/ve-chung-toi",
+    "to": "/du-an"
    }
   ],
   "about-page": [

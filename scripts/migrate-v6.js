@@ -84,7 +84,8 @@ function applyCopy(data, changes) {
       }
       continue;
     }
-    if (from === null) continue;
+    // Ô bị bỏ (to = null) chỉ xóa đúng vị trí, không dò theo giá trị để khỏi xóa nhầm ô khác.
+    if (from === null || to === null) continue;
     for (const q of findAll(data, p[p.length - 1], from)) {
       set(data, q, to);
       touched++;

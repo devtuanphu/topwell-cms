@@ -33,11 +33,9 @@ export interface CopyAccessibility extends Struct.ComponentSchema {
     menuClose: Schema.Attribute.String & Schema.Attribute.Required;
     menuOpen: Schema.Attribute.String & Schema.Attribute.Required;
     navigation: Schema.Attribute.String & Schema.Attribute.Required;
-    nextSlide: Schema.Attribute.String & Schema.Attribute.Required;
     pagination: Schema.Attribute.String & Schema.Attribute.Required;
     partners: Schema.Attribute.String & Schema.Attribute.Required;
     play: Schema.Attribute.String & Schema.Attribute.Required;
-    previousSlide: Schema.Attribute.String & Schema.Attribute.Required;
     skip: Schema.Attribute.String & Schema.Attribute.Required;
     slide: Schema.Attribute.String & Schema.Attribute.Required;
     zoomIn: Schema.Attribute.String & Schema.Attribute.Required;
@@ -467,9 +465,6 @@ export interface SectionsHeroSlider extends Struct.ComponentSchema {
   };
   attributes: {
     cards: Schema.Attribute.Component<'shared.card', true>;
-    reviewAvatars: Schema.Attribute.Component<'shared.image', true>;
-    reviewLabel: Schema.Attribute.String;
-    reviewRating: Schema.Attribute.String;
     slideSeconds: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
         {
