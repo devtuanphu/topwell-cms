@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_services",
   "info": {
-    "displayName": "Dịch vụ"
+    "displayName": "D\u1ecbch v\u1ee5"
   },
   "attributes": {
     "ctaHref": {
@@ -45,6 +45,9 @@
     },
     "parentSlug": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

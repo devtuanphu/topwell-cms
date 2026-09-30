@@ -117,7 +117,7 @@ const CONTENT = {
               icon: { $file: 'fv2-1c40063d.svg', alt: 'Solutions icon' },
             },
             {
-              title: 'Spare parts & components',
+              title: 'Spare parts & Components',
               description:
                 'Spare parts, components and replacement solutions for maintenance, repair and stable operation.',
               icon: { $file: 'fv2-a32070f8.svg', alt: 'Spare parts icon' },
@@ -265,7 +265,6 @@ const CONTENT = {
         {
           __component: 'sections.about',
           variant: 'company',
-          eyebrow: 'WHY CHOOSE TOP WELL',
           // Figma v3 ghi chú "chèn logo": ô trống phía trên tiêu đề dành cho logo đối tác.
           logo: { $file: 'fv2-79973b4b.png', alt: 'Partner logo' },
           title: 'VM International Trading Company',
@@ -362,20 +361,10 @@ const CONTENT = {
           description:
             'Work with us for smarter industrial technology, faster product launches and sustainable growth for your business.',
           image: { $file: 'fv2-c006e544.jpg', alt: 'Container port at night' },
-          ctaLabel: 'Contact us',
+          ctaLabel: 'Contact our team',
           ctaHref: '/lien-he',
           supportLabel: '24/7 technical support',
           supportValue: '(+84) 1900 xxxx',
-          panelTitle: 'Need in-depth support?',
-          panelText:
-            'Our mechanical engineers and automation specialists are ready to survey your plant on site within 24 hours.',
-          cards: [
-            { title: 'RFQ response time:', description: '< 4 hours' },
-            { title: 'Factory survey:', description: 'Free nationwide' },
-            { title: 'Prototype tooling:', description: 'DFM test samples' },
-          ],
-          panelLabel: 'Send CAD/STEP drawings →',
-          panelHref: '/lien-he',
         },
       ],
     },
@@ -3472,7 +3461,7 @@ CONTENT.footer = {
   companyName: 'TOPWELL INTERNATIONAL CO., LTD',
   description: '"International standards – Local service."',
   phoneLabel: 'Hotline:',
-  phoneSuffix: '24/7 technical support',
+  phoneSuffix: 'Engineering 24/7',
   emailLabel: 'Email:',
   addressLabel: 'Location:',
   copyright: '© {year} - TOP WELL International. All rights reserved.',
@@ -3759,9 +3748,20 @@ Object.assign(
 (() => {
   const article = CONTENT.articles.find((a) => a.slug === 'quy-trinh-gia-cong-cnc-5-truc');
   const find = (name) => article.sections.find((s) => s.__component === `sections.${name}`);
+  // Câu chữ theo bài viết mẫu của Figma (29:1706).
+  article.title =
+    'Heavy-duty 5-axis CNC milling machine handover and micro-tolerance testing in Hai Phong';
   Object.assign(find('article-body'), {
+    title: article.title,
     description:
-      'Bringing five-axis precision machining centres into heavy industrial production demands strict control of foundation vibration, laser optical alignment and micro-level tolerance inspection. Below is a real technical handover report recently completed by TOP WELL International at the Deep C Industrial Zone in Hai Phong.',
+      'Bringing 5-axis precision machining cells into heavy industrial production lines demands strict standards for foundation vibration isolation, laser optical alignment and tolerance inspection at micro-inch level. Below is the actual technical handover record TOP WELL International has just completed at the Deep C Industrial Zone in Hai Phong.',
+    cards: [
+      {
+        title: '1. Industrial context and the challenge of vibration control',
+        description:
+          'As high-tech supply chains shift to northern Vietnam, Tier-1 satellite plants producing semiconductor components, aerospace moulds and EV parts demand absolute kinematic stability. For large 5-axis CNC milling machines with table loads above 8 tonnes, thermal displacement and vibration transmitted from nearby overhead cranes can ruin an entire machining batch worth hundreds of thousands of US dollars.\n\nTOP WELL International takes responsibility from the machine foundation ground survey and construction of a vibration-isolated foundation pit with specialised elastic polyurethane damping, through to setting the machine down with electronic spirit-level accuracy of 0.001 mm/m.\n\n“However advanced a 5-axis CNC machine is, it only reaches full capacity when the handover masters three factors: machine foundation seismics, real-time optical laser measurement and kinematic error-compensation software calibration.” — Kenji Takahashi, Chief Technical Advisor, TOP WELL Alliance',
+      },
+    ],
     image: { $file: 'fv2-19742fac.png', alt: 'Container ship and port logistics in Hai Phong' },
     imageTag: 'HAI PHONG PORT INDUSTRIAL CORRIDOR',
     imageNote:
@@ -3769,7 +3769,60 @@ Object.assign(
     imageCaption:
       'Figure 1.1: The heavy industrial equipment transport corridor and precision mechanical handover by TOP WELL.',
   });
+  Object.assign(find('article-steps'), {
+    title: '2. A standard 5-step technical handover process',
+    description:
+      'To ensure full transparency and safety, the TOP WELL engineering team applies an internationally standardised 5-stage handover framework:',
+    cards: [
+      {
+        title: 'Receipt & machine foundation levelling (Foundation Seating)',
+        description:
+          'Synchronised 100-tonne hydraulic jacks and industrial anti-vibration pads keep flatness error below 0.005 mm.',
+      },
+      {
+        title: 'Optical laser interferometer alignment',
+        description:
+          'Straightness and squareness of the X-Y-Z axes and A-C rotary axes are measured with Renishaw laser interferometry.',
+      },
+      {
+        title: 'Micro-error calibration (Kinematic Compensation < 0.002mm)',
+        description:
+          'Geometric error-compensation tables are loaded directly into the Heidenhain TNC7 / Fanuc 31i-B5 controller to eliminate backlash.',
+      },
+      {
+        title: 'Continuous 72-hour load test (72-Hour Endurance Run)',
+        description:
+          'Simulated machining of Ti-6Al-4V titanium alloy blanks at a spindle speed of 24,000 rpm, with spindle temperature tracked by infrared camera.',
+      },
+      {
+        title: 'Operator training & maintenance procedure handover',
+        description:
+          'Full bilingual O&M technical documentation is handed over, with safety certification training for 12 plant operating engineers.',
+      },
+    ],
+  });
   Object.assign(find('article-comparison'), {
+    title: '3. Comparison of technical acceptance standards',
+    description:
+      'The table below shows the gap between common market standards and the strict quality commitments of the TOP WELL Alliance engineering alliance:',
+    cards: [
+      {
+        title: 'Positioning repeatability',
+        description: '± 0.005 mm',
+        eyebrow: '± 0.0018 mm (Laser Verified)',
+      },
+      { title: 'Spindle runout', description: '< 0.003 mm', eyebrow: '< 0.0012 mm at 20,000 rpm' },
+      {
+        title: 'Continuous load test duration',
+        description: '24 hours with interruptions',
+        eyebrow: '72 continuous hours at 100% capacity',
+      },
+      {
+        title: 'Technical incident response time',
+        description: '24 – 48 working hours',
+        eyebrow: 'Under 2 hours on site in northern Vietnam',
+      },
+    ],
     checklistTitle: 'Completed handover inspection checklist',
     checklist:
       'Renishaw XL-80 laser interferometer report\nBallbar QC20-W kinematic test\nFFT accelerometer vibration spectrum analysis\nSample part machining certified at Cpk > 1.67',
@@ -3777,6 +3830,8 @@ Object.assign(
   Object.assign(find('article-author'), {
     eyebrow: 'TECHNICAL EXPERT',
     role: 'Chief Technical Advisor • Former Toyota Motor specialist, Lean Six Sigma Master Black Belt',
+    description:
+      'Over 22 years of experience in automated mechanical line handover, micro-error control and OEE optimisation for multinational industrial groups across Asia.',
     image: { $file: 'fv2-0cf1e2df.jpg', alt: 'Kenji Takahashi' },
   });
 })();
@@ -3790,7 +3845,6 @@ CONTENT.global.supportImage = { $file: 'fv2-d5b4afb2.jpg', alt: 'TOP WELL suppor
   find('about', 'company').eyebrowIcon = { $file: 'fv2-e7fb93a7.svg', alt: 'Company icon' };
   Object.assign(find('cta'), {
     supportIcon: { $file: 'fv2-963abffd.svg', alt: 'Support headset icon' },
-    panelIcon: { $file: 'fv2-67d27141.svg', alt: 'Support agent icon' },
   });
 })();
 CONTENT.footer.columns[0].links = CONTENT.projects
@@ -3964,14 +4018,33 @@ CONTENT.services.forEach((service) => {
     },
     body: 'Process design: layout, capacity and utility requirements agreed with your team. Procurement: equipment sourced from qualified international manufacturers. Installation & commissioning: mechanical, electrical and control integration on site. Handover: acceptance tests, SOP training and after-sales support.',
   });
+  const productionLines = child('production-lines', 'thiet-bi-va-giai-phap', 1, {
+    title: 'Production Lines',
+    slug: 'day-chuyen-san-xuat',
+  });
+  // Câu hỏi thường gặp riêng của trang Dây chuyền sản xuất (CHILD PAGE 208:4449).
+  const lineFaq = productionLines.sections.find((s) => s.__component === 'sections.faq');
+  lineFaq.cards = [
+    {
+      title: 'How long does it take to design, build and hand over an automated line?',
+      description:
+        'Delivery usually takes 6 to 12 weeks depending on the scale and complexity of the line. TOP WELL runs a full FAT at our workshop first, cutting installation and trial runs at your plant to just 7–14 working days.',
+    },
+    {
+      ...lineFaq.cards[1],
+      title: 'Can the automated line integrate with our existing ERP/MES software?',
+    },
+    {
+      title: 'How does TOP WELL deliver operation and maintenance training?',
+      description:
+        'Training, maintenance requirements and technical support arrangements are defined as part of the project scope.',
+    },
+  ];
   CONTENT.services = [
     { ...equipment, order: 0 },
     { ...parts, order: 1 },
     child('machinery', 'thiet-bi-va-giai-phap', 0, { title: 'Equipment', slug: 'thiet-bi' }),
-    child('production-lines', 'thiet-bi-va-giai-phap', 1, {
-      title: 'Production Lines',
-      slug: 'day-chuyen-san-xuat',
-    }),
+    productionLines,
     turnkey,
     child('spare-parts-molds', 'phu-tung-va-linh-kien', 0, {
       title: 'Replacement parts supply',
@@ -4463,7 +4536,7 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
   return stats;
 }
 
-module.exports = { CONTENT, seed, validateContent, localizeContent };
+module.exports = { CONTENT, seed, validateContent, localizeContent, articleRichText };
 
 if (require.main === module) {
   (async () => {

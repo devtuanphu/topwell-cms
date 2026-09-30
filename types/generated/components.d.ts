@@ -733,6 +733,7 @@ export interface SectionsServices extends Struct.ComponentSchema {
   attributes: {
     ctaHref: Schema.Attribute.String;
     ctaLabel: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     eyebrow: Schema.Attribute.String;
     highlight: Schema.Attribute.String;
     limit: Schema.Attribute.Integer &

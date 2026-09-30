@@ -1,0 +1,3217 @@
+{
+ "vi": {
+  "global": [
+   {
+    "path": [
+     "address"
+    ],
+    "from": "Tầng lửng, Block B2 Topaz City, 39 Cao Lỗ, Phường Chánh Hưng, TP. Hồ Chí Minh, Việt Nam",
+    "to": "Tầng lửng, Block B2 Topaz City, số 39 Cao Lỗ, Phường Chánh Hưng, Thành phố Hồ Chí Minh, Việt Nam"
+   }
+  ],
+  "footer": [
+   {
+    "path": [
+     "companyName"
+    ],
+    "from": "TOPWELL INTERNATIONAL CO., LTD",
+    "to": "CÔNG TY TNHH QUỐC TẾ TOPWELL"
+   },
+   {
+    "path": [
+     "description"
+    ],
+    "from": "\"Tiêu chuẩn quốc tế – Dịch vụ địa phương.\"",
+    "to": "“Tiêu chuẩn quốc tế – Dịch vụ tại địa phương.”"
+   },
+   {
+    "path": [
+     "phoneSuffix"
+    ],
+    "from": "Hỗ trợ kỹ thuật 24/7",
+    "to": "Kỹ thuật 24/7"
+   },
+   {
+    "path": [
+     "addressLabel"
+    ],
+    "from": "Địa chỉ:",
+    "to": "Vị trí:"
+   },
+   {
+    "path": [
+     "copyright"
+    ],
+    "from": "© {year} - TOP WELL International. Bảo lưu mọi quyền.",
+    "to": "© {year} - TOP WELL International. Mọi quyền được bảo lưu."
+   },
+   {
+    "path": [
+     "followTitle"
+    ],
+    "from": "Theo dõi chúng tôi",
+    "to": "Hãy theo dõi chúng tôi"
+   }
+  ],
+  "site-settings": [
+   {
+    "path": [
+     "common",
+     "readMore"
+    ],
+    "from": "Xem thêm",
+    "to": "Đọc thêm"
+   },
+   {
+    "path": [
+     "common",
+     "searchPlaceholder"
+    ],
+    "from": "Nhập từ khóa…",
+    "to": "Tìm kiếm sản phẩm, dịch vụ..."
+   },
+   {
+    "path": [
+     "sidebar",
+     "recentTitle"
+    ],
+    "from": "Bài viết mới nhất",
+    "to": "Bài viết gần đây"
+   },
+   {
+    "path": [
+     "forms",
+     "submit"
+    ],
+    "from": "Gửi tin nhắn",
+    "to": "Gửi Câu Hỏi Của Bạn"
+   },
+   {
+    "path": [
+     "forms",
+     "nameShort"
+    ],
+    "from": "Họ tên của bạn*",
+    "to": "Tên của bạn*"
+   },
+   {
+    "path": [
+     "forms",
+     "messageShort"
+    ],
+    "from": "Nhập nội dung tin nhắn",
+    "to": "Gửi tin nhắn tại đây"
+   },
+   {
+    "path": [
+     "forms",
+     "topicsTitle"
+    ],
+    "from": "Chúng tôi có thể hỗ trợ gì cho bạn?",
+    "to": "Chúng tôi có thể giúp gì cho bạn?"
+   },
+   {
+    "path": [
+     "forms",
+     "quoteService"
+    ],
+    "from": "Chọn loại dịch vụ",
+    "to": "Chọn loại hình dịch vụ"
+   },
+   {
+    "path": [
+     "forms",
+     "quoteDate"
+    ],
+    "from": "Chọn ngày tư vấn",
+    "to": "Chọn ngày hẹn tư vấn"
+   },
+   {
+    "path": [
+     "newsletter",
+     "title"
+    ],
+    "from": "Bản tin ngành",
+    "to": "Bản tin Công nghiệp"
+   },
+   {
+    "path": [
+     "newsletter",
+     "description"
+    ],
+    "from": "Nhận thông tin cập nhật về máy móc, công nghệ dụng cụ và diễn biến chuỗi cung ứng.",
+    "to": "Nhận thông báo định kỳ về giải pháp máy móc, công nghệ khuôn mẫu và xu hướng chuỗi cung ứng mới nhất."
+   },
+   {
+    "path": [
+     "newsletter",
+     "placeholder"
+    ],
+    "from": "Địa chỉ email của bạn",
+    "to": "Nhập địa chỉ email công ty..."
+   },
+   {
+    "path": [
+     "newsletter",
+     "submit"
+    ],
+    "from": "Đăng ký",
+    "to": "Đăng ký theo dõi"
+   },
+   {
+    "path": [
+     "article",
+     "comparisonItem"
+    ],
+    "from": "Tiêu chí nghiệm thu",
+    "to": "Hạng mục kiểm nghiệm"
+   },
+   {
+    "path": [
+     "article",
+     "comparisonReference"
+    ],
+    "from": "Tham chiếu ngành",
+    "to": "Tiêu chuẩn công nghiệp chung"
+   },
+   {
+    "path": [
+     "article",
+     "comparisonTarget"
+    ],
+    "from": "Mục tiêu dự án",
+    "to": "Tiêu chuẩn TOP WELL Alliance"
+   }
+  ],
+  "home-page": [
+   {
+    "path": [
+     "sections",
+     1,
+     "title"
+    ],
+    "from": "Giải pháp công nghiệp toàn diện cho doanh nghiệp của bạn",
+    "to": "Giải pháp công nghiệp\ntoàn diện\ncho doanh nghiệp"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "description"
+    ],
+    "from": "TOP WELL kết nối doanh nghiệp với hệ sinh thái thiết bị, dây chuyền sản xuất, phụ tùng và giải pháp kỹ thuật từ các đối tác quốc tế. Chúng tôi đồng hành cùng bạn từ tư vấn, triển khai đến dịch vụ hậu mãi tại Việt Nam.",
+    "to": "TOP WELL kết nối doanh nghiệp với hệ sinh thái thiết bị, dây chuyền sản xuất, phụ tùng – linh kiện và giải pháp kỹ thuật từ các đối tác quốc tế. Chúng tôi đồng hành từ khâu tư vấn, triển khai đến hỗ trợ sau bán hàng tại thị trường Việt Nam."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Tư vấn ngay từ đầu",
+    "to": "Tư vấn từ giai đoạn đầu"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Chúng tôi phân tích nhu cầu, điều kiện vận hành và mục tiêu đầu tư để đề xuất phương án phù hợp cho từng dự án.",
+    "to": "Phân tích nhu cầu, điều kiện vận hành và mục tiêu đầu tư để đề xuất phương án phù hợp cho từng dự án."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Giải pháp theo đúng nhu cầu",
+    "to": "Giải pháp theo nhu cầu"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Chúng tôi phối hợp với các đối tác kỹ thuật và nhà sản xuất để xây dựng giải pháp đáp ứng yêu cầu vận hành thực tế.",
+    "to": "Phối hợp cùng đối tác kỹ thuật và nhà sản xuất để xây dựng giải pháp đáp ứng yêu cầu thực tế của doanh nghiệp."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Phụ tùng và linh kiện",
+    "to": "Phụ tùng & Linh kiện"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Phụ tùng, linh kiện và giải pháp thay thế phục vụ bảo trì, sửa chữa và vận hành ổn định.",
+    "to": "Cung cấp phụ tùng, linh kiện và giải pháp thay thế phục vụ bảo trì, sửa chữa và duy trì hoạt động ổn định."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "Hỗ trợ lắp đặt, vận hành, bảo trì, nâng cấp và các yêu cầu kỹ thuật trong suốt vòng đời thiết bị.",
+    "to": "Đồng hành trong lắp đặt, vận hành, bảo trì, nâng cấp và xử lý các yêu cầu kỹ thuật trong suốt vòng đời thiết bị."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "title"
+    ],
+    "from": "Nền tảng kỹ thuật vững chắc cho mọi dây chuyền sản xuất quy mô lớn.",
+    "to": "Nền tảng kỹ thuật vững chắc cho mọi dây chuyền quy mô lớn."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "title"
+    ],
+    "from": "Nền tảng kỹ thuật vững chắc cho mọi dây chuyền sản xuất quy mô lớn.",
+    "to": "Nền tảng kỹ thuật vững chắc cho mọi dây chuyền quy mô lớn."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Máy móc nhập khẩu chính ngạch từ các nhà sản xuất hàng đầu Nhật Bản, Đài Loan và châu Âu, có chứng nhận xuất xứ và giám định độc lập.",
+    "to": "Cung ứng nguồn máy móc thiết bị chính ngạch từ các nhà chế tạo hàng đầu tại Nhật Bản, Đài Loan và Châu Âu, có chứng chỉ xuất xứ và kiểm định độc lập."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Thiết kế mặt bằng nhà xưởng, tích hợp robot cộng tác (cobot) và lập trình đồng bộ tín hiệu dây chuyền tự động khép kín.",
+    "to": "Tư vấn thiết kế layout xưởng sản xuất, tích hợp robot cộng tác Cobot, lập trình đồng bộ hệ thống tín hiệu tự động hóa dây chuyền khép kín."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Bảo trì định kỳ, căn chỉnh trục bằng laser, chẩn đoán rung động và giám sát mài mòn nhiệt để ngăn ngừa dừng máy ngoài kế hoạch.",
+    "to": "Xây dựng quy trình bảo trì định kỳ, cân chỉnh trục tâm laser, chẩn đoán rung chấn và giám sát hao mòn nhiệt, ngăn ngừa sự cố dừng máy ngoài dự kiến."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "Nâng cấp máy hiện có với bộ điều khiển CNC/PLC thế hệ mới, giảm tiêu thụ năng lượng và kết nối IoT công nghiệp.",
+    "to": "Cải tiến máy móc cũ, thay thế bộ điều khiển CNC/PLC thế hệ mới, tối ưu hóa mức tiêu thụ năng lượng và nâng cấp chuẩn truyền thông IoT công nghiệp."
+   },
+   {
+    "path": [
+     "sections",
+     5,
+     "title"
+    ],
+    "from": "Cập nhật ngành liên tục",
+    "to": "Cập nhật liên tục tình hình"
+   },
+   {
+    "path": [
+     "sections",
+     6,
+     "ctaLabel"
+    ],
+    "from": "Nhận báo giá ngay",
+    "to": "Nhận Báo Giá Ngay"
+   },
+   {
+    "path": [
+     "sections",
+     6,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Dịch vụ được đánh giá cao",
+    "to": "Dịch vụ được đánh giá cao nhất"
+   },
+   {
+    "path": [
+     "sections",
+     6,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Kỹ thuật viên có chứng chỉ",
+    "to": "Kỹ thuật viên được cấp phép"
+   },
+   {
+    "path": [
+     "sections",
+     7,
+     "eyebrow"
+    ],
+    "from": "ĐƯỢC CÁC DOANH NGHIỆP HÀNG ĐẦU THẾ GIỚI TIN TƯỞNG",
+    "to": "ĐƯỢC CÁC CÔNG TY HÀNG ĐẦU THẾ GIỚI TIN DÙNG"
+   },
+   {
+    "path": [
+     "sections",
+     7,
+     "title"
+    ],
+    "from": "Mang lại giá trị cho các tập đoàn hàng đầu toàn cầu",
+    "to": "Mang lại giá trị cho các nhà lãnh đạo toàn cầu"
+   },
+   {
+    "path": [
+     "sections",
+     7,
+     "highlight"
+    ],
+    "from": "các tập đoàn hàng đầu toàn cầu",
+    "to": "các nhà lãnh đạo toàn cầu"
+   },
+   {
+    "path": [
+     "sections",
+     7,
+     "description"
+    ],
+    "from": "Kéo hoặc di chuột để khám phá mạng lưới đối tác công nghiệp quốc tế của chúng tôi.",
+    "to": "Kéo trượt hoặc rê chuột để khám phá hệ thống đối tác công nghiệp chuẩn quốc tế"
+   }
+  ],
+  "about-page": [
+   {
+    "path": [
+     "sections",
+     0,
+     "title"
+    ],
+    "from": "Chúng tôi không chỉ vận chuyển hàng hóa. Chúng tôi kiến tạo cơ hội.",
+    "to": "Không chỉ chuyển động những kiện hàng, Chúng tôi kiến tạo những cơ hội."
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "description"
+    ],
+    "from": "TOP WELL International được thành lập từ một niềm tin giản dị: sản xuất cơ khí và công nghệ chuỗi cung ứng cần **thông minh hơn**, **nhanh hơn** và **nhân văn hơn**. Chúng tôi kết hợp kỹ thuật chính xác với các giải pháp công nghiệp tiên tiến để giúp doanh nghiệp phát triển không giới hạn.",
+    "to": "TOP WELL International ra đời từ niềm tin đơn giản — sản xuất cơ khí và công nghệ chuỗi cung ứng cần **thông minh hơn**, **nhanh hơn** và **nhân văn hơn**. Chúng tôi kết hợp năng lực kỹ thuật cơ khí chính xác với giải pháp công nghiệp tiên tiến để cùng doanh nghiệp bứt phá không giới hạn."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "VÌ SAO CHỌN TOP WELL",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "description"
+    ],
+    "from": "Phụ trách thương mại quốc tế và đại diện tại Việt Nam.",
+    "to": "Đơn vị phụ trách hoạt động thương mại quốc tế và đại diện tại Việt Nam."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Tiếp cận hơn 150 quốc gia cùng mạng lưới đối tác cung ứng công nghệ uy tín.",
+    "to": "Tiếp cận hơn 150+ quốc gia và mạng lưới đối tác cung ứng công nghệ tin cậy."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "title"
+    ],
+    "from": "Dẫn đầu bằng sự chính xác & tận tâm",
+    "to": "Định hình vị thế tiên phong bằng sự chuẩn xác & tận tâm"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "description"
+    ],
+    "from": "Mỗi bước đi của TOP WELL đều hướng tới tối đa hóa giá trị kinh tế cho khách hàng thông qua các tiêu chuẩn kỹ thuật cơ khí hiện đại nhất.",
+    "to": "Mỗi bước đi của TOP WELL đều hướng đến mục tiêu tối ưu hóa hiệu quả kinh tế cho khách hàng thông qua chuẩn mực công nghệ cơ khí hiện đại nhất."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Trở thành đối tác hàng đầu Đông Nam Á về tích hợp kỹ thuật công nghiệp và cung ứng dụng cụ chính xác, kết nối các công nghệ sản xuất thông minh toàn cầu.",
+    "to": "Trở thành đối tác tích hợp kỹ thuật công nghiệp và chuỗi cung ứng linh kiện khuôn mẫu chính xác số 1 tại Đông Nam Á, kết nối các mắt xích công nghệ sản xuất thông minh toàn cầu."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "label"
+    ],
+    "from": "Vươn xa hơn đến năm 2030",
+    "to": "Mục tiêu 2030 vươn tầm"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Sứ mệnh",
+    "to": "Sứ mệnh đồng hành"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Xóa bỏ rào cản kỹ thuật phức tạp và thời gian dừng máy tốn kém, mang lại biên lợi nhuận tốt hơn và hiệu suất cơ khí vượt trội cho mọi xưởng đối tác.",
+    "to": "Loại bỏ mọi rào cản kỹ thuật phức tạp và tổn thất thời gian ngừng máy (downtime). Đem lại biên độ lợi nhuận tối ưu và hiệu suất vận hành cơ khí vượt trội cho từng phân xưởng đối tác."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "eyebrow"
+    ],
+    "from": "NGUYÊN TẮC HOẠT ĐỘNG",
+    "to": "NGUYÊN TẮC HÀNH ĐỘNG"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Chính xác: Độ chính xác tuyệt đối trong từng kích thước cơ khí và tiêu chuẩn kiểm định.\nLinh hoạt: Phản hồi tức thì mọi yêu cầu kỹ thuật và yêu cầu khẩn cấp tại xưởng.\nCam kết: Bảo trì và chuyển giao công nghệ trong suốt vòng đời máy.",
+    "to": "Precision: Chuẩn xác tuyệt đối trong mọi kích thước cơ khí và quy chuẩn kiểm định.\nAgility: Tốc độ phản hồi tức thời mọi yêu cầu kỹ thuật và khẩn cấp của xưởng.\nCommitment: Đồng hành bảo dưỡng, chuyển giao công nghệ trọn vòng đời máy móc."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "label"
+    ],
+    "from": "Tiêu chuẩn Nhật & châu Âu",
+    "to": "Tiêu chuẩn Nhật & Châu Âu"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "eyebrow"
+    ],
+    "from": "QUY TRÌNH CỦA CHÚNG TÔI",
+    "to": "OUR PROCESS"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "title"
+    ],
+    "from": "Dịch vụ dân dụng và thương mại",
+    "to": "Dịch Vụ Dân Dụng Và Thương Mại"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Kỹ thuật viên có chứng chỉ",
+    "to": "Kỹ thuật viên được cấp phép"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Dịch vụ được đánh giá cao",
+    "to": "Dịch vụ được đánh giá cao nhất"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "eyebrow"
+    ],
+    "from": "HÀNH ĐỘNG VÌ NHỮNG ĐIỀU QUAN TRỌNG",
+    "to": "HÃY HÀNH ĐỘNG VÌ NHỮNG ĐIỀU QUAN TRỌNG"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "title"
+    ],
+    "from": "Hợp tác cùng TOP WELL để bứt phá năng lực sản xuất.",
+    "to": "Hợp tác cùng TOP WELL để bứt phá năng lực sản xuất của bạn."
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "description"
+    ],
+    "from": "Đồng hành cùng chúng tôi để có công nghệ công nghiệp thông minh hơn, ra mắt sản phẩm nhanh hơn và tăng trưởng bền vững cho doanh nghiệp.",
+    "to": "Hãy hợp tác với chúng tôi để có giải pháp công nghệ công nghiệp thông minh hơn, rút ngắn tiến độ ra mắt sản phẩm và thúc đẩy sự phát triển bền vững của doanh nghiệp bạn."
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "ctaLabel"
+    ],
+    "from": "Liên hệ",
+    "to": "Liên hệ với chúng tôi"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelTitle"
+    ],
+    "from": "Cần hỗ trợ chuyên sâu?",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelText"
+    ],
+    "from": "Đội ngũ kỹ sư cơ khí và chuyên gia tự động hóa của chúng tôi sẵn sàng khảo sát nhà máy tại chỗ trong vòng 24 giờ.",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Thời gian phản hồi RFQ:",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "< 4 giờ",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Khảo sát nhà máy:",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Miễn phí toàn quốc",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Dụng cụ mẫu:",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Mẫu thử DFM",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelLabel"
+    ],
+    "from": "Gửi bản vẽ CAD/STEP →",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelHref"
+    ],
+    "from": "/lien-he",
+    "to": null
+   }
+  ],
+  "services-page": [
+   {
+    "path": [
+     "sections",
+     1,
+     "title"
+    ],
+    "from": "Vận hành đồng bộ – quy trình chuẩn quốc tế",
+    "to": "Vận hành đồng bộ Chuẩn hóa quy trình quốc tế"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "eyebrow"
+    ],
+    "from": "KHÁM PHÁ DỊCH VỤ",
+    "to": "KHÁM PHÁ CÁC DỊCH VỤ CỦA CHÚNG TÔI"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "title"
+    ],
+    "from": "Một cú nhấp để có dịch vụ sửa chữa và bảo trì trọn gói từ A đến Z.",
+    "to": "Chỉ Cần Nhấp Chuột Để Nhận Dịch Vụ Sửa Chữa Và Bảo Trì Từ A Đến Z."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "ctaLabel"
+    ],
+    "from": "Khám phá thêm",
+    "to": "Khám Phá Thêm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "title"
+    ],
+    "from": "Niềm tin từ các doanh nghiệp FDI & tập đoàn sản xuất",
+    "to": "Niềm Tin Từ Các Doanh Nghiệp FDI & Tập Đoàn Sản Xuất"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "statusTitle"
+    ],
+    "from": "99.4% khách hàng hài lòng",
+    "to": "99.4% Khách hàng hài lòng"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "statusNote"
+    ],
+    "from": "Hơn 180 dự án cơ khí & tự động hóa đã bàn giao",
+    "to": "Hơn 180+ dự án cơ khí & tự động hóa bàn giao"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "\"TOP WELL đáp ứng xuất sắc độ dung sai ±0.002mm cho cụm chi tiết máy ép tốc độ cao. Dịch vụ đo kiểm CMM 3D minh bạch kèm chứng chỉ chuẩn Zeiss giúp sản phẩm của chúng tôi xuất khẩu sang Nhật Bản thuận lợi.\"",
+    "to": "\"TOP WELL đáp ứng xuất sắc độ dung sai ±0.002mm cho cụm chi tiết máy ép tốc độ cao. Dịch vụ đo kiểm CMM 3D minh bạch kèm chứng chỉ chuẩn Zeiss giúp sản phẩm của chúng tôi xuất khẩu sang thị trường Nhật Bản thuận lợi tuyệt đối.\""
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Toru Shinohara",
+    "to": "Ông Toru Shinohara"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Nguyen Van Tuan",
+    "to": "Ông Nguyễn Văn Tuấn"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "eyebrow"
+    ],
+    "from": "Quản lý Vận hành Nhà máy, Bosch Rexroth Industrial Facility",
+    "to": "Plant Operations Lead, Bosch Rexroth Industrial Facility"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "eyebrow"
+    ],
+    "from": "VẬN HÀNH & NĂNG LỰC HIỆN TRƯỜNG",
+    "to": "HÌNH ẢNH HOẠT ĐỘNG & NĂNG LỰC THỰC TẾ"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "title"
+    ],
+    "from": "Hoạt động và đội ngũ chuyên gia tại hiện trường",
+    "to": "Hình ảnh hoạt động & Đội ngũ chuyên môn tại hiện trường"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "description"
+    ],
+    "from": "Hình ảnh thực tế về gia công, lắp đặt, bảo trì máy móc, hệ thống kỹ thuật và kiểm định tiêu chuẩn tại xưởng của chúng tôi và công trường đối tác.",
+    "to": "Ghi nhận thực tế các công đoạn thi công, lắp đặt, bảo trì máy móc cơ khí, hệ thống kỹ thuật và kiểm định tiêu chuẩn tại xưởng sản xuất và hiện trường đối tác."
+   }
+  ],
+  "news-page": [
+   {
+    "path": [
+     "sections",
+     1,
+     "promo",
+     "title"
+    ],
+    "from": "Cần tư vấn giải pháp kho bãi và cơ khí?",
+    "to": "Cần tư vấn giải pháp kho bãi & cơ khí?"
+   }
+  ],
+  "contact-page": [
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "LIÊN HỆ CHUYÊN GIA",
+    "to": "LIÊN HỆ VỚI CÁC CHUYÊN GIA CỦA CHÚNG TÔI"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "title"
+    ],
+    "from": "Kết nối với chúng tôi!",
+    "to": "Hãy Liên Hệ Và Kết Nối!"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "description"
+    ],
+    "from": "TOP WELL International kết nối doanh nghiệp với hệ sinh thái thiết bị, dây chuyền sản xuất, phụ tùng và giải pháp kỹ thuật từ các đối tác quốc tế. Chúng tôi đồng hành cùng bạn từ tư vấn, triển khai đến hỗ trợ kỹ thuật 24/7.",
+    "to": "TOP WELL International kết nối doanh nghiệp với hệ sinh thái thiết bị, dây chuyền sản xuất, phụ tùng - linh kiện và giải pháp kỹ thuật từ các đối tác quốc tế. Chúng tôi đồng hành từ khâu tư vấn, triển khai đến hỗ trợ kỹ thuật 24/7."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "panelTitle"
+    ],
+    "from": "Xin chào!",
+    "to": "Chào Bạn!"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "panelText"
+    ],
+    "from": "TOP WELL International hỗ trợ doanh nghiệp lắp đặt, vận hành, bảo trì, nâng cấp và xử lý yêu cầu kỹ thuật trong suốt vòng đời thiết bị.",
+    "to": "TOP WELL International cam kết đồng hành cùng doanh nghiệp trong lắp đặt, vận hành, bảo trì, nâng cấp và xử lý các yêu cầu kỹ thuật trong suốt vòng đời thiết bị."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "requestTitle"
+    ],
+    "from": "Yêu cầu",
+    "to": "Yêu Cầu"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "requestText"
+    ],
+    "from": "Phụ tùng, linh kiện và giải pháp thay thế phục vụ bảo trì, sửa chữa và vận hành ổn định.",
+    "to": "Cung cấp phụ tùng, linh kiện và giải pháp thay thế phục vụ bảo trì, sửa chữa và duy trì hoạt động ổn định."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Thương mại",
+    "to": "Thuộc Về Thương Mại"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Dân dụng",
+    "to": "Khu Dân Cư"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Cá nhân",
+    "to": "Cá Nhân"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Vệ sinh",
+    "to": "Dọn Dẹp"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     5,
+     "title"
+    ],
+    "from": "Họp",
+    "to": "Cuộc Họp"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "eyebrow"
+    ],
+    "from": "VẬN HÀNH TOÀN CẦU",
+    "to": "HOẠT ĐỘNG TOÀN CẦU"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "title"
+    ],
+    "from": "Mạng lưới kỹ thuật & logistics chiến lược",
+    "to": "Mạng lưới kỹ thuật & hậu cần chiến lược của chúng tôi"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "highlight"
+    ],
+    "from": "kỹ thuật & logistics",
+    "to": "kỹ thuật & hậu cần"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "description"
+    ],
+    "from": "Khám phá các trung tâm vận hành và cơ sở logistics của chúng tôi, được xây dựng để phân phối nhanh, lưu kho hiệu quả và vận hành chuỗi cung ứng liền mạch tại các khu vực trọng điểm.",
+    "to": "Khám phá các trung tâm điều hành và cơ sở hậu cần của chúng tôi được xây dựng để hỗ trợ phân phối nhanh chóng, kho bãi hiệu quả và hoạt động chuỗi cung ứng liền mạch trên các khu vực trọng điểm."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Tầng lửng, Block B2 Topaz City, 39 Cao Lỗ, Phường Chánh Hưng, TP. Hồ Chí Minh, Việt Nam",
+    "to": "Tầng lửng, Block B2 Topaz City, số 39 Cao Lỗ, Phường Chánh Hưng, Thành phố Hồ Chí Minh, Việt Nam"
+   }
+  ],
+  "services:thiet-bi-va-giai-phap": [
+   {
+    "path": [
+     "features",
+     0,
+     "title"
+    ],
+    "from": "Tiêu chuẩn Nhật & châu Âu",
+    "to": "Tiêu chuẩn Nhật & Châu Âu"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Tiếp nhận bản vẽ CAD/STEP, khảo sát mặt bằng xưởng trực tiếp và đo đạc thông số phụ tải trong vòng 24 giờ.",
+    "to": "Tiếp nhận bản vẽ CAD/STEP, khảo sát mặt bằng xưởng trực tiếp và đo đạc thông số phụ tải trong vòng 24h."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Phân tích DFM (Design for Manufacturing), tính toán chu kỳ gia công và báo giá phương án khả thi.",
+    "to": "Phân tích DFM (Design for Manufacturing), tính toán chu kỳ gia công (cycle-time) và báo giá phương án khả thi."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "description"
+    ],
+    "from": "Đội ngũ kỹ sư TOP WELL sẵn sàng khảo sát hiện trạng và đề xuất phương án trong vòng 24 giờ.",
+    "to": "Đội ngũ kỹ sư TOP WELL sẵn sàng hỗ trợ khảo sát và tối ưu dây chuyền nhà máy 24/7."
+   }
+  ],
+  "services:phu-tung-va-linh-kien": [
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Tiếp nhận bản vẽ CAD/STEP, khảo sát mặt bằng xưởng trực tiếp và đo đạc thông số phụ tải trong vòng 24 giờ.",
+    "to": "Tiếp nhận bản vẽ CAD/STEP, khảo sát mặt bằng xưởng trực tiếp và đo đạc thông số phụ tải trong vòng 24h."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Phân tích DFM (Design for Manufacturing), tính toán chu kỳ gia công và báo giá phương án khả thi.",
+    "to": "Phân tích DFM (Design for Manufacturing), tính toán chu kỳ gia công (cycle-time) và báo giá phương án khả thi."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "description"
+    ],
+    "from": "Đội ngũ kỹ sư TOP WELL sẵn sàng khảo sát hiện trạng và đề xuất phương án trong vòng 24 giờ.",
+    "to": "Đội ngũ kỹ sư TOP WELL sẵn sàng hỗ trợ khảo sát và tối ưu dây chuyền nhà máy 24/7."
+   }
+  ],
+  "services:day-chuyen-san-xuat": [
+   {
+    "path": [
+     "sections",
+     0,
+     "title"
+    ],
+    "from": "Tối ưu năng suất với tự động hóa Công nghiệp 4.0",
+    "to": "Tối Ưu Hóa Năng Suất & Tự Động Hóa Chuẩn Công Nghiệp 4.0"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "description"
+    ],
+    "from": "TOP WELL International thiết kế, chế tạo và tích hợp dây chuyền sản xuất tự động thông minh. Chúng tôi hợp tác với các tập đoàn FDI và nhà sản xuất hàng đầu để tối ưu sản xuất thông qua robot công nghiệp đa trục, xe tự hành AGV/AMR, băng tải pallet tải trọng lớn cùng các mô-đun lắp ráp và kiểm tra tự động.\n\nMỗi dây chuyền tự động do TOP WELL bàn giao đều trải qua quy trình thử tải nghiêm ngặt, bàn giao đúng tiến độ và đạt chỉ số vận hành ổn định trước khi đi vào sản xuất thương mại.",
+    "to": "TOP WELL International cung cấp giải pháp toàn diện về thiết kế, chế tạo và tích hợp hệ thống dây chuyền sản xuất tự động hóa thông minh (Production Lines). Chúng tôi đồng hành cùng các tập đoàn FDI và doanh nghiệp sản xuất hàng đầu để tối ưu hóa quy trình chế tạo thông qua việc tích hợp robot cánh tay công nghiệp đa trục, xe tự hành dẫn đường AGV/AMR, băng chuyền trung chuyển pallet tải trọng lớn và các module lắp ráp - kiểm thử tự động.\n\nMọi dây chuyền sản xuất tự động do TOP WELL triển khai đều trải qua các vòng thử nghiệm tải nghiêm ngặt, cam kết bàn giao đúng tiến độ và đạt các chỉ số vận hành ổn định tối đa trước khi đưa vào khai thác thương mại."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Làm thế nào để yêu cầu báo giá?",
+    "to": "Thời gian thiết kế, chế tạo và bàn giao dây chuyền tự động hóa mất bao lâu?"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Gửi yêu cầu về thiết bị hoặc hàng hóa, địa điểm và tiến độ mong muốn qua biểu mẫu liên hệ. Đội ngũ của chúng tôi sẽ xem xét phạm vi và đề xuất các bước tiếp theo.",
+    "to": "Thời gian triển khai thông thường từ 6 đến 12 tuần tùy thuộc vào quy mô và độ phức tạp của dây chuyền. TOP WELL thực hiện kiểm nghiệm FAT tại xưởng trước 100% nhằm rút ngắn tối đa thời gian lắp đặt và chạy thử tại nhà máy đối tác xuống chỉ còn từ 7 - 14 ngày làm việc."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Giải pháp có thể tích hợp với hệ thống hiện có không?",
+    "to": "Dây chuyền tự động hóa có thể tích hợp với phần mềm ERP/MES hiện có không?"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Công ty có cung cấp đào tạo và hỗ trợ hậu mãi không?",
+    "to": "TOP WELL tổ chức chương trình đào tạo chuyển giao vận hành và bảo trì như thế nào?"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Có. Đào tạo, yêu cầu bảo trì và phương án hỗ trợ kỹ thuật được xác định trong phạm vi dự án.",
+    "to": "Đào tạo, yêu cầu bảo trì và phương án hỗ trợ kỹ thuật được xác định trong phạm vi dự án."
+   }
+  ],
+  "projects:oulide-ada-smart-warehouse": [
+   {
+    "path": [
+     "summary"
+    ],
+    "from": "Giải pháp lưu trữ thông minh tích hợp Ada System Platform và công nghệ AS/RS nhằm tối ưu dòng vật tư và tự động hóa logistics công nghiệp.",
+    "to": "Triển khai giải pháp kho lưu trữ thông minh tích hợp nền tảng điều hành Ada System Platform và công nghệ AS/RS, tối ưu hóa lưu chuyển vật tư và tự động hóa quy trình hậu cần công nghiệp."
+   },
+   {
+    "path": [
+     "seo",
+     "metaDescription"
+    ],
+    "from": "Giải pháp lưu trữ thông minh tích hợp Ada System Platform và công nghệ AS/RS nhằm tối ưu dòng vật tư và tự động hóa logistics công nghiệp.",
+    "to": "Triển khai giải pháp kho lưu trữ thông minh tích hợp nền tảng điều hành Ada System Platform và công nghệ AS/RS, tối ưu hóa lưu chuyển vật tư và tự động hóa quy trình hậu cần công nghiệp."
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "description"
+    ],
+    "from": "Tối ưu thời gian chu kỳ sản xuất và loại bỏ sai số gia công tích lũy trên các cụm lắp ráp cơ khí phức tạp. Khách hàng gặp tình trạng tỷ lệ phế phẩm cao và chi phí bảo trì ngoài kế hoạch lớn, đòi hỏi một dây chuyền tự động hóa đồng bộ với tiêu chuẩn kiểm tra dung sai siêu nhỏ nghiêm ngặt.",
+    "to": "Tối ưu hóa thời gian chu kỳ sản xuất và giải quyết triệt để sai số gia công tích lũy trên cụm chi tiết cơ khí phức tạp. Khách hàng đối mặt với tỷ lệ phế phẩm cao và chi phí bảo trì đột xuất, đòi hỏi giải pháp dây chuyền tự động hóa đồng bộ cùng quy chuẩn kiểm định dung sai vi mô khắt khe."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "title"
+    ],
+    "from": "Thách thức & giải pháp",
+    "to": "Thách thức & Giải pháp"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "THÁCH THỨC & GIẢI PHÁP",
+    "to": "CHALLENGE & SOLUTION"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "description"
+    ],
+    "from": "Nhà máy của đối tác gặp khó khăn trong việc duy trì sự ổn định đồng thời giữa khâu dập tốc độ cao và cụm gia công CNC. Các thao tác thủ công làm gián đoạn quá trình cấp phôi, gây tắc nghẽn nghiêm trọng và lãng phí vật liệu hợp kim đặc biệt. TOP WELL đã xây dựng một giải pháp toàn diện:",
+    "to": "Nhà máy đối tác gặp khó khăn trong việc duy trì tính ổn định giữa dây chuyền dập khuôn tốc độ cao và cụm trung tâm gia công CNC. Các nguyên công thủ công hiện hữu dẫn đến sự gián đoạn trong chuỗi cấp phôi, tạo ra các điểm nghẽn nghiêm trọng và gây lãng phí nguyên vật liệu hợp kim đặc chủng. TOP WELL đã xây dựng cấu trúc giải pháp toàn diện:"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Loại bỏ rung động động lực học và trôi nhiệt trong quá trình vận hành CNC 24/7.",
+    "to": "Khắc phục độ rung động học và sai lệch nhiệt độ khi máy CNC vận hành liên tục 24/7."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Tự động cấp phôi và đo quang học không tiếp xúc với độ chính xác ±0.002 mm.",
+    "to": "Tự động hóa khâu cấp phôi và kiểm tra đo lường quang học không tiếp xúc với dung sai ±0.002mm."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Tích hợp truyền thông công nghiệp SCADA/MES để giám sát thiết bị theo thời gian thực.",
+    "to": "Tích hợp truyền thông công nghiệp SCADA/MES giám sát trạng thái thiết bị thời gian thực."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Chuyển giao quy trình vận hành SOP chuẩn hóa cho đội ngũ kỹ sư tại nhà máy.",
+    "to": "Đào tạo chuyển giao toàn bộ quy trình vận hành SOP chuẩn hóa cho đội ngũ kỹ sư tại chỗ."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "title"
+    ],
+    "from": "Quy trình triển khai",
+    "to": "Quy trình thực hiện"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "eyebrow"
+    ],
+    "from": "QUY TRÌNH CỦA CHÚNG TÔI",
+    "to": "OUR PROCESS"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "description"
+    ],
+    "from": "Dự án được triển khai theo thông lệ công nghiệp Đức và Nhật Bản: khảo sát hiện trường, mô phỏng 3D DFM/Moldflow, gia công tinh trên trung tâm gia công 5 trục, hiệu chuẩn laser Renishaw và nghiệm thu FAT/SAT tại hiện trường trước khi đưa vào sản xuất thực tế.",
+    "to": "Quy trình triển khai của TOP WELL tuân thủ nghiêm ngặt chuẩn kỹ thuật công nghiệp Đức và Nhật Bản. Đội ngũ chuyên gia tiến hành khảo sát thực địa hiện trường, lập mô phỏng động học 3D DFM/Moldflow, gia công tinh trên tổ hợp trung tâm 5 trục, hiệu chuẩn giao thoa laser Renishaw và tổ chức nghiệm thu FAT/SAT tại chỗ trước khi hòa lưới sản xuất chính thức."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Khảo sát & quy hoạch thiết bị",
+    "to": "Khảo sát & Lập kế hoạch thiết bị"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Gia công & tinh chỉnh CNC 5 trục",
+    "to": "Gia công CNC 5 trục & Hiệu chỉnh"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Kiểm tra CMM laser & FAT",
+    "to": "Kiểm chuẩn Laser CMM & Nghiệm thu FAT"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "title"
+    ],
+    "from": "Kết quả & tác động",
+    "to": "Kết quả & Tác động"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "eyebrow"
+    ],
+    "from": "KẾT QUẢ & TÁC ĐỘNG",
+    "to": "RESULTS & IMPACT"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "description"
+    ],
+    "from": "Sau khi bàn giao, dự án đã tạo ra bước chuyển mạnh mẽ về năng lực vận hành thực tế, thiết lập chuẩn mực mới về độ tin cậy cơ khí và giúp đối tác đáp ứng các tiêu chuẩn khắt khe của chuỗi cung ứng toàn cầu:",
+    "to": "Dự án sau khi bàn giao đã mang lại sự bứt phá vượt bậc về năng lực vận hành thực tế cho khách hàng, thiết lập kỷ lục mới về độ tin cậy cơ khí và giúp đối tác đáp ứng toàn diện tiêu chuẩn khắt khe từ chuỗi cung ứng toàn cầu:"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "và giảm 98% thời gian dừng máy ngoài kế hoạch.",
+    "to": "và triệt tiêu 98% thời gian dừng máy ngoài kế hoạch (downtime)."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Hiệu suất thiết bị tổng thể (OEE)",
+    "to": "Nâng chỉ số hiệu suất thiết bị tổng thể (OEE)"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "tăng từ 76% lên 94.2%.",
+    "to": "từ 76% lên 94.2%."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "đạt được sau 14 tháng vận hành.",
+    "to": "chỉ sau 14 tháng triển khai thực tế."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Chứng nhận chất lượng quốc tế",
+    "to": "Đạt chứng chỉ nghiệm thu kiểm định chất lượng quốc tế"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "theo tiêu chuẩn ISO 9001 và AS9100.",
+    "to": "chuẩn ISO 9001 và AS9100."
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "description"
+    ],
+    "from": "Đội ngũ kỹ sư TOP WELL sẵn sàng khảo sát hiện trạng và đề xuất phương án trong vòng 24 giờ.",
+    "to": "Đội ngũ kỹ sư TOP WELL sẵn sàng hỗ trợ khảo sát và tối ưu dây chuyền nhà máy 24/7."
+   },
+   {
+    "path": [
+     "homeSummary"
+    ],
+    "from": "Giải pháp lưu trữ thông minh tích hợp Ada System Platform và công nghệ AS/RS nhằm tối ưu dòng vật tư và tự động hóa logistics công nghiệp.",
+    "to": "Triển khai giải pháp kho lưu trữ thông minh tích hợp nền tảng điều hành Ada System Platform và công nghệ AS/RS, tối ưu hóa lưu chuyển vật tư và tự động hóa quy trình hậu cần công nghiệp."
+   }
+  ],
+  "projects:tongjun-environmental-new-materials": [
+   {
+    "path": [
+     "summary"
+    ],
+    "from": "Dây chuyền gia công và đùn ép công nghệ cao cho các loại polyme kỹ thuật mới thân thiện với môi trường, đáp ứng tiêu chuẩn xuất khẩu quốc tế khắt khe.",
+    "to": "Ứng dụng dây chuyền công nghệ cao chế biến và đùn ép vật liệu polyme kỹ thuật mới thân thiện với môi trường, đáp ứng tiêu chuẩn xuất khẩu quốc tế khắt khe."
+   },
+   {
+    "path": [
+     "seo",
+     "metaDescription"
+    ],
+    "from": "Dây chuyền gia công và đùn ép công nghệ cao cho các loại polyme kỹ thuật mới thân thiện với môi trường, đáp ứng tiêu chuẩn xuất khẩu quốc tế khắt khe.",
+    "to": "Ứng dụng dây chuyền công nghệ cao chế biến và đùn ép vật liệu polyme kỹ thuật mới thân thiện với môi trường, đáp ứng tiêu chuẩn xuất khẩu quốc tế khắt khe."
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "description"
+    ],
+    "from": "Tối ưu thời gian chu kỳ sản xuất và loại bỏ sai số gia công tích lũy trên các cụm lắp ráp cơ khí phức tạp. Khách hàng gặp tình trạng tỷ lệ phế phẩm cao và chi phí bảo trì ngoài kế hoạch lớn, đòi hỏi một dây chuyền tự động hóa đồng bộ với tiêu chuẩn kiểm tra dung sai siêu nhỏ nghiêm ngặt.",
+    "to": "Tối ưu hóa thời gian chu kỳ sản xuất và giải quyết triệt để sai số gia công tích lũy trên cụm chi tiết cơ khí phức tạp. Khách hàng đối mặt với tỷ lệ phế phẩm cao và chi phí bảo trì đột xuất, đòi hỏi giải pháp dây chuyền tự động hóa đồng bộ cùng quy chuẩn kiểm định dung sai vi mô khắt khe."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "title"
+    ],
+    "from": "Thách thức & giải pháp",
+    "to": "Thách thức & Giải pháp"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "THÁCH THỨC & GIẢI PHÁP",
+    "to": "CHALLENGE & SOLUTION"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "description"
+    ],
+    "from": "Nhà máy của đối tác gặp khó khăn trong việc duy trì sự ổn định đồng thời giữa khâu dập tốc độ cao và cụm gia công CNC. Các thao tác thủ công làm gián đoạn quá trình cấp phôi, gây tắc nghẽn nghiêm trọng và lãng phí vật liệu hợp kim đặc biệt. TOP WELL đã xây dựng một giải pháp toàn diện:",
+    "to": "Nhà máy đối tác gặp khó khăn trong việc duy trì tính ổn định giữa dây chuyền dập khuôn tốc độ cao và cụm trung tâm gia công CNC. Các nguyên công thủ công hiện hữu dẫn đến sự gián đoạn trong chuỗi cấp phôi, tạo ra các điểm nghẽn nghiêm trọng và gây lãng phí nguyên vật liệu hợp kim đặc chủng. TOP WELL đã xây dựng cấu trúc giải pháp toàn diện:"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Loại bỏ rung động động lực học và trôi nhiệt trong quá trình vận hành CNC 24/7.",
+    "to": "Khắc phục độ rung động học và sai lệch nhiệt độ khi máy CNC vận hành liên tục 24/7."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Tự động cấp phôi và đo quang học không tiếp xúc với độ chính xác ±0.002 mm.",
+    "to": "Tự động hóa khâu cấp phôi và kiểm tra đo lường quang học không tiếp xúc với dung sai ±0.002mm."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Tích hợp truyền thông công nghiệp SCADA/MES để giám sát thiết bị theo thời gian thực.",
+    "to": "Tích hợp truyền thông công nghiệp SCADA/MES giám sát trạng thái thiết bị thời gian thực."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Chuyển giao quy trình vận hành SOP chuẩn hóa cho đội ngũ kỹ sư tại nhà máy.",
+    "to": "Đào tạo chuyển giao toàn bộ quy trình vận hành SOP chuẩn hóa cho đội ngũ kỹ sư tại chỗ."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "title"
+    ],
+    "from": "Quy trình triển khai",
+    "to": "Quy trình thực hiện"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "eyebrow"
+    ],
+    "from": "QUY TRÌNH CỦA CHÚNG TÔI",
+    "to": "OUR PROCESS"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "description"
+    ],
+    "from": "Dự án được triển khai theo thông lệ công nghiệp Đức và Nhật Bản: khảo sát hiện trường, mô phỏng 3D DFM/Moldflow, gia công tinh trên trung tâm gia công 5 trục, hiệu chuẩn laser Renishaw và nghiệm thu FAT/SAT tại hiện trường trước khi đưa vào sản xuất thực tế.",
+    "to": "Quy trình triển khai của TOP WELL tuân thủ nghiêm ngặt chuẩn kỹ thuật công nghiệp Đức và Nhật Bản. Đội ngũ chuyên gia tiến hành khảo sát thực địa hiện trường, lập mô phỏng động học 3D DFM/Moldflow, gia công tinh trên tổ hợp trung tâm 5 trục, hiệu chuẩn giao thoa laser Renishaw và tổ chức nghiệm thu FAT/SAT tại chỗ trước khi hòa lưới sản xuất chính thức."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Khảo sát & quy hoạch thiết bị",
+    "to": "Khảo sát & Lập kế hoạch thiết bị"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Gia công & tinh chỉnh CNC 5 trục",
+    "to": "Gia công CNC 5 trục & Hiệu chỉnh"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Kiểm tra CMM laser & FAT",
+    "to": "Kiểm chuẩn Laser CMM & Nghiệm thu FAT"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "title"
+    ],
+    "from": "Kết quả & tác động",
+    "to": "Kết quả & Tác động"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "eyebrow"
+    ],
+    "from": "KẾT QUẢ & TÁC ĐỘNG",
+    "to": "RESULTS & IMPACT"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "description"
+    ],
+    "from": "Sau khi bàn giao, dự án đã tạo ra bước chuyển mạnh mẽ về năng lực vận hành thực tế, thiết lập chuẩn mực mới về độ tin cậy cơ khí và giúp đối tác đáp ứng các tiêu chuẩn khắt khe của chuỗi cung ứng toàn cầu:",
+    "to": "Dự án sau khi bàn giao đã mang lại sự bứt phá vượt bậc về năng lực vận hành thực tế cho khách hàng, thiết lập kỷ lục mới về độ tin cậy cơ khí và giúp đối tác đáp ứng toàn diện tiêu chuẩn khắt khe từ chuỗi cung ứng toàn cầu:"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "và giảm 98% thời gian dừng máy ngoài kế hoạch.",
+    "to": "và triệt tiêu 98% thời gian dừng máy ngoài kế hoạch (downtime)."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Hiệu suất thiết bị tổng thể (OEE)",
+    "to": "Nâng chỉ số hiệu suất thiết bị tổng thể (OEE)"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "tăng từ 76% lên 94.2%.",
+    "to": "từ 76% lên 94.2%."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "đạt được sau 14 tháng vận hành.",
+    "to": "chỉ sau 14 tháng triển khai thực tế."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Chứng nhận chất lượng quốc tế",
+    "to": "Đạt chứng chỉ nghiệm thu kiểm định chất lượng quốc tế"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "theo tiêu chuẩn ISO 9001 và AS9100.",
+    "to": "chuẩn ISO 9001 và AS9100."
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "description"
+    ],
+    "from": "Đội ngũ kỹ sư TOP WELL sẵn sàng khảo sát hiện trạng và đề xuất phương án trong vòng 24 giờ.",
+    "to": "Đội ngũ kỹ sư TOP WELL sẵn sàng hỗ trợ khảo sát và tối ưu dây chuyền nhà máy 24/7."
+   },
+   {
+    "path": [
+     "homeSummary"
+    ],
+    "from": "Dây chuyền gia công và đùn ép công nghệ cao cho các loại polyme kỹ thuật mới thân thiện với môi trường, đáp ứng tiêu chuẩn xuất khẩu quốc tế khắt khe.",
+    "to": "Ứng dụng dây chuyền công nghệ cao chế biến và đùn ép vật liệu polyme kỹ thuật mới thân thiện với môi trường, đáp ứng tiêu chuẩn xuất khẩu quốc tế khắt khe."
+   }
+  ],
+  "articles:quy-trinh-gia-cong-cnc-5-truc": [
+   {
+    "path": [
+     "title"
+    ],
+    "from": "Chạy thử và nghiệm thu máy CNC năm trục",
+    "to": "Quy trình chuyển giao máy phay CNC 5 trục công nghiệp nặng và tiêu chuẩn kiểm thử sai số vi mô tại Hải Phòng"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "title"
+    ],
+    "from": "Chạy thử và nghiệm thu máy CNC năm trục",
+    "to": "Quy trình chuyển giao máy phay CNC 5 trục công nghiệp nặng và tiêu chuẩn kiểm thử sai số vi mô tại Hải Phòng"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "description"
+    ],
+    "from": "Đưa trung tâm gia công chính xác năm trục vào sản xuất công nghiệp nặng đòi hỏi kiểm soát chặt chẽ rung động nền móng, căn chỉnh quang học bằng laser và kiểm tra dung sai ở cấp độ micro. Dưới đây là báo cáo bàn giao kỹ thuật thực tế vừa được TOP WELL International hoàn thành tại Khu công nghiệp Deep C, Hải Phòng.",
+    "to": "Việc đưa các tổ hợp gia công cơ khí chính xác 5 trục vào dây chuyền sản xuất công nghiệp nặng đòi hỏi tiêu chuẩn khắt khe về triệt tiêu dao động nền, căn chỉnh quang học laser và kiểm định dung sai ở cấp độ micro-inch. Dưới đây là biên bản chuyển giao kỹ thuật thực tế vừa được TOP WELL International hoàn thiện tại tổ hợp KCN Deep C Hải Phòng."
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "imageTag"
+    ],
+    "from": "HÀNH LANG CÔNG NGHIỆP CẢNG HẢI PHÒNG",
+    "to": "HẢI PHÒNG PORT INDUSTRIAL CORRIDOR"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "imageNote"
+    ],
+    "from": "Vận chuyển hàng siêu trường siêu trọng và tiếp nhận máy CNC chính xác tại cảng nước sâu Hải Phòng.",
+    "to": "Vận tải siêu trường siêu trọng và tiếp nhận tổ hợp máy CNC chính xác tại cầu cảng nước sâu Hải Phòng."
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "imageCaption"
+    ],
+    "from": "Hình 1.1: Hành lang vận chuyển thiết bị công nghiệp nặng và bàn giao cơ khí chính xác của TOP WELL.",
+    "to": "Hình 1.1: Hành lang vận chuyển thiết bị máy móc công nghiệp nặng và bàn giao cơ khí chính xác của TOP WELL."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "content"
+    ],
+    "from": "<h2>1. Yêu cầu công nghiệp và kiểm soát rung động</h2><p>Gia công năm trục đòi hỏi lắp đặt ổn định, điều kiện vận hành được kiểm soát và phép đo có độ lặp lại. Kế hoạch chạy thử cần xác định rõ yêu cầu thiết bị trước khi bắt đầu lắp đặt.</p><p>Các phép đo phải được ghi nhận bằng thiết bị đã hiệu chuẩn và đối chiếu với tiêu chí nghiệm thu đã thống nhất. Mọi công việc khắc phục cần được xác minh trước khi bàn giao đưa vào sản xuất.</p><blockquote><p>“Chạy thử đáng tin cậy là cầu nối giữa năng lực thiết bị và một quy trình vận hành có tính lặp lại.”</p><p>— Kenji Takahashi, Cố vấn kỹ thuật</p></blockquote>",
+    "to": "<h2>1. Bối cảnh công nghiệp và thách thức kiểm soát độ rung chấn</h2><p>Trong làn sóng dịch chuyển chuỗi cung ứng công nghệ cao sang miền Bắc Việt Nam, các nhà máy vệ tinh cấp 1 (Tier-1) sản xuất linh kiện bán dẫn, khuôn mẫu hàng không và chi tiết ô tô điện đặt ra yêu cầu tuyệt đối về độ ổn định động học. Đối với dòng máy phay CNC 5 trục khổ lớn tải trọng bàn làm việc trên 8 tấn, sai số nhiệt (thermal displacement) và rung chấn lan truyền từ các cẩu trục lân cận có thể làm hỏng toàn bộ mẻ gia công có giá trị hàng trăm ngàn USD.</p><p>TOP WELL International nhận trách nhiệm tư vấn từ khâu khảo sát địa chất móng máy, thi công hố móng cách ly rung chấn cao su giảm chấn đàn hồi polyurethane chuyên dụng, cho đến khâu hạ đặt máy với độ thăng bằng bọt thủy điện tử đạt mức 0.001 mm/m.</p><blockquote><p>“Một cỗ máy CNC 5 trục dù hiện đại đến đâu cũng chỉ phát huy tối đa công suất khi quy trình chuyển giao làm chủ được ba yếu tố: Địa chấn móng máy, Đo đạc laser quang học thời gian thực và Năng lực hiệu chuẩn phần mềm bù sai số động học.”</p><p>— Kenji Takahashi, Cố vấn Kỹ thuật Trưởng TOP WELL Alliance</p></blockquote>"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "title"
+    ],
+    "from": "2. Quy trình bàn giao kỹ thuật năm giai đoạn",
+    "to": "2. Quy trình 5 bước chuyển giao kỹ thuật chuẩn mực"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "description"
+    ],
+    "from": "Trình tự có cấu trúc giúp công tác lắp đặt, kiểm định và đào tạo người vận hành luôn đồng bộ.",
+    "to": "Nhằm đảm bảo tính minh bạch và an toàn tuyệt đối, đội ngũ kỹ thuật TOP WELL áp dụng khung bàn giao 5 giai đoạn tiêu chuẩn hóa quốc tế:"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Đặt máy lên nền và cân chỉnh",
+    "to": "Giao nhận & Cân bằng móng máy (Foundation Seating)"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Kiểm tra nền móng, phương án nâng hạ và cân chỉnh máy theo yêu cầu lắp đặt thiết bị.",
+    "to": "Sử dụng kích thủy lực đồng bộ 100 tấn và đệm chống rung công nghiệp kiểm soát sai số cao độ phẳng dưới 0.005mm."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Căn chỉnh bằng laser",
+    "to": "Căn chỉnh Laser Interferometer quang học"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Đo độ đồng trục, độ thẳng và độ vuông góc bằng thiết bị đã hiệu chuẩn.",
+    "to": "Đo kiểm độ thẳng hàng, độ vuông góc giữa các trục X-Y-Z và trục xoay A-C bằng thiết bị giao thoa laser chuẩn Renishaw."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Bù động học",
+    "to": "Hiệu chuẩn sai số vi mô (Kinematic Compensation < 0.002mm)"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Xem xét các phép đo hình học và áp dụng thông số bù đã được phê duyệt vào bộ điều khiển.",
+    "to": "Nạp bảng bù sai số hình học trực tiếp vào bộ điều khiển Heidenhain TNC7 / Fanuc 31i-B5 để triệt tiêu độ rơ hồi chuyển."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Chạy thử độ bền",
+    "to": "Kiểm thử tải liên tục 72 giờ (72-Hour Endurance Run)"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "Chạy chương trình thử nghiệm đã thống nhất đồng thời giám sát nhiệt độ, rung động và độ ổn định gia công.",
+    "to": "Chạy mô phỏng gia công phôi hợp kim Titanium Ti-6Al-4V với tốc độ trục chính 24.000 rpm, theo dõi nhiệt độ trục chính bằng camera hồng ngoại."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     4,
+     "title"
+    ],
+    "from": "Đào tạo người vận hành và bàn giao",
+    "to": "Đào tạo vận hành & Chuyển giao quy trình bảo dưỡng"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     4,
+     "description"
+    ],
+    "from": "Cung cấp hướng dẫn vận hành, hướng dẫn bảo trì và đào tạo thực hành cho đội ngũ tại nhà máy.",
+    "to": "Bàn giao toàn bộ tài liệu kỹ thuật O&M song ngữ, đào tạo cấp chứng chỉ an toàn cho 12 kỹ sư vận hành nhà máy."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "title"
+    ],
+    "from": "3. Tiêu chí nghiệm thu kỹ thuật",
+    "to": "3. So sánh tiêu chuẩn nghiệm thu kỹ thuật"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "description"
+    ],
+    "from": "Các chỉ tiêu minh họa dưới đây cho thấy cách một kế hoạch nghiệm thu ghi nhận các yêu cầu đo lường được. Giá trị cuối cùng phải được thống nhất cho thiết bị được lựa chọn.",
+    "to": "Bảng số liệu dưới đây thể hiện sự vượt trội giữa tiêu chuẩn thông thường trên thị trường so với cam kết chất lượng khắt khe thuộc Liên minh Kỹ thuật TOP WELL Alliance:"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Độ lặp lại định vị",
+    "to": "Độ lặp lại vị trí (Positioning Repeatability)"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Tham chiếu thông thường: ±0.005 mm",
+    "to": "± 0.005 mm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "eyebrow"
+    ],
+    "from": "Mục tiêu dự án: ±0.0018 mm",
+    "to": "± 0.0018 mm (Laser Verified)"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Độ đảo trục chính",
+    "to": "Độ đảo đầu trục chính (Spindle Runout)"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Tham chiếu thông thường: <0.003 mm",
+    "to": "< 0.003 mm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "eyebrow"
+    ],
+    "from": "Mục tiêu dự án: <0.0012 mm ở 20,000 vòng/phút",
+    "to": "< 0.0012 mm tại 20.000 rpm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Chạy thử độ bền liên tục",
+    "to": "Thời gian kiểm thử tải liên tục"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Tham chiếu thông thường: 24 giờ",
+    "to": "24 giờ gián đoạn"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "eyebrow"
+    ],
+    "from": "Mục tiêu dự án: 72 giờ liên tục",
+    "to": "72 giờ liên tục 100% công suất"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Thời gian phản hồi kỹ thuật",
+    "to": "Thời gian phản hồi sự cố kỹ thuật"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "Tham chiếu thông thường: 24–48 giờ làm việc",
+    "to": "24 – 48 giờ làm việc"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "eyebrow"
+    ],
+    "from": "Mục tiêu dự án: dưới 2 giờ trong khu vực dịch vụ đã thống nhất",
+    "to": "Dưới 2 giờ tại hiện trường miền Bắc"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "checklistTitle"
+    ],
+    "from": "Danh mục kiểm tra bàn giao đã hoàn tất",
+    "to": "Checklist kiểm định bàn giao hoàn tất"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "checklist"
+    ],
+    "from": "Báo cáo giao thoa kế laser Renishaw XL-80\nKiểm tra động học Ballbar QC20-W\nPhân tích phổ rung động bằng cảm biến gia tốc FFT\nGia công chi tiết mẫu đạt chứng nhận Cpk > 1.67",
+    "to": "Biên bản đo giao thoa Laser Renishaw XL-80\nKiểm tra động học Ballbar QC20-W\nPhân tích phổ rung chấn gia tốc kế FFT\nChứng nhận gia công phôi mẫu đạt Cpk > 1.67"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "description"
+    ],
+    "from": "Cố vấn kỹ thuật cấp cao có kinh nghiệm về chạy thử công nghiệp, đo lường chính xác và cải tiến sản xuất.",
+    "to": "Hơn 22 năm kinh nghiệm trong lĩnh vực chuyển giao dây chuyền cơ khí tự động hóa, kiểm soát sai số vi mô và tối ưu hóa hệ số OEE cho các tập đoàn công nghiệp đa quốc gia tại Châu Á."
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "role"
+    ],
+    "from": "Cố vấn kỹ thuật trưởng • Nguyên chuyên gia Toyota Motor, Lean Six Sigma Master Black Belt",
+    "to": "Cố vấn Kỹ thuật Trưởng • Cựu chuyên gia Toyota Motor, Lean Six Sigma Master Black Belt"
+   },
+   {
+    "path": [
+     "authorRole"
+    ],
+    "from": "Cố vấn kỹ thuật trưởng • TOP WELL Industrial Alliance",
+    "to": "Cố vấn Kỹ thuật Trưởng • TOP WELL Industrial Alliance"
+   }
+  ],
+  "articles:chuoi-cung-ung-ben-vung": [
+   {
+    "path": [
+     "authorRole"
+    ],
+    "from": "Cố vấn kỹ thuật trưởng • TOP WELL Industrial Alliance",
+    "to": "Cố vấn Kỹ thuật Trưởng • TOP WELL Industrial Alliance"
+   }
+  ],
+  "articles:xu-huong-tu-dong-hoa-kho-hang": [
+   {
+    "path": [
+     "authorRole"
+    ],
+    "from": "Cố vấn kỹ thuật trưởng • TOP WELL Industrial Alliance",
+    "to": "Cố vấn Kỹ thuật Trưởng • TOP WELL Industrial Alliance"
+   }
+  ],
+  "articles:kho-bai-thong-minh": [
+   {
+    "path": [
+     "authorRole"
+    ],
+    "from": "Cố vấn kỹ thuật trưởng • TOP WELL Industrial Alliance",
+    "to": "Cố vấn Kỹ thuật Trưởng • TOP WELL Industrial Alliance"
+   }
+  ],
+  "articles:cong-nghe-do-luong": [
+   {
+    "path": [
+     "authorRole"
+    ],
+    "from": "Cố vấn kỹ thuật trưởng • TOP WELL Industrial Alliance",
+    "to": "Cố vấn Kỹ thuật Trưởng • TOP WELL Industrial Alliance"
+   }
+  ],
+  "articles:thach-thuc-chuoi-cung-ung": [
+   {
+    "path": [
+     "authorRole"
+    ],
+    "from": "Cố vấn kỹ thuật trưởng • TOP WELL Industrial Alliance",
+    "to": "Cố vấn Kỹ thuật Trưởng • TOP WELL Industrial Alliance"
+   }
+  ],
+  "articles:giao-hang-chang-cuoi": [
+   {
+    "path": [
+     "authorRole"
+    ],
+    "from": "Cố vấn kỹ thuật trưởng • TOP WELL Industrial Alliance",
+    "to": "Cố vấn Kỹ thuật Trưởng • TOP WELL Industrial Alliance"
+   }
+  ]
+ },
+ "en": {
+  "footer": [
+   {
+    "path": [
+     "phoneSuffix"
+    ],
+    "from": "24/7 technical support",
+    "to": "Engineering 24/7"
+   }
+  ],
+  "home-page": [
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Spare parts & components",
+    "to": "Spare parts & Components"
+   }
+  ],
+  "about-page": [
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "WHY CHOOSE TOP WELL",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "ctaLabel"
+    ],
+    "from": "Contact us",
+    "to": "Contact our team"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelTitle"
+    ],
+    "from": "Need in-depth support?",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelText"
+    ],
+    "from": "Our mechanical engineers and automation specialists are ready to survey your plant on site within 24 hours.",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "RFQ response time:",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "< 4 hours",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Factory survey:",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Free nationwide",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Prototype tooling:",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "DFM test samples",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelLabel"
+    ],
+    "from": "Send CAD/STEP drawings →",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelHref"
+    ],
+    "from": "/lien-he",
+    "to": null
+   }
+  ],
+  "services:day-chuyen-san-xuat": [
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "How do I request a quotation?",
+    "to": "How long does it take to design, build and hand over an automated line?"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Send your equipment or cargo requirements, location and preferred schedule through our contact form. Our team will review the scope and recommend the next steps.",
+    "to": "Delivery usually takes 6 to 12 weeks depending on the scale and complexity of the line. TOP WELL runs a full FAT at our workshop first, cutting installation and trial runs at your plant to just 7–14 working days."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Can the solution integrate with existing systems?",
+    "to": "Can the automated line integrate with our existing ERP/MES software?"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Do you provide training and after-sales support?",
+    "to": "How does TOP WELL deliver operation and maintenance training?"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Yes. Training, maintenance requirements and technical support arrangements are defined as part of the project scope.",
+    "to": "Training, maintenance requirements and technical support arrangements are defined as part of the project scope."
+   }
+  ],
+  "articles:quy-trinh-gia-cong-cnc-5-truc": [
+   {
+    "path": [
+     "title"
+    ],
+    "from": "Five-Axis CNC Commissioning and Acceptance Testing",
+    "to": "Heavy-duty 5-axis CNC milling machine handover and micro-tolerance testing in Hai Phong"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "title"
+    ],
+    "from": "Five-Axis CNC Commissioning and Acceptance Testing",
+    "to": "Heavy-duty 5-axis CNC milling machine handover and micro-tolerance testing in Hai Phong"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "description"
+    ],
+    "from": "Bringing five-axis precision machining centres into heavy industrial production demands strict control of foundation vibration, laser optical alignment and micro-level tolerance inspection. Below is a real technical handover report recently completed by TOP WELL International at the Deep C Industrial Zone in Hai Phong.",
+    "to": "Bringing 5-axis precision machining cells into heavy industrial production lines demands strict standards for foundation vibration isolation, laser optical alignment and tolerance inspection at micro-inch level. Below is the actual technical handover record TOP WELL International has just completed at the Deep C Industrial Zone in Hai Phong."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "content"
+    ],
+    "from": "<h2>1. Industrial requirements and vibration control</h2><p>Five-axis machining requires a stable installation, controlled operating conditions and repeatable measurement. The commissioning plan should define the equipment requirements before installation begins.</p><p>Measurements must be recorded using calibrated instruments and compared with the agreed acceptance criteria. Any corrective work should be verified before production handover.</p><blockquote><p>“Reliable commissioning connects equipment capability with a repeatable operating process.”</p><p>— Kenji Takahashi, Technical Advisor</p></blockquote>",
+    "to": "<h2>1. Industrial context and the challenge of vibration control</h2><p>As high-tech supply chains shift to northern Vietnam, Tier-1 satellite plants producing semiconductor components, aerospace moulds and EV parts demand absolute kinematic stability. For large 5-axis CNC milling machines with table loads above 8 tonnes, thermal displacement and vibration transmitted from nearby overhead cranes can ruin an entire machining batch worth hundreds of thousands of US dollars.</p><p>TOP WELL International takes responsibility from the machine foundation ground survey and construction of a vibration-isolated foundation pit with specialised elastic polyurethane damping, through to setting the machine down with electronic spirit-level accuracy of 0.001 mm/m.</p><blockquote><p>“However advanced a 5-axis CNC machine is, it only reaches full capacity when the handover masters three factors: machine foundation seismics, real-time optical laser measurement and kinematic error-compensation software calibration.”</p><p>— Kenji Takahashi, Chief Technical Advisor, TOP WELL Alliance</p></blockquote>"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "title"
+    ],
+    "from": "2. A five-stage technical handover process",
+    "to": "2. A standard 5-step technical handover process"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "description"
+    ],
+    "from": "A structured sequence keeps installation, verification and operator training aligned.",
+    "to": "To ensure full transparency and safety, the TOP WELL engineering team applies an internationally standardised 5-stage handover framework:"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Foundation seating and levelling",
+    "to": "Receipt & machine foundation levelling (Foundation Seating)"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Check the foundation, lifting plan and machine levelling against the equipment installation requirements.",
+    "to": "Synchronised 100-tonne hydraulic jacks and industrial anti-vibration pads keep flatness error below 0.005 mm."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "Laser alignment",
+    "to": "Optical laser interferometer alignment"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Measure axis alignment, straightness and squareness using calibrated instruments.",
+    "to": "Straightness and squareness of the X-Y-Z axes and A-C rotary axes are measured with Renishaw laser interferometry."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Kinematic compensation",
+    "to": "Micro-error calibration (Kinematic Compensation < 0.002mm)"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Review geometric measurements and apply approved compensation settings to the controller.",
+    "to": "Geometric error-compensation tables are loaded directly into the Heidenhain TNC7 / Fanuc 31i-B5 controller to eliminate backlash."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Endurance testing",
+    "to": "Continuous 72-hour load test (72-Hour Endurance Run)"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "Run the agreed test programme while monitoring temperature, vibration and machining stability.",
+    "to": "Simulated machining of Ti-6Al-4V titanium alloy blanks at a spindle speed of 24,000 rpm, with spindle temperature tracked by infrared camera."
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     4,
+     "title"
+    ],
+    "from": "Operator training and handover",
+    "to": "Operator training & maintenance procedure handover"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     4,
+     "description"
+    ],
+    "from": "Provide operating instructions, maintenance guidance and practical training for the site team.",
+    "to": "Full bilingual O&M technical documentation is handed over, with safety certification training for 12 plant operating engineers."
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "title"
+    ],
+    "from": "3. Technical acceptance criteria",
+    "to": "3. Comparison of technical acceptance standards"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "description"
+    ],
+    "from": "Illustrative targets below show how an acceptance plan can document measurable requirements. Final values must be agreed for the selected equipment.",
+    "to": "The table below shows the gap between common market standards and the strict quality commitments of the TOP WELL Alliance engineering alliance:"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "Typical reference: ±0.005 mm",
+    "to": "± 0.005 mm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "eyebrow"
+    ],
+    "from": "Project target: ±0.0018 mm",
+    "to": "± 0.0018 mm (Laser Verified)"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "Typical reference: <0.003 mm",
+    "to": "< 0.003 mm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "eyebrow"
+    ],
+    "from": "Project target: <0.0012 mm at 20,000 rpm",
+    "to": "< 0.0012 mm at 20,000 rpm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Continuous endurance test",
+    "to": "Continuous load test duration"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "Typical reference: 24 hours",
+    "to": "24 hours with interruptions"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "eyebrow"
+    ],
+    "from": "Project target: 72 continuous hours",
+    "to": "72 continuous hours at 100% capacity"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Technical response time",
+    "to": "Technical incident response time"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "Typical reference: 24–48 working hours",
+    "to": "24 – 48 working hours"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "eyebrow"
+    ],
+    "from": "Project target: under 2 hours in the agreed service area",
+    "to": "Under 2 hours on site in northern Vietnam"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "description"
+    ],
+    "from": "Senior technical advisor with experience in industrial commissioning, precision measurement and production improvement.",
+    "to": "Over 22 years of experience in automated mechanical line handover, micro-error control and OEE optimisation for multinational industrial groups across Asia."
+   }
+  ]
+ },
+ "zh": {
+  "global": [
+   {
+    "path": [
+     "address"
+    ],
+    "from": "越南胡志明市 Chanh Hung 坊 Cao Lo 街 39 号 Topaz City B2 栋夹层",
+    "to": "越南胡志明市正兴坊高鲁街 39 号 Topaz City B2 座夹层"
+   }
+  ],
+  "footer": [
+   {
+    "path": [
+     "companyName"
+    ],
+    "from": "TOPWELL INTERNATIONAL CO., LTD",
+    "to": "TOPWELL 国际有限公司"
+   },
+   {
+    "path": [
+     "description"
+    ],
+    "from": "\"国际标准 – 本地服务。\"",
+    "to": "“国际标准 – 本地服务。”"
+   },
+   {
+    "path": [
+     "phoneSuffix"
+    ],
+    "from": "24/7 技术支持",
+    "to": "技术支持 24/7"
+   },
+   {
+    "path": [
+     "copyright"
+    ],
+    "from": "© {year} - TOP WELL International. 保留所有权利。",
+    "to": "© {year} - TOP WELL International. 版权所有。"
+   }
+  ],
+  "about-page": [
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "为什么选择 TOP WELL",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "ctaLabel"
+    ],
+    "from": "联系我们",
+    "to": "联系我们的团队"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelTitle"
+    ],
+    "from": "需要深入支持？",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelText"
+    ],
+    "from": "我们的机械工程师与自动化专家可在 24 小时内赴您的工厂进行现场勘察。",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "询价响应时间：",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "< 4 小时",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "工厂勘察：",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "全国免费",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "原型模具：",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "DFM 试样",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelLabel"
+    ],
+    "from": "发送 CAD/STEP 图纸 →",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "panelHref"
+    ],
+    "from": "/lien-he",
+    "to": null
+   }
+  ],
+  "contact-page": [
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "越南胡志明市 Chanh Hung 坊 Cao Lo 街 39 号 Topaz City B2 栋夹层",
+    "to": "越南胡志明市正兴坊高鲁街 39 号 Topaz City B2 座夹层"
+   }
+  ],
+  "services:day-chuyen-san-xuat": [
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "如何申请报价？",
+    "to": "自动化产线的设计、制造与交付需要多长时间？"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "请通过联系表单提交您的设备或货物需求、地点及期望时间安排。我们的团队将审核需求范围并建议后续步骤。",
+    "to": "根据产线规模与复杂程度，交付周期通常为 6 至 12 周。TOP WELL 先在本厂完成 100% 出厂验收（FAT），将客户工厂现场的安装与试运行时间缩短至 7–14 个工作日。"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "该方案能否与现有系统集成？",
+    "to": "自动化产线能否与现有的 ERP/MES 软件集成？"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "你们是否提供培训和售后支持？",
+    "to": "TOP WELL 如何开展运行与维护培训？"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "是的。培训、维护要求及技术支持安排均会在项目范围中予以明确。",
+    "to": "培训、维护要求及技术支持安排均会在项目范围中予以明确。"
+   }
+  ],
+  "articles:quy-trinh-gia-cong-cnc-5-truc": [
+   {
+    "path": [
+     "title"
+    ],
+    "from": "五轴 CNC 调试与验收测试",
+    "to": "海防重型五轴 CNC 铣床交付流程与微米级误差测试标准"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "title"
+    ],
+    "from": "五轴 CNC 调试与验收测试",
+    "to": "海防重型五轴 CNC 铣床交付流程与微米级误差测试标准"
+   },
+   {
+    "path": [
+     "sections",
+     0,
+     "description"
+    ],
+    "from": "将五轴精密加工中心投入重工业生产，需要严格控制地基振动、激光光学对中以及微米级公差检测。以下是 TOP WELL International 近期在海防 Deep C 工业区完成的一份真实技术交接报告。",
+    "to": "将五轴精密加工单元引入重工业生产线，需要在地基隔振、激光光学校准以及微英寸级公差检测方面达到严格标准。以下是 TOP WELL International 刚在海防 Deep C 工业区完成的实际技术交付记录。"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "content"
+    ],
+    "from": "<h2>1. 工业要求与振动控制</h2><p>五轴加工需要稳定的安装条件、受控的运行环境以及可重复的测量。调试方案应在安装开始前明确设备要求。</p><p>测量须使用经校准的仪器进行记录，并与商定的验收标准进行比对。任何整改工作都应在移交生产前完成验证。</p><blockquote><p>“可靠的调试，将设备能力与可重复的运行流程紧密相连。”—— Kenji Takahashi，技术顾问</p></blockquote>",
+    "to": "<h2>1. 行业背景与振动控制挑战</h2><p>随着高科技供应链向越南北部转移，生产半导体元件、航空模具和电动汽车零部件的一级（Tier-1）配套工厂对运动稳定性提出了绝对要求。对于工作台载荷超过 8 吨的大型五轴 CNC 铣床，热变形以及附近桥式起重机传来的振动可能毁掉价值数十万美元的整批加工件。</p><p>TOP WELL International 负责从机床地基地质勘察、采用专用弹性聚氨酯减振材料建造隔振地基坑，直至以 0.001 mm/m 电子水平精度完成机床落位的全过程咨询。</p><blockquote><p>“无论五轴 CNC 机床多么先进，只有在交付流程掌握三大要素时才能发挥全部产能：机床地基振动、实时光学激光测量以及运动学误差补偿软件校准。”</p><p>— Kenji Takahashi，TOP WELL Alliance 首席技术顾问</p></blockquote>"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "title"
+    ],
+    "from": "2. 五阶段技术交接流程",
+    "to": "2. 标准化五步技术交付流程"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "description"
+    ],
+    "from": "规范化的流程确保安装、验证与操作人员培训协调一致。",
+    "to": "为确保全程透明与绝对安全，TOP WELL 技术团队采用国际标准化的五阶段交付框架："
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "地基就位与调平",
+    "to": "接收与机床地基调平（Foundation Seating）"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "根据设备安装要求检查地基、吊装方案及机床水平度。",
+    "to": "采用 100 吨同步液压千斤顶与工业防振垫，将平面度误差控制在 0.005 mm 以下。"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "title"
+    ],
+    "from": "激光对中",
+    "to": "光学激光干涉仪校准"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "使用经校准的仪器测量轴线对中度、直线度与垂直度。",
+    "to": "使用雷尼绍激光干涉仪测量 X-Y-Z 轴及 A-C 旋转轴的直线度与垂直度。"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "运动学补偿",
+    "to": "微米级误差校准（Kinematic Compensation < 0.002mm）"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "审核几何测量结果，并将经批准的补偿参数写入控制系统。",
+    "to": "将几何误差补偿表直接载入 Heidenhain TNC7 / Fanuc 31i-B5 控制器，消除反向间隙。"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "耐久测试",
+    "to": "72 小时连续负载测试（72-Hour Endurance Run）"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "执行商定的测试程序，同时监测温度、振动与加工稳定性。",
+    "to": "以 24,000 rpm 主轴转速模拟加工 Ti-6Al-4V 钛合金毛坯，并用红外热像仪监测主轴温度。"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     4,
+     "title"
+    ],
+    "from": "操作人员培训与交接",
+    "to": "操作培训与维护流程移交"
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     4,
+     "description"
+    ],
+    "from": "为现场团队提供操作说明、维护指导和实操培训。",
+    "to": "移交全套双语运维技术文件，并为 12 名工厂操作工程师提供安全认证培训。"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "title"
+    ],
+    "from": "3. 技术验收标准",
+    "to": "3. 技术验收标准对比"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "description"
+    ],
+    "from": "以下示例指标说明了验收方案如何记录可量化的要求。最终数值须根据所选设备商定。",
+    "to": "下表展示了市场通用标准与 TOP WELL Alliance 技术联盟严格质量承诺之间的差距："
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "description"
+    ],
+    "from": "常规参考值：±0.005 mm",
+    "to": "± 0.005 mm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     0,
+     "eyebrow"
+    ],
+    "from": "项目目标：±0.0018 mm",
+    "to": "± 0.0018 mm（激光验证）"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "description"
+    ],
+    "from": "常规参考值：<0.003 mm",
+    "to": "< 0.003 mm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
+     "eyebrow"
+    ],
+    "from": "项目目标：20,000 rpm 下 <0.0012 mm",
+    "to": "20,000 rpm 时 < 0.0012 mm"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "连续耐久测试",
+    "to": "连续负载测试时长"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "description"
+    ],
+    "from": "常规参考值：24 小时",
+    "to": "24 小时（间断）"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     2,
+     "eyebrow"
+    ],
+    "from": "项目目标：连续 72 小时",
+    "to": "100% 负荷连续 72 小时"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "技术响应时间",
+    "to": "技术故障响应时间"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "description"
+    ],
+    "from": "常规参考值：24–48 个工作小时",
+    "to": "24 – 48 个工作小时"
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     3,
+     "eyebrow"
+    ],
+    "from": "项目目标：约定服务区域内 2 小时以内",
+    "to": "越南北部现场 2 小时内到达"
+   },
+   {
+    "path": [
+     "sections",
+     4,
+     "description"
+    ],
+    "from": "资深技术顾问，在工业调试、精密测量和生产改善方面经验丰富。",
+    "to": "拥有超过 22 年的自动化机械产线交付、微米级误差控制及 OEE 优化经验，服务亚洲多家跨国工业集团。"
+   }
+  ]
+ }
+}
