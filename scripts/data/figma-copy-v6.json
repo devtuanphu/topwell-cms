@@ -832,6 +832,17 @@
      3,
      "cards",
      1,
+     "description"
+    ],
+    "from": "\"Dây chuyền gắp thả đóng gói tự động tích hợp robot KUKA và hệ thống giám sát SCADA được TOP WELL nghiệm thu đúng tiến độ cam kết. Cycle time giảm tới 32% ngay tháng đầu vận hành thử nghiệm.\"",
+    "to": "\"Dây chuyền gắp thả đóng gói tự động hóa tích hợp robot KUKA và hệ thống giám sát SCADA được TOP WELL nghiệm thu đúng tiến độ cam kết. Cycle time giảm tới 32% ngay tháng đầu vận hành thử nghiệm.\""
+   },
+   {
+    "path": [
+     "sections",
+     3,
+     "cards",
+     1,
      "title"
     ],
     "from": "Nguyen Van Tuan",
@@ -874,6 +885,17 @@
     ],
     "from": "Hình ảnh thực tế về gia công, lắp đặt, bảo trì máy móc, hệ thống kỹ thuật và kiểm định tiêu chuẩn tại xưởng của chúng tôi và công trường đối tác.",
     "to": "Ghi nhận thực tế các công đoạn thi công, lắp đặt, bảo trì máy móc cơ khí, hệ thống kỹ thuật và kiểm định tiêu chuẩn tại xưởng sản xuất và hiện trường đối tác."
+   }
+  ],
+  "projects-page": [
+   {
+    "path": [
+     "sections",
+     1,
+     "title"
+    ],
+    "from": "Triển khai đồng bộ – quy trình chuẩn quốc tế",
+    "to": "Vận hành đồng bộ\nChuẩn hóa quy trình quốc tế"
    }
   ],
   "news-page": [
