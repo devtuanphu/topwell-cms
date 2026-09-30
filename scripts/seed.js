@@ -294,7 +294,7 @@ const CONTENT = {
               title: 'Core values',
               description:
                 'Precision: Absolute accuracy in every mechanical dimension and inspection standard.\nAgility: Immediate response to every technical and urgent workshop request.\nCommitment: Maintenance and technology transfer across the full machine life cycle.',
-              label: 'Japanese & European standards',
+              label: 'Japanese & European Standards',
               icon: { $file: 'fv2-3e6f5b1b.svg', alt: 'Values icon' },
               image: { $file: 'fv2-631e8092.svg', alt: 'Certified icon' },
             },

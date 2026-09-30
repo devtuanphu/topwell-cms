@@ -844,7 +844,7 @@
      "label"
     ],
     "from": "Tiêu chuẩn Nhật & châu Âu",
-    "to": "Tiêu chuẩn Nhật & Châu Âu"
+    "to": "Tiêu chuẩn Nhật Bản & Châu Âu"
    },
    {
     "path": [
@@ -2953,6 +2953,17 @@
    {
     "path": [
      "sections",
+     2,
+     "cards",
+     2,
+     "label"
+    ],
+    "from": "Japanese & European standards",
+    "to": "Japanese & European Standards"
+   },
+   {
+    "path": [
+     "sections",
      4,
      "ctaLabel"
     ],
@@ -3794,6 +3805,17 @@
     ],
     "from": "为什么选择 TOP WELL",
     "to": null
+   },
+   {
+    "path": [
+     "sections",
+     2,
+     "cards",
+     2,
+     "label"
+    ],
+    "from": "日欧标准",
+    "to": "日本与欧洲标准"
    },
    {
     "path": [
