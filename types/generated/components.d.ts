@@ -473,7 +473,7 @@ export interface SectionsHeroSlider extends Struct.ComponentSchema {
         },
         number
       > &
-      Schema.Attribute.DefaultTo<5>;
+      Schema.Attribute.DefaultTo<4>;
     title: Schema.Attribute.String;
   };
 }

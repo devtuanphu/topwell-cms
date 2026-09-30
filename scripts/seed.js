@@ -16,7 +16,7 @@ const CONTENT = {
         {
           __component: 'sections.hero-slider',
           title: 'Smart industry. Connected logistics.',
-          slideSeconds: 5,
+          slideSeconds: 4,
           cards: [
             {
               title: 'Take action for what matters.',
@@ -1721,7 +1721,7 @@ const CONTENT = {
         {
           __component: 'sections.project-process',
           title: 'Implementation process',
-          eyebrow: 'OUR PROCESS',
+          eyebrow: 'Our process',
           description:
             'Our engineers assessed the site, agreed an equipment layout and coordinated installation. Commissioning included functional checks, acceptance testing and a structured handover to the local team.',
           cards: [
@@ -1846,7 +1846,7 @@ const CONTENT = {
         {
           __component: 'sections.project-process',
           title: 'Implementation process',
-          eyebrow: 'OUR PROCESS',
+          eyebrow: 'Our process',
           description:
             'Our engineers assessed the site, agreed an equipment layout and coordinated installation. Commissioning included functional checks, acceptance testing and a structured handover to the local team.',
           cards: [
@@ -1971,7 +1971,7 @@ const CONTENT = {
         {
           __component: 'sections.project-process',
           title: 'Implementation process',
-          eyebrow: 'OUR PROCESS',
+          eyebrow: 'Our process',
           description:
             'Our engineers assessed the site, agreed an equipment layout and coordinated installation. Commissioning included functional checks, acceptance testing and a structured handover to the local team.',
           cards: [
@@ -2086,7 +2086,7 @@ const CONTENT = {
         {
           __component: 'sections.project-process',
           title: 'Implementation process',
-          eyebrow: 'OUR PROCESS',
+          eyebrow: 'Our process',
           description:
             'Our engineers assessed the site, agreed an equipment layout and coordinated installation. Commissioning included functional checks, acceptance testing and a structured handover to the local team.',
           cards: [
@@ -2201,7 +2201,7 @@ const CONTENT = {
         {
           __component: 'sections.project-process',
           title: 'Implementation process',
-          eyebrow: 'OUR PROCESS',
+          eyebrow: 'Our process',
           description:
             'Our engineers assessed the site, agreed an equipment layout and coordinated installation. Commissioning included functional checks, acceptance testing and a structured handover to the local team.',
           cards: [
@@ -2326,7 +2326,7 @@ const CONTENT = {
         {
           __component: 'sections.project-process',
           title: 'Implementation process',
-          eyebrow: 'OUR PROCESS',
+          eyebrow: 'Our process',
           description:
             'Our engineers assessed the site, agreed an equipment layout and coordinated installation. Commissioning included functional checks, acceptance testing and a structured handover to the local team.',
           cards: [
@@ -3315,7 +3315,7 @@ CONTENT.serviceGroups = [
       },
       {
         __component: 'sections.process-steps',
-        eyebrow: 'DELIVERY WORKFLOW',
+        
         title: 'Technical intake and rollout process',
         description:
           'Every milestone is controlled, from feasibility review to stable handover under strict quality standards.',
@@ -3392,7 +3392,6 @@ CONTENT.serviceGroups = [
       },
       {
         __component: 'sections.process-steps',
-        eyebrow: 'DELIVERY WORKFLOW',
         title: 'How a shipment is planned and delivered',
         description:
           'From cargo survey to final handover, every stage is tracked and reported transparently.',
@@ -3615,7 +3614,7 @@ CONTENT.projects[0].sections = [
   {
     __component: 'sections.project-process',
     title: 'Implementation process',
-    eyebrow: 'OUR PROCESS',
+    eyebrow: 'Our process',
     description:
       'Delivery followed German and Japanese industrial practice: site survey, 3D DFM/Moldflow simulation, finishing on 5-axis machining centres, Renishaw laser calibration and on-site FAT/SAT acceptance before connecting to live production.',
     cards: [
@@ -3917,8 +3916,8 @@ CONTENT.services.forEach((service) => {
         .filter(Boolean)
         .join('\n\n'),
       image: v1.image || service.image || intro.image,
-      images:
-        v1.images || (gallery ? gallery.cards.slice(0, 2).map((c) => c.image) : DETAIL_PHOTOS),
+      // Hai ảnh dưới đoạn giới thiệu: cặp ảnh bàn giao và họp dự án như mọi trang con Figma.
+      images: v1.images || DETAIL_PHOTOS,
       body: describe(commitments?.cards) || describe(features?.cards),
     },
     ...(faq ? [{ ...faq, title: 'Frequently asked questions' }] : []),
@@ -4072,6 +4071,8 @@ CONTENT.services.forEach((service) => {
       publishedDate: '2026-05-17',
     }),
     project('khuon-ep-nhua-y-te', 'tongjun-environmental-new-materials', {
+      // Ảnh thẻ thứ hai ở trang Dự án Figma (116:210); thẻ trang chủ giữ ảnh như Figma 87:212.
+      image: { $file: 'fv2-801a5634.jpg', alt: 'Modern automated warehouse' },
       location: 'Hai Phong',
       year: '2025',
       publishedDate: '2026-04-22',

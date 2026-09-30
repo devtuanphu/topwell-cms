@@ -620,6 +620,15 @@
    {
     "path": [
      "sections",
+     4,
+     "eyebrow"
+    ],
+    "from": "DỰ ÁN ĐỐI TÁC",
+    "to": "DỰ ÁN HỢP TÁC"
+   },
+   {
+    "path": [
+     "sections",
      5,
      "title"
     ],
@@ -841,15 +850,6 @@
     "path": [
      "sections",
      3,
-     "eyebrow"
-    ],
-    "from": "QUY TRÌNH CỦA CHÚNG TÔI",
-    "to": "OUR PROCESS"
-   },
-   {
-    "path": [
-     "sections",
-     3,
      "title"
     ],
     "from": "Dịch vụ dân dụng và thương mại",
@@ -1024,7 +1024,7 @@
      "title"
     ],
     "from": "Vận hành đồng bộ – quy trình chuẩn quốc tế",
-    "to": "Vận hành đồng bộ Chuẩn hóa quy trình quốc tế"
+    "to": "Vận hành đồng bộ Chuẩn hóa\nquy trình quốc tế"
    },
    {
     "path": [
@@ -1168,10 +1168,19 @@
     "path": [
      "sections",
      1,
+     "eyebrow"
+    ],
+    "from": "DANH MỤC DỰ ÁN",
+    "to": "DỰ ÁN"
+   },
+   {
+    "path": [
+     "sections",
+     1,
      "title"
     ],
     "from": "Triển khai đồng bộ – quy trình chuẩn quốc tế",
-    "to": "Vận hành đồng bộ\nChuẩn hóa quy trình quốc tế"
+    "to": "Vận hành đồng bộ Chuẩn hóa\nquy trình quốc tế"
    }
   ],
   "news-page": [
@@ -1367,6 +1376,44 @@
     "path": [
      "sections",
      1,
+     "eyebrow"
+    ],
+    "from": "QUY TRÌNH TRIỂN KHAI",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "title"
+    ],
+    "from": "Quy trình tiếp nhận và triển khai kỹ thuật",
+    "to": "Quy Trình Tiếp Nhận & Triển Khai Kỹ Thuật"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "description"
+    ],
+    "from": "Kiểm soát chặt chẽ từng cột mốc, từ đánh giá tính khả thi đến bàn giao chạy ổn định theo quy chuẩn khắt khe.",
+    "to": "Kiểm soát chặt chẽ từng cột mốc từ đánh giá tính khả thi đến bàn giao dây chuyền chạy ổn định theo quy chuẩn khắt khe."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Khảo sát & yêu cầu",
+    "to": "Khảo Sát & Yêu Cầu"
+   },
+   {
+    "path": [
+     "sections",
+     1,
      "cards",
      0,
      "description"
@@ -1380,10 +1427,43 @@
      1,
      "cards",
      1,
+     "title"
+    ],
+    "from": "DFM & mô phỏng giải pháp",
+    "to": "DFM & Mô Phỏng Giải Pháp"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
      "description"
     ],
     "from": "Phân tích DFM (Design for Manufacturing), tính toán chu kỳ gia công và báo giá phương án khả thi.",
     "to": "Phân tích DFM (Design for Manufacturing), tính toán chu kỳ gia công (cycle-time) và báo giá phương án khả thi."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Chế tạo & kiểm nghiệm FAT",
+    "to": "Chế Tạo & Kiểm Nghiệm FAT"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Bàn giao SAT & SOP O&M",
+    "to": "Bàn Giao SAT & SOP O&M"
    },
    {
     "path": [
@@ -1400,6 +1480,44 @@
     "path": [
      "sections",
      1,
+     "eyebrow"
+    ],
+    "from": "QUY TRÌNH TRIỂN KHAI",
+    "to": null
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "title"
+    ],
+    "from": "Quy trình tiếp nhận và triển khai kỹ thuật",
+    "to": "Quy Trình Tiếp Nhận & Triển Khai Kỹ Thuật"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "description"
+    ],
+    "from": "Kiểm soát chặt chẽ từng cột mốc, từ đánh giá tính khả thi đến bàn giao chạy ổn định theo quy chuẩn khắt khe.",
+    "to": "Kiểm soát chặt chẽ từng cột mốc từ đánh giá tính khả thi đến bàn giao dây chuyền chạy ổn định theo quy chuẩn khắt khe."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     0,
+     "title"
+    ],
+    "from": "Khảo sát & yêu cầu",
+    "to": "Khảo Sát & Yêu Cầu"
+   },
+   {
+    "path": [
+     "sections",
+     1,
      "cards",
      0,
      "description"
@@ -1413,10 +1531,43 @@
      1,
      "cards",
      1,
+     "title"
+    ],
+    "from": "DFM & mô phỏng giải pháp",
+    "to": "DFM & Mô Phỏng Giải Pháp"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     1,
      "description"
     ],
     "from": "Phân tích DFM (Design for Manufacturing), tính toán chu kỳ gia công và báo giá phương án khả thi.",
     "to": "Phân tích DFM (Design for Manufacturing), tính toán chu kỳ gia công (cycle-time) và báo giá phương án khả thi."
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     2,
+     "title"
+    ],
+    "from": "Chế tạo & kiểm nghiệm FAT",
+    "to": "Chế Tạo & Kiểm Nghiệm FAT"
+   },
+   {
+    "path": [
+     "sections",
+     1,
+     "cards",
+     3,
+     "title"
+    ],
+    "from": "Bàn giao SAT & SOP O&M",
+    "to": "Bàn Giao SAT & SOP O&M"
    },
    {
     "path": [
@@ -1767,6 +1918,13 @@
     ],
     "from": "Giải pháp lưu trữ thông minh tích hợp Ada System Platform và công nghệ AS/RS nhằm tối ưu dòng vật tư và tự động hóa logistics công nghiệp.",
     "to": "Triển khai giải pháp kho lưu trữ thông minh tích hợp nền tảng điều hành Ada System Platform và công nghệ AS/RS, tối ưu hóa lưu chuyển vật tư và tự động hóa quy trình hậu cần công nghiệp."
+   },
+   {
+    "path": [
+     "tags"
+    ],
+    "from": "Ada System Platform, Smart AS/RS, Kho AI",
+    "to": "Ada System Platform, Smart AS/RS, AI Warehouse"
    }
   ],
   "projects:tongjun-environmental-new-materials": [
@@ -2033,6 +2191,13 @@
     ],
     "from": "Dây chuyền gia công và đùn ép công nghệ cao cho các loại polyme kỹ thuật mới thân thiện với môi trường, đáp ứng tiêu chuẩn xuất khẩu quốc tế khắt khe.",
     "to": "Ứng dụng dây chuyền công nghệ cao chế biến và đùn ép vật liệu polyme kỹ thuật mới thân thiện với môi trường, đáp ứng tiêu chuẩn xuất khẩu quốc tế khắt khe."
+   },
+   {
+    "path": [
+     "tags"
+    ],
+    "from": "Vật liệu xanh, Polyme sinh thái, ISO 14001",
+    "to": "Green Materials, Eco Polymer, ISO 14001"
    }
   ],
   "articles:quy-trinh-gia-cong-cnc-5-truc": [
@@ -2897,6 +3062,28 @@
     "to": null
    }
   ],
+  "services:thiet-bi-va-giai-phap": [
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "DELIVERY WORKFLOW",
+    "to": null
+   }
+  ],
+  "services:phu-tung-va-linh-kien": [
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "DELIVERY WORKFLOW",
+    "to": null
+   }
+  ],
   "services:day-chuyen-san-xuat": [
    {
     "path": [
@@ -2952,6 +3139,28 @@
     ],
     "from": "Yes. Training, maintenance requirements and technical support arrangements are defined as part of the project scope.",
     "to": "Training, maintenance requirements and technical support arrangements are defined as part of the project scope."
+   }
+  ],
+  "projects:oulide-ada-smart-warehouse": [
+   {
+    "path": [
+     "sections",
+     2,
+     "eyebrow"
+    ],
+    "from": "OUR PROCESS",
+    "to": "Our process"
+   }
+  ],
+  "projects:tongjun-environmental-new-materials": [
+   {
+    "path": [
+     "sections",
+     2,
+     "eyebrow"
+    ],
+    "from": "OUR PROCESS",
+    "to": "Our process"
    }
   ],
   "articles:quy-trinh-gia-cong-cnc-5-truc": [
@@ -3709,6 +3918,28 @@
     ],
     "from": "越南胡志明市 Chanh Hung 坊 Cao Lo 街 39 号 Topaz City B2 栋夹层",
     "to": "越南胡志明市正兴坊高鲁街 39 号 Topaz City B2 座夹层"
+   }
+  ],
+  "services:thiet-bi-va-giai-phap": [
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "交付流程",
+    "to": null
+   }
+  ],
+  "services:phu-tung-va-linh-kien": [
+   {
+    "path": [
+     "sections",
+     1,
+     "eyebrow"
+    ],
+    "from": "交付流程",
+    "to": null
    }
   ],
   "services:day-chuyen-san-xuat": [

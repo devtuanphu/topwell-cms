@@ -14,7 +14,7 @@
     },
     "slideSeconds": {
       "type": "integer",
-      "default": 5,
+      "default": 4,
       "min": 2,
       "max": 30
     }

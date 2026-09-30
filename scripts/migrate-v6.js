@@ -19,7 +19,12 @@ const { LOCALES } = require('../src/locales');
 const { CONTENT, localizeContent } = require('./seed');
 
 const ROOT = path.resolve(__dirname, '..');
-const COPY = require('./data/figma-copy-v6.json');
+// Bảng so seed trước V6 và bảng so với bản đã triển khai (sửa cả chỗ V6 đã ghi sai).
+const COPIES = fs
+  .readdirSync(path.join(__dirname, 'data'))
+  .filter((f) => /^figma-copy-v6.*\.json$/.test(f))
+  .sort()
+  .map((f) => require(`./data/${f}`));
 const ICONS = require('./data/recoloured-icons.json');
 
 function populate(strapi, uid) {
@@ -47,9 +52,9 @@ function strip(value, top = true) {
     // Khóa hệ thống chỉ nằm ở cấp tài liệu; trong component, "locale" là ô dữ liệu thật.
     if (
       top &&
-      ['documentId', 'createdAt', 'updatedAt', 'publishedAt', 'locale', 'localizations'].concat(
-        ['createdBy', 'updatedBy', 'parent', 'children'],
-      ).includes(key)
+      ['documentId', 'createdAt', 'updatedAt', 'publishedAt', 'locale', 'localizations']
+        .concat(['createdBy', 'updatedBy', 'parent', 'children'])
+        .includes(key)
     )
       continue;
     out[key] = strip(item, false);
@@ -99,35 +104,42 @@ async function migrate(strapi) {
   const codes = LOCALES.map((l) => l.code);
 
   // 1. Câu chữ theo bảng so sánh seed cũ – mới.
-  for (const code of codes) {
-    for (const [key, changes] of Object.entries(COPY[code] || {})) {
-      const [group, slug] = key.includes(':') ? key.split(':') : [null, key];
-      const uid = group ? `api::${group.slice(0, -1)}.${group.slice(0, -1)}` : `api::${key}.${key}`;
-      if (!strapi.contentTypes[uid]) continue;
-      const store = strapi.documents(uid);
-      const doc = await store.findFirst({
-        locale: code,
-        ...(group ? { filters: { slug } } : {}),
-        populate: populate(strapi, uid),
-      });
-      if (!doc) continue;
-      const data = strip(doc);
-      let touched = applyCopy(data, changes);
-      // Khối kêu gọi không còn thẻ phụ bên phải thì bỏ luôn các dòng của thẻ đó.
-      for (const section of data.sections || [])
-        if (section.__component === 'sections.cta' && !section.panelTitle && section.cards?.length) {
-          section.cards = [];
-          section.panelIcon = null;
-          touched++;
-        }
-      if (!touched) continue;
-      if (uid === 'api::header.header' && data.logo && typeof data.logo === 'object')
-        data.logo = data.logo.id;
-      await store.update({ documentId: doc.documentId, locale: code, data, status: 'published' });
-      stats.copy += touched;
-      stats.docs++;
+  for (const COPY of COPIES)
+    for (const code of codes) {
+      for (const [key, changes] of Object.entries(COPY[code] || {})) {
+        const [group, slug] = key.includes(':') ? key.split(':') : [null, key];
+        const uid = group
+          ? `api::${group.slice(0, -1)}.${group.slice(0, -1)}`
+          : `api::${key}.${key}`;
+        if (!strapi.contentTypes[uid]) continue;
+        const store = strapi.documents(uid);
+        const doc = await store.findFirst({
+          locale: code,
+          ...(group ? { filters: { slug } } : {}),
+          populate: populate(strapi, uid),
+        });
+        if (!doc) continue;
+        const data = strip(doc);
+        let touched = applyCopy(data, changes);
+        // Khối kêu gọi không còn thẻ phụ bên phải thì bỏ luôn các dòng của thẻ đó.
+        for (const section of data.sections || [])
+          if (
+            section.__component === 'sections.cta' &&
+            !section.panelTitle &&
+            section.cards?.length
+          ) {
+            section.cards = [];
+            section.panelIcon = null;
+            touched++;
+          }
+        if (!touched) continue;
+        if (uid === 'api::header.header' && data.logo && typeof data.logo === 'object')
+          data.logo = data.logo.id;
+        await store.update({ documentId: doc.documentId, locale: code, data, status: 'published' });
+        stats.copy += touched;
+        stats.docs++;
+      }
     }
-  }
 
   // 2. Ô Mô tả mới của khối Dịch vụ.
   for (const code of codes) {
@@ -150,7 +162,12 @@ async function migrate(strapi) {
           }
         });
       if (touched) {
-        await store.update({ documentId: doc.documentId, locale: code, data: { sections }, status: 'published' });
+        await store.update({
+          documentId: doc.documentId,
+          locale: code,
+          data: { sections },
+          status: 'published',
+        });
         stats.filled++;
       }
     }
@@ -172,14 +189,124 @@ async function migrate(strapi) {
   // 4. Logo đầu trang: file logo TOP WELL mà seed khai báo.
   const logoFile = path.join(ROOT, 'seed-assets', CONTENT.header.logo.$file);
   const digest = crypto.createHash('sha256').update(fs.readFileSync(logoFile)).digest('hex');
-  const logo = await files.findOne({ where: { name: `topwell-seed-${digest}${path.extname(logoFile)}` } });
+  const logo = await files.findOne({
+    where: { name: `topwell-seed-${digest}${path.extname(logoFile)}` },
+  });
   if (logo) {
     const header = strapi.documents('api::header.header');
     for (const code of codes) {
       const doc = await header.findFirst({ locale: code, populate: { logo: true } });
       if (doc && doc.logo?.id !== logo.id) {
-        await header.update({ documentId: doc.documentId, locale: code, data: { logo: logo.id }, status: 'published' });
+        await header.update({
+          documentId: doc.documentId,
+          locale: code,
+          data: { logo: logo.id },
+          status: 'published',
+        });
         stats.headerLogo++;
+      }
+    }
+  }
+
+  // 6. Trang dịch vụ con có hai ảnh giới thiệu trùng nhau: đổi sang cặp ảnh của seed.
+  {
+    const uid = 'api::service.service';
+    const store = strapi.documents(uid);
+    const uploadOf = async (file) => {
+      const buf = fs.readFileSync(path.join(ROOT, 'seed-assets', file));
+      const digest = crypto.createHash('sha256').update(buf).digest('hex');
+      // Cùng nội dung có thể đã tải lên dưới đuôi khác (.png/.jpg).
+      return files.findOne({ where: { name: { $startsWith: `topwell-seed-${digest}` } } });
+    };
+    for (const code of codes) {
+      const localized = localizeContent(CONTENT, code);
+      const list = (localized.content || localized).services;
+      for (const doc of await store.findMany({ locale: code, populate: populate(strapi, uid) })) {
+        const sections = strip(doc.sections || []);
+        const intro = sections.find((s) => s.__component === 'sections.service-intro');
+        const ids = (intro?.images || []).map((i) => i.media);
+        if (ids.length !== 2 || ids[0] !== ids[1]) continue;
+        const source = list.find((s) => s.slug === doc.slug);
+        const seeded = source?.sections.find(
+          (s) => s.__component === 'sections.service-intro',
+        )?.images;
+        if (!seeded) continue;
+        const next = [];
+        for (const image of seeded) {
+          const upload = await uploadOf(image.$file);
+          if (upload) next.push({ media: upload.id, alt: image.alt });
+        }
+        if (next.length !== 2) continue;
+        intro.images = next;
+        await store.update({
+          documentId: doc.documentId,
+          locale: code,
+          data: { sections },
+          status: 'published',
+        });
+        stats.introPhotos = (stats.introPhotos || 0) + 1;
+      }
+    }
+  }
+
+  // 7. Ảnh dự án Tongjun: bỏ ảnh chụp màn hình mẫu, dùng ảnh kho vận ở thẻ thứ hai Figma 116:210.
+  {
+    const uid = 'api::project.project';
+    const store = strapi.documents(uid);
+    const digestOf = (file) =>
+      crypto
+        .createHash('sha256')
+        .update(fs.readFileSync(path.join(ROOT, 'seed-assets', file)))
+        .digest('hex');
+    const oldDigest = digestOf('fv2-19742fac.png');
+    const next = await files.findOne({
+      where: { name: { $startsWith: `topwell-seed-${digestOf('fv2-801a5634.jpg')}` } },
+    });
+    if (next)
+      for (const code of codes) {
+        const doc = await store.findFirst({
+          locale: code,
+          filters: { slug: 'tongjun-environmental-new-materials' },
+          populate: { image: { populate: { media: true } } },
+        });
+        if (!doc) continue;
+        const localized = localizeContent(CONTENT, code);
+        const seeded = (localized.content || localized).projects.find((p) => p.slug === doc.slug);
+        const data = {};
+        for (const key of ['image'])
+          if (doc[key]?.media?.name?.startsWith(`topwell-seed-${oldDigest}`))
+            data[key] = { media: next.id, alt: seeded?.[key]?.alt || doc[key].alt };
+        if (Object.keys(data).length) {
+          await store.update({
+            documentId: doc.documentId,
+            locale: code,
+            data,
+            status: 'published',
+          });
+          stats.projectImage = (stats.projectImage || 0) + 1;
+        }
+      }
+  }
+
+  // 5. Banner trang chủ tự chuyển nhanh hơn: 5 giây (mặc định cũ) thành 4 giây.
+  {
+    const store = strapi.documents('api::home-page.home-page');
+    for (const code of codes) {
+      const doc = await store.findFirst({
+        locale: code,
+        populate: populate(strapi, 'api::home-page.home-page'),
+      });
+      const sections = strip(doc?.sections || []);
+      const hero = sections.find((s) => s.__component === 'sections.hero-slider');
+      if (hero && (hero.slideSeconds === 5 || hero.slideSeconds == null)) {
+        hero.slideSeconds = 4;
+        await store.update({
+          documentId: doc.documentId,
+          locale: code,
+          data: { sections },
+          status: 'published',
+        });
+        stats.slideSeconds = (stats.slideSeconds || 0) + 1;
       }
     }
   }

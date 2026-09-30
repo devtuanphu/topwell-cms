@@ -3,12 +3,14 @@
  * So nội dung seed ở một commit trước (thư mục .old-seed) với seed hiện tại, ghi ra danh sách
  * ô chữ đổi theo từng ngôn ngữ để migration cập nhật dữ liệu đang chạy.
  * Chạy: node scripts/build-copy-diff.js <tên-file-json>
+ *       OLD_SEED=.seed-head node scripts/build-copy-diff.js <tên-file-json>
  */
 const fs = require('node:fs');
 const path = require('node:path');
 const { LOCALES } = require('../src/locales');
 const NEW = require('./seed');
-const OLD = require('../.old-seed/scripts/seed');
+// Seed để so: mặc định .old-seed (trước vòng V6); OLD_SEED=.seed-head so với bản đang chạy.
+const OLD = require(path.join('..', process.env.OLD_SEED || '.old-seed', 'scripts', 'seed'));
 
 const SINGLE = ['global', 'header', 'footer', 'site-settings'];
 const docs = (content) => {
@@ -57,4 +59,9 @@ for (const { code } of LOCALES) {
 const file = path.join(__dirname, 'data', process.argv[2] || 'copy-diff.json');
 fs.writeFileSync(file, JSON.stringify(result, null, 1) + '\n');
 for (const [code, byDoc] of Object.entries(result))
-  console.log(code, Object.entries(byDoc).map(([k, c]) => `${k}:${c.length}`).join('  '));
+  console.log(
+    code,
+    Object.entries(byDoc)
+      .map(([k, c]) => `${k}:${c.length}`)
+      .join('  '),
+  );

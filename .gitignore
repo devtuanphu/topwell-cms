@@ -13,3 +13,4 @@ exports/
 public/uploads/*
 !public/uploads/.gitkeep
 .old-seed/
+.seed-head/
