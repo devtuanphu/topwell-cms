@@ -553,13 +553,6 @@ const CONTENT = {
           title: 'Get in touch and connect!',
           description:
             'TOP WELL International connects businesses with an ecosystem of equipment, production lines, spare parts and technical solutions from international partners. We support you from consultation and implementation to 24/7 technical support.',
-          panelTitle: 'Hello!',
-          panelText:
-            'TOP WELL International supports businesses with installation, operation, maintenance, upgrades and technical requests throughout the equipment life cycle.',
-          image: { $file: 'fv2-7cf6d98c.jpg', alt: 'TOP WELL support agent with a headset' },
-          requestTitle: 'Requests',
-          requestText:
-            'Spare parts, components and replacement solutions for maintenance, repair and stable operation.',
           cards: [
             { title: 'Commercial' },
             { title: 'Residential' },
@@ -4224,8 +4217,30 @@ const escapeHtml = (text) =>
     /[&<>"]/g,
     (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c],
   );
-// Article bodies are edited in CKEditor: turn the seed's heading/paragraph cards into one HTML block.
-function articleRichText(content) {
+// Khối được đặt vào Nội dung chính bằng dòng [[khoi-N]]; tác giả, bài liên quan và dải kêu gọi
+// giữ vị trí riêng (sau thẻ tag / rộng hết khung) nên không cần đánh dấu.
+const INLINE_BLOCKS = new Set([
+  'sections.article-body',
+  'sections.article-steps',
+  'sections.article-comparison',
+  'sections.faq',
+]);
+/** Gộp các khối CKEditor vào ô Nội dung chính, chỗ các khối khác thành dòng [[khoi-N]]. */
+function inlineArticleBlocks(sections) {
+  const kept = sections.filter((s) => s.__component !== 'sections.rich-text');
+  const content = sections
+    .map((s) =>
+      s.__component === 'sections.rich-text'
+        ? s.content || ''
+        : INLINE_BLOCKS.has(s.__component)
+          ? `<p>[[khoi-${kept.indexOf(s) + 1}]]</p>`
+          : '',
+    )
+    .join('');
+  return { content, sections: kept };
+}
+// Article bodies are edited in CKEditor: turn the seed's heading/paragraph cards into the main content.
+function articleContent(content) {
   for (const article of content.articles) {
     const index = article.sections.findIndex((s) => s.__component === 'sections.article-body');
     const body = article.sections[index];
@@ -4251,6 +4266,7 @@ function articleRichText(content) {
       { ...body, cards: [] },
       { __component: 'sections.rich-text', content: html },
     );
+    Object.assign(article, inlineArticleBlocks(article.sections));
   }
   return content;
 }
@@ -4490,7 +4506,7 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
     ...LOCALES.map((l) => l.code).filter((c) => c !== SOURCE_LOCALE),
   ]) {
     const localized = localizeContent(CONTENT, code);
-    const content = articleRichText(
+    const content = articleContent(
       structuredClone(code === SOURCE_LOCALE ? CONTENT : localized.content),
     );
     if (code !== SOURCE_LOCALE) missing[code] = localized.missing;
@@ -4519,7 +4535,14 @@ async function seed(strapi, { replace = false, upgradeUi = false, only = null } 
   return stats;
 }
 
-module.exports = { CONTENT, seed, validateContent, localizeContent, articleRichText };
+module.exports = {
+  CONTENT,
+  seed,
+  validateContent,
+  localizeContent,
+  articleContent,
+  inlineArticleBlocks,
+};
 
 if (require.main === module) {
   (async () => {

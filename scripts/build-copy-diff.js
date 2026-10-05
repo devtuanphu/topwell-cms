@@ -36,8 +36,8 @@ const result = {};
 for (const { code } of LOCALES) {
   const localize = (mod) => {
     const r = mod.localizeContent(mod.CONTENT, code);
-    // Thân bài viết lưu trong CMS ở dạng khối rich text, so theo đúng dạng đó.
-    return NEW.articleRichText(structuredClone(r.content || r));
+    // Thân bài viết lưu trong CMS ở ô Nội dung chính, so theo đúng dạng đó.
+    return NEW.articleContent(structuredClone(r.content || r));
   };
   const before = docs(localize(OLD));
   const after = docs(localize(NEW));

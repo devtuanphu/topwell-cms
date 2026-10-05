@@ -10,25 +10,8 @@
     "eyebrow": {
       "type": "string"
     },
-    "image": {
-      "type": "component",
-      "component": "shared.image",
-      "repeatable": false
-    },
     "title": {
       "type": "string"
-    },
-    "panelTitle": {
-      "type": "string"
-    },
-    "panelText": {
-      "type": "text"
-    },
-    "requestTitle": {
-      "type": "string"
-    },
-    "requestText": {
-      "type": "text"
     },
     "cards": {
       "type": "component",

@@ -371,11 +371,6 @@ export interface SectionsContactForm extends Struct.ComponentSchema {
     cards: Schema.Attribute.Component<'shared.card', true>;
     description: Schema.Attribute.Text;
     eyebrow: Schema.Attribute.String;
-    image: Schema.Attribute.Component<'shared.image', false>;
-    panelText: Schema.Attribute.Text;
-    panelTitle: Schema.Attribute.String;
-    requestText: Schema.Attribute.Text;
-    requestTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }

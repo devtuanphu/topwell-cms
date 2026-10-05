@@ -315,7 +315,7 @@ async function migrate(strapi) {
   return stats;
 }
 
-module.exports = { migrate };
+module.exports = { migrate, populate, strip };
 
 if (require.main === module) {
   (async () => {

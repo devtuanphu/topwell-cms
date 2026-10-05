@@ -15,5 +15,9 @@
   },
   "shared.nav-item": {
     "source": "services / projects = menu con nhiều tầng lấy tự động từ cây Dịch vụ / Dự án · manual = tự nhập từng liên kết · none = không có menu con."
+  },
+  "api::article.article": {
+    "content": "Viết bài tại đây: tiêu đề phụ (Heading 2, 3), đoạn văn, in đậm, link, ảnh (nhớ điền mô tả ảnh), bảng, video. Muốn chèn một khối bên dưới vào giữa bài, gõ [[khoi-1]], [[khoi-2]]… trên một dòng riêng, số là thứ tự khối trong mục \"Khối chèn vào bài\".",
+    "sections": "Các khối có sẵn (mở đầu có ảnh, các bước, bảng so sánh, tác giả, kêu gọi…). Khối thứ N hiện ở chỗ có dòng [[khoi-N]] trong Nội dung chính; khối không được gọi sẽ hiện ở cuối bài."
   }
 }
