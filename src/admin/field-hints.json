@@ -19,5 +19,13 @@
   "api::article.article": {
     "content": "Viết bài tại đây: tiêu đề phụ (Heading 2, 3), đoạn văn, in đậm, link, ảnh (nhớ điền mô tả ảnh), bảng, video. Muốn chèn một khối bên dưới vào giữa bài, gõ [[khoi-1]], [[khoi-2]]… trên một dòng riêng, số là thứ tự khối trong mục \"Khối chèn vào bài\".",
     "sections": "Các khối có sẵn (mở đầu có ảnh, các bước, bảng so sánh, tác giả, kêu gọi…). Khối thứ N hiện ở chỗ có dòng [[khoi-N]] trong Nội dung chính; khối không được gọi sẽ hiện ở cuối bài."
+  },
+  "sections.about": {
+    "ctaFile": "Tải lên file PDF để nút \"Xem thêm\" mở file này trong tab mới. Nếu có file, nút ưu tiên mở file; nếu để trống thì dùng ô Liên kết (ctaHref).",
+    "ctaHref": "Liên kết khi bấm nút Xem thêm (ví dụ /tin-tuc hoặc https://...). Chỉ dùng khi không tải file PDF ở trên."
+  },
+  "sections.about-hero": {
+    "ctaFile": "Tải lên file PDF để nút \"Xem thêm\" mở file này trong tab mới. Nếu có file, nút ưu tiên mở file; nếu để trống thì dùng ô Liên kết (ctaHref).",
+    "ctaHref": "Liên kết khi bấm nút Xem thêm (ví dụ /tin-tuc hoặc https://...). Chỉ dùng khi không tải file PDF ở trên."
   }
 }

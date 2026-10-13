@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_about_hero",
   "info": {
-    "displayName": "Banner gi\u1edbi thi\u1ec7u"
+    "displayName": "Banner giới thiệu"
   },
   "attributes": {
     "cards": {
@@ -41,6 +41,13 @@
       "type": "component",
       "component": "shared.image",
       "repeatable": false
+    },
+    "ctaFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
     }
   }
 }

@@ -57,6 +57,13 @@
       "type": "component",
       "component": "shared.image",
       "repeatable": false
+    },
+    "ctaFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
     }
   }
 }

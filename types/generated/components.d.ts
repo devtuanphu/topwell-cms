@@ -248,6 +248,7 @@ export interface SectionsAbout extends Struct.ComponentSchema {
   attributes: {
     badges: Schema.Attribute.Component<'shared.card', true>;
     cards: Schema.Attribute.Component<'shared.card', true>;
+    ctaFile: Schema.Attribute.Media<'files'>;
     ctaHref: Schema.Attribute.String;
     ctaLabel: Schema.Attribute.String;
     description: Schema.Attribute.Text;
@@ -270,6 +271,7 @@ export interface SectionsAboutHero extends Struct.ComponentSchema {
   };
   attributes: {
     cards: Schema.Attribute.Component<'shared.card', true>;
+    ctaFile: Schema.Attribute.Media<'files'>;
     ctaHref: Schema.Attribute.String;
     ctaLabel: Schema.Attribute.String;
     description: Schema.Attribute.Text;
