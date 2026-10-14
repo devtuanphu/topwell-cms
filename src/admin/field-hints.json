@@ -27,5 +27,9 @@
   "sections.about-hero": {
     "ctaFile": "Tải lên file PDF để nút \"Xem thêm\" mở file này trong tab mới. Nếu có file, nút ưu tiên mở file; nếu để trống thì dùng ô Liên kết (ctaHref).",
     "ctaHref": "Liên kết khi bấm nút Xem thêm (ví dụ /tin-tuc hoặc https://...). Chỉ dùng khi không tải file PDF ở trên."
+  },
+  "sections.hero-slider": {
+    "cards": "Mỗi banner là 1 thẻ. Ảnh nền: dùng ảnh NGANG kích thước 1920×800 px (tất cả banner cùng cỡ) để hiển thị đẹp, nét và đều nhau. Ảnh nhỏ hoặc sai tỉ lệ sẽ bị mờ hoặc lệch chiều cao.",
+    "slideSeconds": "Số giây mỗi banner tự chuyển (2–30). Mặc định 4 giây."
   }
 }
